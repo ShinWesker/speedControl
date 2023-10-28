@@ -1,1 +1,11 @@
-.idea
+# Ignore everything by default
+*
+
+# Whitelist the 'diagramms' and 'implementation' directories
+!/diagramms/
+!/implementation/
+
+# Inside 'implementation', ignore specific directories
+/implementation/.gradle/
+/implementation/.idea/
+/implementation/build/
