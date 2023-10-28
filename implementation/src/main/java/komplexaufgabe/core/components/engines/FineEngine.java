@@ -44,7 +44,7 @@ public class FineEngine {
         private final IPolicy bPolicy;
          private final AIEngine bAIEngine;
 
-        public FineEngineBuilder(IPolicy pPolicy) {
+        public FineEngineBuilder(IPolicy pPolicy, AIEngine pAIEngine) {
             bPolicy = pPolicy;
             bAIEngine = pAIEngine;
         }

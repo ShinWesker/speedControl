@@ -3,6 +3,7 @@ import komplexaufgabe.core.components.Camera;
 import komplexaufgabe.core.components.CentralUnit;
 import komplexaufgabe.core.components.LED;
 import komplexaufgabe.core.components.LaserScanner;
+import komplexaufgabe.core.components.engines.AIEngine;
 import komplexaufgabe.core.components.engines.FineEngine;
 import komplexaufgabe.entities.car.Car;
 import komplexaufgabe.entities.car.LicensePlate;
@@ -82,6 +83,6 @@ public class Application {
         speedCamera.activate();
         speedCamera.getCamera().takePhoto(carHenry);
         speedCamera.getLaserScanner().detectSpeed(carHenry);
-        speedCamera.setFineEngine(new FineEngine.FineEngineBuilder(new GermanPolicy()).build());
+        speedCamera.setFineEngine(new FineEngine.FineEngineBuilder(new GermanPolicy(), new AIEngine()).build());
     }
 }
