@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'dhbw'
+version null
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+    implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.14.0'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.14.0'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.16.0'
+    implementation group: 'org.json', name: 'json', version: '20231013'
+
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.10.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.6.0'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.14.0'
+    testImplementation ("org.junit.vintage:junit-vintage-engine")
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-runner:1.10.0")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
+}
+
+test {
+    useJUnitPlatform()
+    failFast = true
+    testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'
+    }
+    afterSuite { desc, result ->
+        if (!desc.parent) {
+            println "\nTest result: ${result.resultType}"
+            println "Test summary: ${result.testCount} tests completed, " +
+                    "${result.successfulTestCount} succeeded, " +
+                    "${result.failedTestCount} failed, " +
+                    "${result.skippedTestCount} skipped"
+        }
+    }
+}
