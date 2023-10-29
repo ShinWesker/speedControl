@@ -3,6 +3,7 @@
 /implementation/build/
 .gradle/
 build/
+.idea/
 
 # Include all Java classes and related files
 !**/src/main/java/**/*.java
