@@ -1,28 +1,21 @@
-# Ignore everything by default
-*
-
-# Whitelist the 'diagrams' and 'implementation' directories
-!/diagrams/
-!/implementation/
-
-# Inside 'implementation', ignore specific directories
+# Ignore specific directories
 /implementation/.idea/
 /implementation/build/
+.gradle/
+build/
 
-# Whitelist all Java classes and related files
-!**/*.java
+# Include all Java classes and related files
+!**/src/main/java/**/*.java
 
 # If you want to include other file types such as XML or properties files, add them here
-!**/*.xml
-!**/*.properties
+!**/src/main/java/**/*.xml
+!**/src/main/java/**/*.properties
 
 # Exclude any compiled Java files
 **/*.class
 
-# Exclude other common files/directories that you might not want in the repo
+# Exclude other common files that you might not want in the repo
 **/target/
 **/.DS_Store
 **/dist/
-.gradle/
-build/
 
