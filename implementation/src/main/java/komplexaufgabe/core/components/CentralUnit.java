@@ -1,6 +1,6 @@
 package komplexaufgabe.core.components;
 
-import komplexaufgabe.interfaces.encryption.IEncryption;
+import komplexaufgabe.core.interfaces.encryption.IEncryption;
 
 import java.util.ArrayList;
 import java.util.TreeMap;

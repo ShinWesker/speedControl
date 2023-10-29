@@ -1,6 +1,6 @@
 package komplexaufgabe.core.components;
 
-import komplexaufgabe.entities.car.Car;
+import komplexaufgabe.core.entities.Car;
 
 public class LaserScanner {
 

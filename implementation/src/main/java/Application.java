@@ -1,25 +1,21 @@
 import komplexaufgabe.core.SpeedCamera;
-import komplexaufgabe.core.components.Camera;
 import komplexaufgabe.core.components.CentralUnit;
 import komplexaufgabe.core.components.LED;
 import komplexaufgabe.core.components.LaserScanner;
-import komplexaufgabe.core.components.engines.AIEngine;
-import komplexaufgabe.core.components.engines.FineEngine;
-import komplexaufgabe.entities.car.Car;
-import komplexaufgabe.entities.car.LicensePlate;
-import komplexaufgabe.entities.human.Owner;
-import komplexaufgabe.entities.human.officer.idcard.NextGenIDCard;
-import komplexaufgabe.entities.human.officer.idcard.OldIDCard;
-import komplexaufgabe.entities.smartphone.SmartPhone;
-import komplexaufgabe.interfaces.encryptionhash.MD5;
-import komplexaufgabe.interfaces.encryptionhash.SHA256;
-import komplexaufgabe.core.components.mobile.MobileCentralUnit;
-import komplexaufgabe.interfaces.policy.GermanPolicy;
-import komplexaufgabe.interfaces.stoppingtools.TrafficSpikes;
+import komplexaufgabe.core.entities.Car;
+import komplexaufgabe.core.entities.LicensePlate;
+import komplexaufgabe.core.entities.Owner;
+import komplexaufgabe.core.entities.NextGenIDCard;
+import komplexaufgabe.core.entities.OldIDCard;
+import komplexaufgabe.core.entities.SmartPhone;
+import komplexaufgabe.core.interfaces.encryptionhash.MD5;
+import komplexaufgabe.core.interfaces.encryptionhash.SHA256;
+import komplexaufgabe.core.components.MobileCentralUnit;
+import komplexaufgabe.core.interfaces.policy.GermanPolicy;
+import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
 
 import java.util.Date;
 import java.util.Stack;
-import java.util.UUID;
 
 public class Application {
     public static void main(String... args) {
@@ -76,13 +72,11 @@ public class Application {
 
         SpeedCamera speedCamera = new SpeedCamera.CameraBuilder(
                 componentsStack,
-                new UUID(4,1),
-                new Date(),new Camera(),
                 new TrafficSpikes()).build();
 
         speedCamera.activate();
         speedCamera.getCamera().takePhoto(carHenry);
         speedCamera.getLaserScanner().detectSpeed(carHenry);
-        speedCamera.setFineEngine(new FineEngine.FineEngineBuilder(new GermanPolicy(), new AIEngine()).build());
+        speedCamera.getFineEngine().setPolicy(new GermanPolicy());
     }
 }

@@ -1,6 +1,6 @@
 package komplexaufgabe.simulate;
 
-import komplexaufgabe.entities.car.Car;
+import komplexaufgabe.core.entities.Car;
 import java.util.List;
 
 public class ParkingSpace {

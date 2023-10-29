@@ -1,7 +1,7 @@
 package komplexaufgabe.core.components;
 
-import komplexaufgabe.entities.CameraData;
-import komplexaufgabe.entities.car.Car;
+import komplexaufgabe.core.entities.CameraData;
+import komplexaufgabe.core.entities.Car;
 
 public class Camera {
 
