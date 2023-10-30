@@ -9,5 +9,6 @@ public abstract class IDCard {
         encryptionHash = pEncryptionHash;
     }
 
-    public abstract void savePIN(int pin);
+    public abstract void store(int pin);
+    public abstract boolean isAuthorized(int pin);
 }

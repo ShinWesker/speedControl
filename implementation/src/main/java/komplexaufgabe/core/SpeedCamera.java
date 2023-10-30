@@ -1,12 +1,12 @@
 package komplexaufgabe.core;
 
+import io.cucumber.java.ro.Si;
+import komplexaufgabe.core.components.*;
+import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.Car;
+import komplexaufgabe.core.entities.Owner;
 import komplexaufgabe.core.interfaces.stoppingtools.IStoppingTools;
-import komplexaufgabe.core.components.Camera;
-import komplexaufgabe.core.components.CentralUnit;
-import komplexaufgabe.core.components.LED;
-import komplexaufgabe.core.components.LaserScanner;
-import komplexaufgabe.core.components.FineEngine;
+import komplexaufgabe.simulate.Simulation;
 
 import java.util.Date;
 import java.util.Stack;
@@ -17,11 +17,15 @@ public class SpeedCamera {
     private final Date manufacturingDate;
     private Camera camera;
     private IStoppingTools stoppingTool;
-    private  CentralUnit centralUnit;
+    private CentralUnit centralUnit;
     private LED led;
     private LaserScanner laserScanner;
     private FineEngine fineEngine;
     private boolean isShutDown = true;
+
+    private Simulation simulation;
+
+    private MobileNetworkModule mobileNetworkModule;
 
     private SpeedCamera(CameraBuilder cameraBuilder) {
         centralUnit = (CentralUnit) cameraBuilder.bSections.peek();
@@ -39,6 +43,19 @@ public class SpeedCamera {
         fineEngine = new FineEngine();
         stoppingTool = cameraBuilder.bStoppingTool;
 
+        mobileNetworkModule = new MobileNetworkModule();
+
+        simulation = new Simulation(this);
+
+
+    }
+
+    public void addWanted(Owner owner) {
+        mobileNetworkModule.addWanted(owner);
+    }
+
+    public Simulation getSimulation() {
+        return simulation;
     }
 
     public void activate() {
@@ -50,6 +67,22 @@ public class SpeedCamera {
     }
 
     public void controlCar(Car car) {
+        int carSpeed = laserScanner.detectSpeed(car);
+        if (fineEngine.isSpeeding(carSpeed)) {
+            led.flash();
+            CameraData cameraData = camera.takePhoto(car);
+
+            boolean stopDriver = fineEngine.processCase(cameraData, carSpeed);
+
+
+            if (stopDriver) {
+            // TODO kill person
+
+            }
+
+
+        }
+
 
     }
 
@@ -81,20 +114,24 @@ public class SpeedCamera {
         return fineEngine;
     }
 
-    public static class CameraBuilder{
+    public static class CameraBuilder {
         private final Stack<Object> bSections;
         private final IStoppingTools bStoppingTool;
 
         public CameraBuilder(Stack<Object> pSections, IStoppingTools pStoppingTools) {
             bSections = pSections;
             bStoppingTool = pStoppingTools;
+
         }
+
         public SpeedCamera build() {
             return new SpeedCamera(this);
         }
     }
 
-
+    public MobileNetworkModule getMobileNetworkModule() {
+        return mobileNetworkModule;
+    }
 }
 
 

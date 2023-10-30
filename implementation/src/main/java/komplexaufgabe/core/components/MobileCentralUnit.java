@@ -7,13 +7,13 @@ import java.util.HashMap;
 
 public enum MobileCentralUnit {
     INSTANCE;
-    private static final HashMap<Integer, SmartPhone> smartPhoneMap = new HashMap<>();
+    private static final HashMap<Long, SmartPhone> smartPhoneMap = new HashMap<>();
 
-    public static void addOwner(Integer id, SmartPhone smartPhone) {
-        smartPhoneMap.put(id, smartPhone);
+    public static void addOwner(Long phoneNumber, SmartPhone smartPhone) {
+        smartPhoneMap.put(phoneNumber, smartPhone);
     }
 
-    public static Wallet getSmartPhoneWallet(Integer id) {
-        return smartPhoneMap.get(id).getWallet();
+    public static Wallet getSmartPhoneWallet(Long phoneNumber) {
+        return smartPhoneMap.get(phoneNumber).getWallet();
     }
 }

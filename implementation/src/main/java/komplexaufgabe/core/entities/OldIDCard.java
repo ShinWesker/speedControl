@@ -11,9 +11,16 @@ public class OldIDCard extends IDCard {
         oldMagneticStrip = new MagneticStrip();
     }
 
+
+
     @Override
-    public void savePIN(int pin) {
-        oldMagneticStrip.setPin(encryptionHash.encrypt(String.valueOf(pin)));
+    public void store(int pin) {
+            oldMagneticStrip.setPin(encryptionHash.encrypt(String.valueOf(pin)));
+    }
+
+    @Override
+    public boolean isAuthorized(int pin) {
+        return encryptionHash.encrypt(String.valueOf(pin)).equals(oldMagneticStrip.getPin());
     }
 }
 

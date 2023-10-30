@@ -32,4 +32,7 @@ public class Officer extends Human {
         }
     }
 
+    public IDCard getIdCard() {
+        return idCard;
+    }
 }
