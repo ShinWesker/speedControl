@@ -1,3 +1,4 @@
+import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.CentralUnit;
 import komplexaufgabe.core.components.LED;
@@ -19,6 +20,9 @@ import java.util.Stack;
 
 public class Application {
     public static void main(String... args) {
+        CLI cli = new CLI();
+        cli.start();
+        /*
         Car carHenry = new Car.CarBuilder(
                 "BMW",
                 "KJEHDKJHE",
@@ -78,5 +82,7 @@ public class Application {
         speedCamera.getCamera().takePhoto(carHenry);
         speedCamera.getLaserScanner().detectSpeed(carHenry);
         speedCamera.getFineEngine().setPolicy(new GermanPolicy());
+        */
+
     }
 }
