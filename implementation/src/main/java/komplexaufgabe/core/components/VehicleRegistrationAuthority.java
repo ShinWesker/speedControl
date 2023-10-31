@@ -11,6 +11,7 @@ public class VehicleRegistrationAuthority {
 
     private final HashMap<String, Owner> carOwners;
     private final IEncryption encryption;
+
     public VehicleRegistrationAuthority() {
         this.carOwners = new HashMap<>();
         this.encryption = new AES();
@@ -22,17 +23,17 @@ public class VehicleRegistrationAuthority {
 
     public String[] getOwnerDataByLicensePlate(String licensePlate) {
 
-        licensePlate = encryption.decrpyt(licensePlate);
+        licensePlate = encryption.decrypt(licensePlate);
         String[] ownerData = new String[3];
 
-        ownerData[0] =  encryption.encrpyt(carOwners.get(licensePlate).getName());
-        ownerData[1] =  encryption.encrpyt(String.valueOf(carOwners.get(licensePlate).getBirthDate().getTime()));
-        ownerData[2] =  encryption.encrpyt(String.valueOf(carOwners.get(licensePlate).getSmartPhone().getPhoneNumber()));
+        ownerData[0] = encryption.encrypt(carOwners.get(licensePlate).getName());
+        ownerData[1] = encryption.encrypt(String.valueOf(carOwners.get(licensePlate).getBirthDate().getTime()));
+        ownerData[2] = encryption.encrypt(String.valueOf(carOwners.get(licensePlate).getSmartPhone().getPhoneNumber()));
 
         return ownerData;
     }
 
-    public Car getCar(String licensePlate){
-        return carOwners.get(encryption.decrpyt(licensePlate)).getCar();
+    public Car getCar(String licensePlate) {
+        return carOwners.get(encryption.decrypt(licensePlate)).getCar();
     }
 }

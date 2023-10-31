@@ -2,13 +2,11 @@ package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.LicensePlate;
-import komplexaufgabe.core.entities.Owner;
 import komplexaufgabe.core.entities.Record;
 import komplexaufgabe.core.interfaces.policy.IPolicy;
 import komplexaufgabe.core.SpeedCamera;
 
 import java.util.Date;
-import java.util.Locale;
 
 public class FineEngine {
     private IPolicy policy;
@@ -45,10 +43,6 @@ public class FineEngine {
 
     private void fineWallet(long phoneNumber, double fine) {
         MobileCentralUnit.getSmartPhoneWallet(phoneNumber).decreaseDeposit(fine);
-    }
-
-    public AIEngine getAiEngine() {
-        return aiEngine;
     }
 
     public String processCase(CameraData cameraData, int carSpeed) {

@@ -9,6 +9,7 @@ public class SmartPhone {
         phoneNumber = pPhoneNumber;
         wallet = new Wallet();
     }
+
     public long getPhoneNumber() {
         return phoneNumber;
     }

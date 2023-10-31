@@ -8,7 +8,8 @@ import komplexaufgabe.core.interfaces.encryptionhash.SHA256;
 public class NextGenIDCard extends IDCard {
     private final IEncryptionHash fingerprintEncryption;
     private final NextGenMagneticStrip nextGenMagneticStrip;
-    public NextGenIDCard(){
+
+    public NextGenIDCard() {
         super(new SHA256());
         fingerprintEncryption = new MD5();
         nextGenMagneticStrip = new NextGenMagneticStrip();

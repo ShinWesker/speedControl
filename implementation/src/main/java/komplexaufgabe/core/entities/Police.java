@@ -1,6 +1,5 @@
 package komplexaufgabe.core.entities;
 
-import io.cucumber.java.bs.A;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
 
@@ -8,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Police {
-    private List<Owner> wantedOwners;
-    private List<Owner> arrestedOwners;
-    private List<Car> confiscatedCars;
+    private final List<Owner> wantedOwners;
+    private final List<Owner> arrestedOwners;
+    private final List<Car> confiscatedCars;
 
     private final IEncryption encryption;
 
@@ -25,12 +24,11 @@ public class Police {
 
 
         for (Owner wantedOwner : wantedOwners) {
-            if (wantedOwner.getFace().equals(encryption.decrpyt(face))) {
+            if (wantedOwner.getFace().equals(encryption.decrypt(face))) {
                 wantedOwners.remove(wantedOwner);
                 arrestedOwners.add(wantedOwner);
             }
         }
-
 
 
     }
@@ -45,7 +43,7 @@ public class Police {
 
     public boolean checkWanted(String data) {
         for (Owner wantedOwner : wantedOwners) {
-            if (wantedOwner.getFace().equals(encryption.decrpyt(data))) {
+            if (wantedOwner.getFace().equals(encryption.decrypt(data))) {
                 return true;
             }
         }

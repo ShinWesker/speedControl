@@ -7,7 +7,7 @@ public class Car {
     private final int speed;
     private Human driver;
 
-    private Car(CarBuilder carBuilder){
+    private Car(CarBuilder carBuilder) {
         manufacturer = carBuilder.bManufacturer;
         registrationID = carBuilder.bRegistrationID;
         speed = carBuilder.bSpeed;
@@ -16,10 +16,6 @@ public class Car {
 
     public String getManufacturer() {
         return manufacturer;
-    }
-
-    public String getRegistrationID() {
-        return registrationID;
     }
 
     public int getSpeed() {
@@ -33,6 +29,7 @@ public class Car {
     public Human getDriver() {
         return driver;
     }
+
     public void setDriver(Human driver) {
         this.driver = driver;
     }

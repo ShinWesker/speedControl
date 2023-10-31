@@ -24,13 +24,13 @@ public class MobileNetworkModule {
     }
 
     public boolean sendRequestToPolice(String data) {
-        return police.checkWanted(encryption.encrpyt(data));
+        return police.checkWanted(encryption.encrypt(data));
     }
 
     public String[] sendRequestToVRA(String licensePlate) {
-        String[] arr = vra.getOwnerDataByLicensePlate(encryption.encrpyt(licensePlate));
+        String[] arr = vra.getOwnerDataByLicensePlate(encryption.encrypt(licensePlate));
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = encryption.decrpyt(arr[i]);
+            arr[i] = encryption.decrypt(arr[i]);
         }
 
         return arr;
@@ -40,15 +40,15 @@ public class MobileNetworkModule {
         vra.registerCar(licensePlate.getLicensePlateID(), owner);
     }
 
-    public void requestArrest(String face){
-        police.arrestOwner(encryption.encrpyt(face));
+    public void requestArrest(String face) {
+        police.arrestOwner(encryption.encrypt(face));
     }
 
-    public void requestCarConfiscation(Car car){
+    public void requestCarConfiscation(Car car) {
         police.confiscateCar(car);
     }
 
-    public Car vraGetCar(String licensePlate){
-       return vra.getCar(encryption.encrpyt(licensePlate));
+    public Car vraGetCar(String licensePlate) {
+        return vra.getCar(encryption.encrypt(licensePlate));
     }
 }

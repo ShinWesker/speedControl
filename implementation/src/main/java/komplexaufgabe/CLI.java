@@ -1,14 +1,12 @@
 package komplexaufgabe;
 
-import io.cucumber.java.sl.In;
 import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.CentralUnit;
 import komplexaufgabe.core.components.LED;
 import komplexaufgabe.core.components.LaserScanner;
 import komplexaufgabe.core.interfaces.policy.GermanPolicy;
 import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
-import komplexaufgabe.simulate.ParkingSpace;
-import komplexaufgabe.simulate.Simulation;
+
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -52,32 +50,30 @@ public class CLI {
 
     public void showMenu() {
         switch (state) {
-            case 0 -> {
-                System.out.println("""
-                        Menu:
-                        --------
-                        startup  - Startup
-                        import   - Import
-                        execute  - Execute Simulation
-                        report   - Report
-                        export   - Export
-                        shutdown - Shutdown
-                        exit     - Exit
-                        --------""");
-            }
-            case 1 -> {
-                startup();
-            }
+            case 0 -> System.out.println("""
+                    Menu:
+                    --------
+                    startup  - Startup
+                    import   - Import
+                    execute  - Execute Simulation
+                    report   - Report
+                    export   - Export
+                    shutdown - Shutdown
+                    exit     - Exit
+                    --------""");
+
+            case 1 -> startup();
+
             case 2 -> {
                 if (speedCamera.isShutDown()) {
-                    System.out.println("Turn on speedcamera first!");
+                    System.out.println("Turn on speed camera first!");
                 } else {
                     policyImport();
                 }
             }
             case 3 -> {
                 if (speedCamera.isShutDown()) {
-                    System.out.println("Turn on speedcamera first!");
+                    System.out.println("Turn on speed camera first!");
                 } else {
                     if (loadedPolicy) {
                         executeSimulation();
@@ -86,12 +82,10 @@ public class CLI {
                     }
                 }
             }
-            case 4 -> {
-                createReportLog();
-            }
-            case 5 -> {
-                export();
-            }
+            case 4 -> createReportLog();
+
+            case 5 -> export();
+
             case 6 -> {
                 if (speedCamera.isShutDown()) {
                     System.out.println("Speed camera is already turned off.");

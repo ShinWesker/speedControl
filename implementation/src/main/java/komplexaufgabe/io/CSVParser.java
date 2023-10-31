@@ -1,11 +1,12 @@
 package komplexaufgabe.io;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Stream;
 
 
-public class CSVParser implements FileParser{
+public class CSVParser implements IFileParser {
 
 
     @Override

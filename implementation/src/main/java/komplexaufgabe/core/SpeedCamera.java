@@ -1,6 +1,5 @@
 package komplexaufgabe.core;
 
-import io.cucumber.java.ro.Si;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.Car;
@@ -16,17 +15,17 @@ import java.util.UUID;
 public class SpeedCamera {
     private final UUID serialNumber;
     private final Date manufacturingDate;
-    private Camera camera;
-    private IStoppingTools stoppingTool;
-    private CentralUnit centralUnit;
-    private LED led;
-    private LaserScanner laserScanner;
-    private FineEngine fineEngine;
+    private final Camera camera;
+    private final IStoppingTools stoppingTool;
+    private final CentralUnit centralUnit;
+    private final LED led;
+    private final LaserScanner laserScanner;
+    private final FineEngine fineEngine;
     private boolean isShutDown = true;
 
-    private Simulation simulation;
+    private final Simulation simulation;
 
-    private MobileNetworkModule mobileNetworkModule;
+    private final MobileNetworkModule mobileNetworkModule;
 
     private SpeedCamera(CameraBuilder cameraBuilder) {
         centralUnit = (CentralUnit) cameraBuilder.bSections.peek();
@@ -77,10 +76,10 @@ public class SpeedCamera {
 
 
             if (!Objects.equals(wantedDriverFace, "")) {
-            stoppingTool.action();
-            mobileNetworkModule.requestArrest(wantedDriverFace);
-            mobileNetworkModule.requestCarConfiscation(car);
-            simulation.removeCar(car);
+                stoppingTool.action();
+                mobileNetworkModule.requestArrest(wantedDriverFace);
+                mobileNetworkModule.requestCarConfiscation(car);
+                simulation.removeCar(car);
             }
 
         }
@@ -92,25 +91,10 @@ public class SpeedCamera {
         return isShutDown;
     }
 
-    public Camera getCamera() {
-        return camera;
-    }
-
-    public IStoppingTools getStoppingTool() {
-        return stoppingTool;
-    }
-
     public CentralUnit getCentralUnit() {
         return centralUnit;
     }
 
-    public LED getLed() {
-        return led;
-    }
-
-    public LaserScanner getLaserScanner() {
-        return laserScanner;
-    }
 
     public FineEngine getFineEngine() {
         return fineEngine;
@@ -135,11 +119,11 @@ public class SpeedCamera {
         return mobileNetworkModule;
     }
 
-    public void createReportLog(){
+    public void createReportLog() {
         centralUnit.createReportLog(mobileNetworkModule);
     }
 
-    public void export(){
+    public void export() {
         centralUnit.export();
     }
 }

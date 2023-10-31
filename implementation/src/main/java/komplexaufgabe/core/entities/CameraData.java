@@ -16,10 +16,6 @@ public class CameraData {
         return String.valueOf(cameraPhoto);
     }
 
-    public long getTimeStamp() {
-        return timeStamp;
-    }
-
     @Override
     public String toString() {
         return getCameraPhoto() + "\n" + new Date(timeStamp);

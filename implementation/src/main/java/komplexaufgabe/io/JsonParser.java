@@ -1,15 +1,13 @@
 package komplexaufgabe.io;
 
-import com.google.gson.JsonObject;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonParser implements FileParser{
+public class JsonParser implements IFileParser {
     @Override
     public List<String[]> parse(String filePath) {
         String content = "N/A";
@@ -20,11 +18,11 @@ public class JsonParser implements FileParser{
             System.out.println(e.getMessage());
         }
         List<String[]> retList = new ArrayList<>();
-        JSONArray arr =  new JSONArray(content);
+        JSONArray arr = new JSONArray(content);
         for (int i = 0; i < arr.length(); i++) {
             String speed = String.valueOf(arr.getJSONObject(i).getInt("speed"));
             String fine = String.valueOf(arr.getJSONObject(i).getDouble("fine"));
-            retList.add(new String[]{speed,fine});
+            retList.add(new String[]{speed, fine});
         }
         return retList;
     }

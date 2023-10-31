@@ -4,8 +4,12 @@ import komplexaufgabe.core.entities.Car;
 import komplexaufgabe.core.entities.Officer;
 import komplexaufgabe.core.entities.OldIDCard;
 import komplexaufgabe.core.entities.Record;
+import komplexaufgabe.core.interfaces.encryption.AES;
+import komplexaufgabe.core.interfaces.encryption.IEncryption;
 import komplexaufgabe.core.interfaces.encryptionhash.IEncryptionHash;
 import komplexaufgabe.core.interfaces.encryptionhash.SHA256;
+import komplexaufgabe.io.CSVParser;
+import komplexaufgabe.io.IFileParser;
 import komplexaufgabe.io.IFileWriter;
 import komplexaufgabe.io.TextFileWriter;
 
@@ -15,16 +19,16 @@ import java.util.stream.Collectors;
 
 public class CentralUnit {
     private final TreeMap<Integer, Officer> registeredOfficer;
-    private ArrayList<Record> fineRecords;
+    private final ArrayList<Record> fineRecords;
     private final IFileWriter fileWriter;
-
     private final String logPath = "./src/main/java/export/report.log";
     private final String exportPath = "./src/main/java/export/export.csv";
+    private final IEncryption aes = new AES();
+    private final String exportPathEncrypted = "./src/main/java/export/export.enc";
 
     public CentralUnit() {
         registeredOfficer = new TreeMap<>();
         fineRecords = new ArrayList<>();
-        IEncryptionHash encryptionHash = new SHA256();
         Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new OldIDCard()).build();
         off1.getIdCard().store(123);
         registeredOfficer.put(0, off1);
@@ -79,5 +83,21 @@ public class CentralUnit {
         }
 
         fileWriter.writeFile(exportPath, content.toString());
+    }
+
+    public void encryptExport() {
+        IFileParser csvParser = new CSVParser();
+        List<String[]> in = csvParser.parse(exportPath);
+
+
+        StringBuilder content = new StringBuilder();
+        for (String[] arr : in) {
+            for (String s : arr) {
+                content.append(s).append(";");
+            }
+            content.append("\n");
+        }
+        fileWriter.writeFile(exportPathEncrypted, aes.encrypt(content.toString()));
+        System.out.println("Encrypted export file.");
     }
 }
