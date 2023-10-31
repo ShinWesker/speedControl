@@ -40,4 +40,15 @@ public class MobileNetworkModule {
         vra.registerCar(licensePlate.getLicensePlateID(), owner);
     }
 
+    public void requestArrest(String face){
+        police.arrestOwner(encryption.encrpyt(face));
+    }
+
+    public void requestCarConfiscation(Car car){
+        police.confiscateCar(car);
+    }
+
+    public Car vraGetCar(String licensePlate){
+       return vra.getCar(encryption.encrpyt(licensePlate));
+    }
 }

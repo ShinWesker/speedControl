@@ -1,5 +1,6 @@
 package komplexaufgabe.core.components;
 
+import komplexaufgabe.core.entities.Car;
 import komplexaufgabe.core.entities.Owner;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
@@ -29,5 +30,9 @@ public class VehicleRegistrationAuthority {
         ownerData[2] =  encryption.encrpyt(String.valueOf(carOwners.get(licensePlate).getSmartPhone().getPhoneNumber()));
 
         return ownerData;
+    }
+
+    public Car getCar(String licensePlate){
+        return carOwners.get(encryption.decrpyt(licensePlate)).getCar();
     }
 }

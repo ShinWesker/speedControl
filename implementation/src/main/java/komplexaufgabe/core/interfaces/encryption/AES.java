@@ -1,13 +1,15 @@
 package komplexaufgabe.core.interfaces.encryption;
 
 public class AES implements IEncryption {
+
+    //TODO Implement
     @Override
     public String encrpyt(String plainMessage) {
-        return null;
+        return plainMessage;
     }
 
     @Override
     public String decrpyt(String cryptedMessage) {
-        return null;
+        return cryptedMessage;
     }
 }

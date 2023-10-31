@@ -53,7 +53,7 @@ public class Simulation {
             }
             carList.add(car);
             speedCamera.getMobileNetworkModule().registerCar(car.getLicensePlate(), owner);
-        //TODO ADD Owner With Phone How to do ENUM
+            MobileCentralUnit.addOwner(smartPhone.getPhoneNumber(), smartPhone);
         }
         return carList;
     }
@@ -85,6 +85,15 @@ public class Simulation {
         while (!simulationCars.isEmpty()){
            speedCamera.controlCar(simulationCars.poll());
         }
+
+
+    }
+
+    public void removeCar(Car car){
+        // remove car from parkingspace
+        parkingSpace.removeCar(car);
+        // it is possible that car is multible times in the simulation Queue
+        simulationCars.removeIf(element -> element == car);
 
     }
 

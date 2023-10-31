@@ -31,12 +31,38 @@ public class ParkingSpace {
         MersenneTwister mersenneTwister = new MersenneTwister();
         Car[] result = new Car[100];
         int count = 0;
+
+        // TODO talk with chris
+       /*
         for (int i = 0; i < parkingSlots.length && count < 100; i++) {
             for (int j = 0; j < parkingSlots[i].length && count < 100; j++) {
-                result[count] = parkingSlots[mersenneTwister.nextInt(0, parkingSlots.length-1)][mersenneTwister.nextInt(0, parkingSlots[i].length-1)];
+                Car car = parkingSlots[mersenneTwister.nextInt(0, parkingSlots.length - 1)][mersenneTwister.nextInt(0, parkingSlots[i].length - 1)];
+                if (car != null) {
+                    result[count] = car;
+                    count++;
+                }
+            }
+        }
+*/
+        while (count<100){
+            Car car = parkingSlots[mersenneTwister.nextInt(0, parkingSlots.length - 1)][mersenneTwister.nextInt(0, parkingSlots[0].length - 1)];
+            if (car != null) {
+                result[count] = car;
                 count++;
             }
         }
         return result;
     }
+
+    public void removeCar(Car car) {
+        for (int i = 0; i < parkingSlots.length; i++) {
+            for (int j = 0; j < parkingSlots[i].length; j++) {
+                if (car == parkingSlots[i][j]) {
+                    parkingSlots[i][j] = null;
+                }
+            }
+        }
+    }
+
+
 }

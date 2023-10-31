@@ -9,6 +9,7 @@ import komplexaufgabe.core.interfaces.stoppingtools.IStoppingTools;
 import komplexaufgabe.simulate.Simulation;
 
 import java.util.Date;
+import java.util.Objects;
 import java.util.Stack;
 import java.util.UUID;
 
@@ -40,11 +41,11 @@ public class SpeedCamera {
         serialNumber = UUID.randomUUID();
         manufacturingDate = new Date();
         camera = new Camera();
-        fineEngine = new FineEngine();
+        fineEngine = new FineEngine(this);
         stoppingTool = cameraBuilder.bStoppingTool;
 
-        mobileNetworkModule = new MobileNetworkModule();
 
+        mobileNetworkModule = new MobileNetworkModule();
         simulation = new Simulation(this);
 
 
@@ -72,14 +73,15 @@ public class SpeedCamera {
             led.flash();
             CameraData cameraData = camera.takePhoto(car);
 
-            boolean stopDriver = fineEngine.processCase(cameraData, carSpeed);
+            String wantedDriverFace = fineEngine.processCase(cameraData, carSpeed);
 
 
-            if (stopDriver) {
-            // TODO kill person
-
+            if (!Objects.equals(wantedDriverFace, "")) {
+            stoppingTool.action();
+            mobileNetworkModule.requestArrest(wantedDriverFace);
+            mobileNetworkModule.requestCarConfiscation(car);
+            simulation.removeCar(car);
             }
-
 
         }
 
@@ -131,6 +133,14 @@ public class SpeedCamera {
 
     public MobileNetworkModule getMobileNetworkModule() {
         return mobileNetworkModule;
+    }
+
+    public void createReportLog(){
+        centralUnit.createReportLog(mobileNetworkModule);
+    }
+
+    public void export(){
+        centralUnit.export();
     }
 }
 

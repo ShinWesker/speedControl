@@ -28,6 +28,7 @@ public class CLI {
     private int state = 0;
     private Scanner scanner;
     private SpeedCamera speedCamera;
+    private boolean loadedPolicy = false;
 
     public void start() {
         Stack<Object> componentsStack = new Stack<>();
@@ -75,16 +76,29 @@ public class CLI {
                 }
             }
             case 3 -> {
-                executeSimulation();
+                if (speedCamera.isShutDown()) {
+                    System.out.println("Turn on speedcamera first!");
+                } else {
+                    if (loadedPolicy) {
+                        executeSimulation();
+                    } else {
+                        System.out.println("Please load policy first!");
+                    }
+                }
             }
             case 4 -> {
-                System.out.println("case4");
+                createReportLog();
             }
             case 5 -> {
-                System.out.println("case5");
+                export();
             }
             case 6 -> {
-                System.out.println("case6");
+                if (speedCamera.isShutDown()) {
+                    System.out.println("Speed camera is already turned off.");
+                } else {
+                    speedCamera.deactivate();
+                    System.out.println("Deactivated speed camera.");
+                }
             }
             case 7 -> {
                 scanner.close();
@@ -112,29 +126,49 @@ public class CLI {
     }
 
     private void startup() {
-        speedCamera.activate();
-        System.out.println("Camera started!");
+        if (!speedCamera.isShutDown()) {
+            System.out.println("Speed camera already running.");
+        } else {
+            speedCamera.activate();
+            System.out.println("Camera started!");
+        }
     }
 
     private void policyImport() {
         System.out.println("Enter officer Id:");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter officer password:");
-        int password = Integer.parseInt(scanner.nextLine());
+        int id;
+        try {
+            id = Integer.parseInt(scanner.nextLine());
 
-        if ( speedCamera.getCentralUnit().validateOfficer(id, password)){
+        } catch (Exception e) {
+            System.out.println("Please type in a number!");
+            System.out.println("Closing login...");
+            return;
+        }
+        System.out.println("Enter officer password:");
+        int password;
+        try {
+            password = Integer.parseInt(scanner.nextLine());
+
+        } catch (Exception e) {
+            System.out.println("Please type in a number!");
+            System.out.println("Closing login...");
+            return;
+        }
+
+        if (speedCamera.getCentralUnit().validateOfficer(id, password)) {
 
             System.out.println("Do you want to import \"resources/fine_catalogue.json\" ? (y/n)");
             String in = scanner.nextLine();
-            if (in.equals("y")){
+            if (in.equals("y")) {
                 speedCamera.getFineEngine().setPolicy(new GermanPolicy("./src/main/java/resources/fine_catalogue.json"));
-            }
-            else {
+                loadedPolicy = true;
+            } else {
                 switchState("");
                 showMenu();
             }
 
-        }else {
+        } else {
             System.out.println("credentials incorrect!");
             switchState("");
             showMenu();
@@ -142,9 +176,19 @@ public class CLI {
 
     }
 
-    private void executeSimulation(){
+    private void executeSimulation() {
         speedCamera.getSimulation().start();
     }
 
+
+    private void createReportLog() {
+        speedCamera.createReportLog();
+        System.out.println("Created report log!");
+    }
+
+    private void export() {
+        speedCamera.export();
+        System.out.println("Exported data to csv!");
+    }
 
 }

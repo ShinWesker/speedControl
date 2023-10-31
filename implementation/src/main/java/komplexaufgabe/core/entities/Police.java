@@ -21,13 +21,18 @@ public class Police {
         this.encryption = new AES();
     }
 
-    public void arrestOwner(Owner owner) {
-        if (wantedOwners.contains(owner)) {
-            wantedOwners.remove(owner);
-            arrestedOwners.add(owner);
-        } else {
-            System.out.println("This owner is not on the wanted list.");
+    public void arrestOwner(String face) {
+
+
+        for (Owner wantedOwner : wantedOwners) {
+            if (wantedOwner.getFace().equals(encryption.decrpyt(face))) {
+                wantedOwners.remove(wantedOwner);
+                arrestedOwners.add(wantedOwner);
+            }
         }
+
+
+
     }
 
     public void confiscateCar(Car car) {
