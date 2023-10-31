@@ -1,45 +1,62 @@
 package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.CameraData;
+import komplexaufgabe.core.entities.LicensePlate;
+import komplexaufgabe.core.entities.Record;
 import komplexaufgabe.core.interfaces.policy.IPolicy;
 import komplexaufgabe.core.SpeedCamera;
 
+import java.util.Date;
+
 public class FineEngine {
     private IPolicy policy;
-    private SpeedCamera speedCamera;
+    private final SpeedCamera speedCamera;
     private final AIEngine aiEngine;
 
-    public FineEngine(){
+    private int recordId = 1;
 
+    public FineEngine(SpeedCamera speedCamera) {
+        this.speedCamera = speedCamera;
         aiEngine = new AIEngine();
     }
+
     public void setPolicy(IPolicy policy) {
         this.policy = policy;
+        System.out.println("Policy was set!");
     }
 
-    public void setSpeedCamera(SpeedCamera speedCamera) {
-        this.speedCamera = speedCamera;
+    public boolean isSpeeding(int speed) {
+        return speed > 53;
     }
 
-    public boolean isSpeeding(Double speed) {
-        //TODO ermittlung der Strafe und die darauf folgenden Aktionen
-        // return wert rpbly nutzen um Spikes auszulösen und blitzer auszulösen und so
-        return true;
-    }
-    public void processPhoto(CameraData cameraData) {
-        //TODO aufruf der AIEngine
+    private String[] processPhoto(CameraData cameraData) {
+        return aiEngine.extractData(cameraData);
     }
 
-    private void contactPolice(String face) {
-        //TODO aufruf über die speedCamera über das mobilenetwork module
+    private boolean contactPolice(String face) {
+        return speedCamera.getMobileNetworkModule().sendRequestToPolice(face);
     }
 
-    private void identifyDriver(String licensePlate) {
-        // TODO ermittelt das Auto durch die licensePlate über MobileNetowrkModule > VehicleRegistrationAuthoritys
+    private String[] identifyDriver(String licensePlate) {
+        return speedCamera.getMobileNetworkModule().sendRequestToVRA(licensePlate);
     }
 
-    private void fineWallet(Integer phoneNumber, Integer fine) {
-        //TODO bestraft das Wallet des fahrers im Falle einer Strafte über das MobileNetowrkModule
+    private void fineWallet(long phoneNumber, double fine) {
+        MobileCentralUnit.getSmartPhoneWallet(phoneNumber).decreaseDeposit(fine);
+    }
+
+    public String processCase(CameraData cameraData, int carSpeed) {
+        String[] carData = processPhoto(cameraData);
+        boolean isWanted = contactPolice(carData[0]);
+        String[] ownerData = identifyDriver(carData[1]);
+
+        double penalty = policy.getFine(carSpeed);
+        Record record = new Record(recordId++, System.nanoTime(), new Date(System.currentTimeMillis()), cameraData.getCameraPhoto(), new LicensePlate(carData[1]), ownerData[0], new Date(Long.parseLong(ownerData[1])), Long.parseLong(ownerData[2]), 50, carSpeed, carSpeed - 3, penalty);
+        speedCamera.getCentralUnit().addRecord(record);
+
+        fineWallet(Long.parseLong(ownerData[2]), penalty);
+        if (isWanted) return carData[0];
+        return "";
     }
 }
 

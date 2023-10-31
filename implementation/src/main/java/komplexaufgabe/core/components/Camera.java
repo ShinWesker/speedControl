@@ -6,7 +6,18 @@ import komplexaufgabe.core.entities.Car;
 public class Camera {
 
     public CameraData takePhoto(Car car){
-        // TODO object von CameraData erstellen mit Foto und Timestamp in Nano Sekunden
-        return null;
+
+        String photo =
+                "+--------------+\n" +
+                "|        "+car.getDriver().getFace().substring(0,5)+" |\n" +
+                "|        "+car.getDriver().getFace().substring(5,10)+" |\n" +
+                "|        "+car.getDriver().getFace().substring(10,15)+" |\n" +
+                "|              |\n" +
+                "+--------------+\n" +
+                "+---["+ car.getLicensePlate().getLicensePlateID() +"]---+\n" +
+                "+--------------+";
+
+
+        return new CameraData(photo, System.currentTimeMillis());
     }
 }

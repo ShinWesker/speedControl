@@ -7,6 +7,7 @@ public class LicensePlate {
     public LicensePlate(String licensePlateID) {
         this.licensePlateID = licensePlateID;
     }
+
     public String getLicensePlateID() {
         return licensePlateID;
     }
