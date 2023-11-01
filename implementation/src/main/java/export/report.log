@@ -1,0 +1,193 @@
+Counted fined cars by manufacturer:
+--------------------------------
+{LEXUS=1, AUDI=1, JAGUAR=1, HONDA=1}
+
+Record overview (timestamp asc):
+--------------------------------
+[
+ Record{
+sequenzID=1,
+timestamp=537725620899400,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        AFFFF |
+|        EFFFA |
+|        EAEEE |
+|              |
++--------------+
++---[4YUPR7]---+
++--------------+,
+licensePlate=4YUPR7,
+name='Matthew Burgess',
+birthDate=Thu Mar 01 00:00:00 CET 1962,
+phoneNumber=1758937959225,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenzID=2,
+timestamp=537725624055100,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        FAACA |
+|        CAEEF |
+|        ECFCA |
+|              |
++--------------+
++---[142K86]---+
++--------------+,
+licensePlate=142K86,
+name='Alma Vasquez',
+birthDate=Tue Mar 12 00:00:00 CET 1968,
+phoneNumber=1731545582544,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenzID=3,
+timestamp=537725626768399,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        ACCCE |
+|        CACFA |
+|        FAACF |
+|              |
++--------------+
++---[QICIQ7]---+
++--------------+,
+licensePlate=QICIQ7,
+name='Justin Lucas',
+birthDate=Sun Dec 05 00:00:00 CET 1965,
+phoneNumber=1702947721590,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenzID=4,
+timestamp=537725628848900,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        FAACC |
+|        EFCAF |
+|        FFCCA |
+|              |
++--------------+
++---[83M2ML]---+
++--------------+,
+licensePlate=83M2ML,
+name='Janis Rice',
+birthDate=Sat Dec 31 00:00:00 CET 1966,
+phoneNumber=1512229588894,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}]
+
+Record overview (measured speed desc):
+--------------------------------
+[
+ Record{
+sequenzID=4,
+timestamp=537725628848900,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        FAACC |
+|        EFCAF |
+|        FFCCA |
+|              |
++--------------+
++---[83M2ML]---+
++--------------+,
+licensePlate=83M2ML,
+name='Janis Rice',
+birthDate=Sat Dec 31 00:00:00 CET 1966,
+phoneNumber=1512229588894,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenzID=1,
+timestamp=537725620899400,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        AFFFF |
+|        EFFFA |
+|        EAEEE |
+|              |
++--------------+
++---[4YUPR7]---+
++--------------+,
+licensePlate=4YUPR7,
+name='Matthew Burgess',
+birthDate=Thu Mar 01 00:00:00 CET 1962,
+phoneNumber=1758937959225,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenzID=2,
+timestamp=537725624055100,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        FAACA |
+|        CAEEF |
+|        ECFCA |
+|              |
++--------------+
++---[142K86]---+
++--------------+,
+licensePlate=142K86,
+name='Alma Vasquez',
+birthDate=Tue Mar 12 00:00:00 CET 1968,
+phoneNumber=1731545582544,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenzID=3,
+timestamp=537725626768399,
+time=31.10.2023 05:11:18,
+picture=
++--------------+
+|        ACCCE |
+|        CACFA |
+|        FAACF |
+|              |
++--------------+
++---[QICIQ7]---+
++--------------+,
+licensePlate=QICIQ7,
+name='Justin Lucas',
+birthDate=Sun Dec 05 00:00:00 CET 1965,
+phoneNumber=1702947721590,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}]
+
+Record overview (to fast speed average, min, max):
+--------------------------------
+average: 17,00
+min: 16
+max: 20

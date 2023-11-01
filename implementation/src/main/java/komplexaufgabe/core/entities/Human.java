@@ -8,7 +8,7 @@ public abstract class Human {
     protected final Date birthDate;
     protected final String face;
 
-    protected Human(String pName, Date pBirthDate, String pFace){
+    protected Human(String pName, Date pBirthDate, String pFace) {
         name = pName;
         birthDate = pBirthDate;
         face = pFace;

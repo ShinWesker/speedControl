@@ -4,10 +4,10 @@ public class Car {
     private final String manufacturer;
     private final String registrationID;
     private final LicensePlate licensePlate;
-    private final double speed;
+    private final int speed;
     private Human driver;
 
-    private Car(CarBuilder carBuilder){
+    private Car(CarBuilder carBuilder) {
         manufacturer = carBuilder.bManufacturer;
         registrationID = carBuilder.bRegistrationID;
         speed = carBuilder.bSpeed;
@@ -18,11 +18,7 @@ public class Car {
         return manufacturer;
     }
 
-    public String getRegistrationID() {
-        return registrationID;
-    }
-
-    public double getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
@@ -33,6 +29,7 @@ public class Car {
     public Human getDriver() {
         return driver;
     }
+
     public void setDriver(Human driver) {
         this.driver = driver;
     }
@@ -41,10 +38,10 @@ public class Car {
     public static class CarBuilder {
         private final String bManufacturer;
         private final String bRegistrationID;
-        private final double bSpeed;
+        private final int bSpeed;
         private final LicensePlate bLicensePlate;
 
-        public CarBuilder(String pManufacturer, String pRegistrationID, double pSpeed, LicensePlate pLicensePlate) {
+        public CarBuilder(String pManufacturer, String pRegistrationID, int pSpeed, LicensePlate pLicensePlate) {
             bManufacturer = pManufacturer;
             bRegistrationID = pRegistrationID;
             bSpeed = pSpeed;
