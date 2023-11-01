@@ -1,19 +1,11 @@
 package komplexaufgabe;
 
 import komplexaufgabe.core.SpeedCamera;
-import komplexaufgabe.core.components.CentralUnit;
-import komplexaufgabe.core.components.LED;
-import komplexaufgabe.core.components.LaserScanner;
-import komplexaufgabe.core.components.MobileNetworkModule;
-import komplexaufgabe.core.entities.Police;
 import komplexaufgabe.core.interfaces.policy.GermanPolicy;
-import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
-import komplexaufgabe.simulate.ParkingSpace;
 import komplexaufgabe.simulate.Simulation;
 
 
 import java.util.Scanner;
-import java.util.Stack;
 
 public class CLI {
 
@@ -151,7 +143,7 @@ public class CLI {
             System.out.println("Do you want to import \"resources/fine_catalogue.json\" ? (y/n)");
             String in = scanner.nextLine();
             if (in.equals("y")) {
-                speedCamera.getFineEngine().setPolicy(new GermanPolicy("./implementation/src/main/java/resources/fine_catalogue.json"));
+                speedCamera.getFineEngine().setPolicy(new GermanPolicy("/fine_catalogue.json"));
                 loadedPolicy = true;
             } else {
                 switchState("");
