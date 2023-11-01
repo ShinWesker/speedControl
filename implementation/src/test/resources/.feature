@@ -1,42 +1,29 @@
-Feature: Calculator
+Feature: ControlCar
 
-  Scenario Outline: Add
-    Given user types "<left>+<right>"
-    When the calculator evaluates the expression
-    Then the result should be "<result>"
+  Scenario: Capture Speed
+    Given Car drives by the speedcamera
+    When car drives next to speedcamera
+    Then the speedcamera captures the speed of the car
 
-    Examples:
-      | left | right | result |
-      | 1    | 2     | 3      |
-      | 10   | 20    | 30     |
-      | 100  | 200   | 300    |
+  Scenario: activate light
+    Given the speed of car
+    When speed of car is above 50
+    Then Activate Light
 
-  Scenario: Subtraction
-    Given user types "1-6"
-    When the calculator evaluates the expression
-    Then the result should be "-5"
+  Scenario: capture picture
+    Given the speed of car
+    When speed of car is above 50
+    Then Capture Picture
 
-  Scenario: Multiplication
-    Given user types "4*8"
-    When the calculator evaluates the expression
-    Then the result should be "32"
+    Scenario: capture timestamp
+      Given the speed of car
+      When speed of car is above 50
+      Then Capture timestamp
 
-  Scenario: Division
-    Given user types "10/5"
-    When the calculator evaluates the expression
-    Then the result should be "2"
+  Scenario: send Data
+    Given the speed of car, the picture and the timestamp
+    When speed of car is above 50
+    Then send Data to FineEngine
 
-  Scenario: Division by zero
-    Given user types "20/0"
-    When the calculator evaluates the expression
-    Then the result should be "error: division by zero"
 
-  Scenario Outline: Unknown expression
-    Given user types "<expression>"
-    When the calculator evaluates the expression
-    Then the result should be ""
 
-    Examples:
-      | expression |
-      | 2^3        |
-      | ?          |
