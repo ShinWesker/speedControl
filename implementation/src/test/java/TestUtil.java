@@ -2,7 +2,6 @@ import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.CentralUnit;
 import komplexaufgabe.core.components.LED;
 import komplexaufgabe.core.components.LaserScanner;
-import komplexaufgabe.core.components.MobileCentralUnit;
 import komplexaufgabe.core.entities.Car;
 import komplexaufgabe.core.entities.LicensePlate;
 import komplexaufgabe.core.entities.Owner;
@@ -12,7 +11,6 @@ import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
 import komplexaufgabe.io.CSVParser;
 import komplexaufgabe.io.IFileParser;
 import komplexaufgabe.simulate.ParkingSpace;
-import komplexaufgabe.simulate.Simulation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -39,9 +37,9 @@ public class TestUtil {
         return new SpeedCamera.CameraBuilder(componentsStack, new TrafficSpikes()).build();
     }
 
-    public static void runSimulation(SpeedCamera speedCamera) {
+    public static void runSetPolicySimulation(SpeedCamera speedCamera) {
         speedCamera.activate();
-        speedCamera.getFineEngine().setPolicy(new GermanPolicy("./src/main/java/resources/fine_catalogue.json"));
+        speedCamera.getFineEngine().setPolicy(new GermanPolicy("./implementation/src/main/java/resources/fine_catalogue.json"));
         speedCamera.getSimulation().start();
         speedCamera.deactivate();
     }
@@ -50,7 +48,7 @@ public class TestUtil {
         SpeedCamera speedCamera = TestUtil.initSpeedCamera();
 
         IFileParser csvParser = new CSVParser();
-        List<String[]> csvOut = csvParser.parse("./src/main/java/resources/data.csv");
+        List<String[]> csvOut = csvParser.parse("./implementation/src/main/java/resources/data.csv");
         List<Car> carList = new ArrayList<>();
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);

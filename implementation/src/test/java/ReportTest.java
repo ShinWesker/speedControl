@@ -16,7 +16,7 @@ public class ReportTest {
     public void create_report() throws IOException {
         SpeedCamera speedCamera = TestUtil.initSpeedCamera();
 
-        TestUtil.runSimulation(speedCamera);
+        TestUtil.runSetPolicySimulation(speedCamera);
 
         speedCamera.createReportLog();
 

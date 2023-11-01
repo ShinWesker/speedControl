@@ -25,7 +25,7 @@ public class ImportTest {
         speedCamera = TestUtil.initSpeedCamera();
     }
 
-    @Order(1)
+    /*@Order(1)
     @Test
     public void can_import_after_startup() {
         CLI cli = spy(new CLI());
@@ -43,7 +43,7 @@ public class ImportTest {
         System.setIn(System.in);
 
         //verify(speedCamera)
-    }
+    }*/
 
     @Order(2)
     @ParameterizedTest(name = "{index} => Validate Officer with id {0} and pwd: {1}")

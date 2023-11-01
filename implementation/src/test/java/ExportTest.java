@@ -14,7 +14,7 @@ public class ExportTest {
     public void create_export() {
         SpeedCamera speedCamera = TestUtil.initSpeedCamera();
 
-        TestUtil.runSimulation(speedCamera);
+        TestUtil.runSetPolicySimulation(speedCamera);
 
         speedCamera.export();
 

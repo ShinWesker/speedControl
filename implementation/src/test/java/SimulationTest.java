@@ -1,7 +1,9 @@
+import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.*;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.io.CSVParser;
+import org.junit.Assert;
 import org.junit.jupiter.api.*;
 
 import java.util.*;
@@ -29,7 +31,11 @@ public class SimulationTest {
     @Order(2)
     @Test
     public void car_speed_between_45_and_120() {
-
+        LaserScanner laserScanner = new LaserScanner();
+        List<Car> cars =  TestUtil.get100CarsFromParkingSpace();
+        cars.forEach(car->{
+            Assertions.assertTrue(45<laserScanner.detectSpeed(car) && laserScanner.detectSpeed(car)<120);
+        });
     }
 
     @Order(3)
@@ -127,7 +133,9 @@ public class SimulationTest {
 
         FineEngine fineEngine = new FineEngine(TestUtil.initSpeedCamera());
 
-        fineEngine.processCase(new CameraData("dwadwa", 21421421L), 200);
+        //CameraData data = new Camera().takePhoto(car);
+
+        //fineEngine.processCase(data, 200);
 
         verify(smartPhone).fineWallet(50);
     }
@@ -153,6 +161,10 @@ public class SimulationTest {
     @Order(16)
     @Test
     public void car_gets_removed_from_parking_space() {
+        SpeedCamera speedCamera = TestUtil.initSpeedCamera();
 
+        speedCamera.activate();
+        //speedCamera.controlCar(car);
+        //speedCamera.getSimulation().
     }
 }

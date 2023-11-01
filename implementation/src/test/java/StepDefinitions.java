@@ -4,30 +4,41 @@ import io.cucumber.java.en.When;
 import komplexaufgabe.core.components.LaserScanner;
 import komplexaufgabe.core.entities.Car;
 import komplexaufgabe.core.entities.LicensePlate;
+import org.junit.jupiter.api.Assertions;
 
 import static org.junit.Assert.assertTrue;
 
 public class StepDefinitions {
 
+Car speedCar;
+Car slowCar;
+
+int speedSpeedCar;
+int speedSlowCar;
 
 
 
-    @Given("Car drives by the speedcamera")
-    public void car_drives_by_the_speedcamera() {
 
-        Car speedCar = new Car.CarBuilder("manufacteur","registrationId",40,new LicensePlate("licenseID")).build();
+    @Given("\\{Car} drives by the speedcamera")
+    public void drives_by_the_speedcamera() {
+        speedCar = new Car.CarBuilder("manufacteur","registrationId",80,new LicensePlate("licenseID")).build();
+        slowCar = new Car.CarBuilder("manufacteur","registrationId",48,new LicensePlate("licenseID")).build();
 
     }
-    @When("car drives next to speedcamera")
-    public void car_drives_next_to_speedcamera(Car car) {
+    @When("\\{car} drives with \\{speed} next to speedcamera")
+    public void drives_with_next_to_speedcamera() {
         LaserScanner laserScanner = new LaserScanner();
-        laserScanner.detectSpeed(car);
+        speedSpeedCar = laserScanner.detectSpeed(speedCar);
+                speedSlowCar = laserScanner.detectSpeed(slowCar);
+
     }
-    @Then("the speedcamera captures the speed of the car")
-    public void the_speedcamera_captures_the_speed_of_the_car() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("the speedcamera captures the \\{speed} of the car")
+    public void the_speedcamera_captures_the_of_the_car() {
+        Assertions.assertTrue(speedSpeedCar>53);
+        Assertions.assertTrue(speedSlowCar<53);
+
     }
+
 
 
 

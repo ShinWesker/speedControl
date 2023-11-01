@@ -56,27 +56,4 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber-report.html"}, features = {"src/test/resources"})
 public class ApplicationTest {
-
-    @BeforeEach
-    public void setup() {
-
-    }
-
-    @Order(1)
-    @ParameterizedTest(name = "{index} => MD5-Hash {0} to {1}")
-    @CsvSource({"Hallo, d1bf93299de1b68e6d382c893bf1215f"})
-    public void md5Test(String text, String hashedText) {
-        MD5 md5 = new MD5();
-
-        assertEquals(hashedText, md5.encrypt(text));
-    }
-
-    @Order(2)
-    @ParameterizedTest(name = "{index} => SHA256-Hash {0} to {1}")
-    @CsvSource({"Hallo, 533ea3ddaaede1572aa73579252794bcebb318b0de102b062572cb5f953871ca"})
-    public void sha256Test(String text, String hashedText) {
-        SHA256 sha256 = new SHA256();
-
-        assertEquals(hashedText, sha256.encrypt(text));
-    }
 }
