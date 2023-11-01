@@ -21,10 +21,10 @@ public class CentralUnit {
     private final TreeMap<Integer, Officer> registeredOfficer;
     private final ArrayList<Record> fineRecords;
     private final IFileWriter fileWriter;
-    private final String logPath = "./src/main/java/export/report.log";
-    private final String exportPath = "./src/main/java/export/export.csv";
+    private final String logPath = "./implementation/src/main/java/export/report.log";
+    private final String exportPath = "./implementation/src/main/java/export/export.csv";
     private final IEncryption aes = new AES();
-    private final String exportPathEncrypted = "./src/main/java/export/export.enc";
+    private final String exportPathEncrypted = "./implementation/src/main/java/export/export.enc";
 
     public CentralUnit() {
         registeredOfficer = new TreeMap<>();
