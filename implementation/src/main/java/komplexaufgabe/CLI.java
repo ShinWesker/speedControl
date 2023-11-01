@@ -155,7 +155,7 @@ public class CLI {
             System.out.println("Do you want to import \"resources/fine_catalogue.json\" ? (y/n)");
             String in = scanner.nextLine();
             if (in.equals("y")) {
-                speedCamera.getFineEngine().setPolicy(new GermanPolicy("./src/main/java/resources/fine_catalogue.json"));
+                speedCamera.getFineEngine().setPolicy(new GermanPolicy("./implementation/src/main/java/resources/fine_catalogue.json"));
                 loadedPolicy = true;
             } else {
                 switchState("");

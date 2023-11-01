@@ -30,7 +30,7 @@ public class Simulation {
 
     private List<Car> getCarsFromFile() {
         IFileParser csvParser = new CSVParser();
-        List<String[]> csvOut = csvParser.parse("./src/main/java/resources/data.csv");
+        List<String[]> csvOut = csvParser.parse("./implementation/src/main/java/resources/data.csv");
         List<Car> carList = new ArrayList<>();
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
