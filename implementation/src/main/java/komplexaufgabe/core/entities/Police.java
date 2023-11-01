@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Police {
-    private final List<Owner> wantedOwners;
+    private List<Owner> wantedOwners;
     private final List<Owner> arrestedOwners;
     private final List<Car> confiscatedCars;
 
@@ -42,11 +42,14 @@ public class Police {
     }
 
     public boolean checkWanted(String data) {
+
         for (Owner wantedOwner : wantedOwners) {
             if (wantedOwner.getFace().equals(encryption.decrypt(data))) {
                 return true;
             }
         }
+
+
         return false;
     }
 }

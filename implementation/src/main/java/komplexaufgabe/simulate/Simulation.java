@@ -25,6 +25,7 @@ public class Simulation {
         this.speedCamera = speedCamera;
 
         this.parkingSpace = new ParkingSpace(getCarsFromFile());
+
     }
 
 
