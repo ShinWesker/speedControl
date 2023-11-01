@@ -12,15 +12,11 @@ public class MobileNetworkModule {
     private final VehicleRegistrationAuthority vra;
 
 
-    public MobileNetworkModule() {
-        police = new Police();
+    public MobileNetworkModule(Police police) {
+        this.police = police;
         encryption = new AES();
         vra = new VehicleRegistrationAuthority();
 
-    }
-
-    public void addWanted(Owner owner) {
-        police.addWanted(owner);
     }
 
     public boolean sendRequestToPolice(String data) {
