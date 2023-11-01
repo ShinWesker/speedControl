@@ -14,7 +14,7 @@ public class SmartPhone {
         return phoneNumber;
     }
 
-    public Wallet getWallet() {
-        return wallet;
+    public void fineWallet(double fine){
+        wallet.decreaseDeposit(fine);
     }
 }

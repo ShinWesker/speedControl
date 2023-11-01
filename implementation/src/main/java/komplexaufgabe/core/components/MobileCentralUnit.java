@@ -13,7 +13,7 @@ public enum MobileCentralUnit {
         smartPhoneMap.put(phoneNumber, smartPhone);
     }
 
-    public static Wallet getSmartPhoneWallet(Long phoneNumber) {
-        return smartPhoneMap.get(phoneNumber).getWallet();
+    public static void fineSmartphoneWallet(Long phoneNumber, double fine) {
+         smartPhoneMap.get(phoneNumber).fineWallet(fine);
     }
 }

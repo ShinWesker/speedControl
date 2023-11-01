@@ -42,7 +42,7 @@ public class FineEngine {
     }
 
     private void fineWallet(long phoneNumber, double fine) {
-        MobileCentralUnit.getSmartPhoneWallet(phoneNumber).decreaseDeposit(fine);
+        MobileCentralUnit.fineSmartphoneWallet(phoneNumber, fine);
     }
 
     public String processCase(CameraData cameraData, int carSpeed) {
