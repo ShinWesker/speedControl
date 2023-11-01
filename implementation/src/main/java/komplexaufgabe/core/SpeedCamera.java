@@ -23,8 +23,6 @@ public class SpeedCamera {
     private final FineEngine fineEngine;
     private boolean isShutDown = true;
 
-    private final Simulation simulation;
-
     private final MobileNetworkModule mobileNetworkModule;
 
     private SpeedCamera(CameraBuilder cameraBuilder) {
@@ -44,18 +42,9 @@ public class SpeedCamera {
         stoppingTool = cameraBuilder.bStoppingTool;
 
 
-        mobileNetworkModule = new MobileNetworkModule();
-        simulation = new Simulation(this);
+        mobileNetworkModule = cameraBuilder.bMobileNetworkmodule;
 
 
-    }
-
-    public void addWanted(Owner owner) {
-        mobileNetworkModule.addWanted(owner);
-    }
-
-    public Simulation getSimulation() {
-        return simulation;
     }
 
     public void activate() {
@@ -79,7 +68,6 @@ public class SpeedCamera {
                 stoppingTool.action();
                 mobileNetworkModule.requestArrest(wantedDriverFace);
                 mobileNetworkModule.requestCarConfiscation(car);
-                simulation.removeCar(car);
             }
 
         }
@@ -103,11 +91,12 @@ public class SpeedCamera {
     public static class CameraBuilder {
         private final Stack<Object> bSections;
         private final IStoppingTools bStoppingTool;
+        private final MobileNetworkModule bMobileNetworkmodule;
 
-        public CameraBuilder(Stack<Object> pSections, IStoppingTools pStoppingTools) {
+        public CameraBuilder(Stack<Object> pSections, IStoppingTools pStoppingTools, MobileNetworkModule pMobileNetworkModule) {
             bSections = pSections;
             bStoppingTool = pStoppingTools;
-
+            bMobileNetworkmodule = pMobileNetworkModule;
         }
 
         public SpeedCamera build() {
@@ -117,14 +106,6 @@ public class SpeedCamera {
 
     public MobileNetworkModule getMobileNetworkModule() {
         return mobileNetworkModule;
-    }
-
-    public void createReportLog() {
-        centralUnit.createReportLog(mobileNetworkModule);
-    }
-
-    public void export() {
-        centralUnit.export();
     }
 }
 

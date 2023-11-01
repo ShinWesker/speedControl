@@ -18,46 +18,36 @@ import java.util.*;
 public class Simulation {
 
     private final ParkingSpace parkingSpace;
-    private final SpeedCamera speedCamera;
+    private SpeedCamera speedCamera;
     private final Queue<Car> simulationCars = new LinkedList<>();
 
-    public Simulation(SpeedCamera speedCamera) {
-        this.speedCamera = speedCamera;
-
-        this.parkingSpace = new ParkingSpace(getCarsFromFile());
-
+    public Simulation(ParkingSpace parkingSpace) {
+        this.parkingSpace = parkingSpace;
     }
 
 
-    private List<Car> getCarsFromFile() {
-        IFileParser csvParser = new CSVParser();
-        List<String[]> csvOut = csvParser.parse("./implementation/src/main/java/resources/data.csv");
-        List<Car> carList = new ArrayList<>();
+    public void start() {
+        Car[] cars = parkingSpace.get100Cars();
+        for (Car car : cars) {
+            car.setSpeed(generateSpeed());
 
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
-        for (int i = 1; i < csvOut.size(); i++) {
-
-            Car car = new Car.CarBuilder(csvOut.get(i)[2], csvOut.get(i)[1], generateSpeed(), new LicensePlate(csvOut.get(i)[0])).build();
-            Owner owner;
-            SmartPhone smartPhone = new SmartPhone(Long.parseLong(csvOut.get(i)[6].replaceAll("\\s", "")));
+            // Magic (too fast for Twister)
             try {
-                owner = new Owner.OwnerBuilder(csvOut.get(i)[3], formatter.parse(csvOut.get(i)[4]), csvOut.get(i)[5], smartPhone, car).build();
-            } catch (ParseException e) {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            car.setDriver(owner);
-
-            if (csvOut.get(i)[7].equals("yes")) {
-                speedCamera.addWanted(owner);
-            }
-            carList.add(car);
-            speedCamera.getMobileNetworkModule().registerCar(car.getLicensePlate(), owner);
-            MobileCentralUnit.addOwner(smartPhone.getPhoneNumber(), smartPhone);
         }
-        return carList;
+        Collections.addAll(simulationCars, cars);
+
+        while (!simulationCars.isEmpty()) {
+            speedCamera.controlCar(simulationCars.poll());
+        }
+
+
     }
 
-    private int generateSpeed() {
+    private static int generateSpeed() {
         MersenneTwister mersenneTwister = new MersenneTwister();
         // 90%
         if (mersenneTwister.nextInt(0, 100) > 10) {
@@ -75,20 +65,11 @@ public class Simulation {
             }
 
         }
-    }
-
-    public void start() {
-        Car[] cars = parkingSpace.get100Cars();
-        Collections.addAll(simulationCars, cars);
-
-        while (!simulationCars.isEmpty()) {
-            speedCamera.controlCar(simulationCars.poll());
-        }
-
 
     }
 
-    public void removeCar(Car car) {
+
+  /*  public void removeCar(Car car) {
         // remove car from parkingSpace
         parkingSpace.removeCar(car);
         // it is possible that car is multiple times in the simulation Queue
@@ -96,4 +77,13 @@ public class Simulation {
 
     }
 
+   */
+
+    public void setSpeedCamera(SpeedCamera speedCamera) {
+        this.speedCamera = speedCamera;
+    }
+
+    public ParkingSpace getParkingSpace() {
+        return parkingSpace;
+    }
 }

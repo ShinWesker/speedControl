@@ -2,6 +2,7 @@ package komplexaufgabe.core.entities;
 
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
+import komplexaufgabe.simulate.ParkingSpace;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ public class Police {
     private List<Owner> wantedOwners;
     private final List<Owner> arrestedOwners;
     private final List<Car> confiscatedCars;
+    private ParkingSpace parkingSpace;
 
     private final IEncryption encryption;
 
@@ -21,8 +23,6 @@ public class Police {
     }
 
     public void arrestOwner(String face) {
-
-
         for (Owner wantedOwner : wantedOwners) {
             if (wantedOwner.getFace().equals(encryption.decrypt(face))) {
                 wantedOwners.remove(wantedOwner);
@@ -30,11 +30,11 @@ public class Police {
             }
         }
 
-
     }
 
     public void confiscateCar(Car car) {
         confiscatedCars.add(car);
+        parkingSpace.removeCar(car);
     }
 
     public void addWanted(Owner owner) {
@@ -51,5 +51,9 @@ public class Police {
 
 
         return false;
+    }
+
+    public void setParkingSpace(ParkingSpace parkingSpace) {
+        this.parkingSpace = parkingSpace;
     }
 }

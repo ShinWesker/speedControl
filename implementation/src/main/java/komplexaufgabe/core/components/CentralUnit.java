@@ -1,8 +1,6 @@
 package komplexaufgabe.core.components;
 
-import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.entities.Officer;
-import komplexaufgabe.core.entities.OldIDCard;
+import komplexaufgabe.core.entities.*;
 import komplexaufgabe.core.entities.Record;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;

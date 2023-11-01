@@ -3,6 +3,7 @@ package komplexaufgabe.simulate;
 import komplexaufgabe.core.entities.Car;
 import komplexaufgabe.randomUtil.MersenneTwister;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ParkingSpace {
@@ -35,7 +36,7 @@ public class ParkingSpace {
 
         while (count < 100) {
             Car car = parkingSlots[mersenneTwister.nextInt(0, parkingSlots.length - 1)][mersenneTwister.nextInt(0, parkingSlots[0].length - 1)];
-            if (car != null) {
+            if (car != null && !Arrays.stream(result).toList().contains(car)) {
                 result[count] = car;
                 count++;
             }
