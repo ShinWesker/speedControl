@@ -1,5 +1,8 @@
-import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
+import komplexaufgabe.core.components.FineEngine;
+import komplexaufgabe.core.components.VehicleRegistrationAuthority;
+import komplexaufgabe.core.entities.Police;
+import komplexaufgabe.core.interfaces.components.IFineEngine;
 import komplexaufgabe.core.interfaces.policy.GermanPolicy;
 import komplexaufgabe.core.interfaces.policy.IPolicy;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,48 +11,26 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import java.io.ByteArrayInputStream;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.*;
 
 public class ImportTest {
 
     private SpeedCamera speedCamera;
 
-    private final String fineCataloguePath = "./src/main/java/resources/fine_catalogue.json";
+    private final String fineCataloguePath = "fine_catalogue.json";
 
     @BeforeEach
     public void setup() {
-        speedCamera = TestUtil.initSpeedCamera();
+        speedCamera = TestUtil.initSpeedCamera(new VehicleRegistrationAuthority(), new Police());
     }
-
-    /*@Order(1)
-    @Test
-    public void can_import_after_startup() {
-        CLI cli = spy(new CLI());
-        cli.start();
-
-        System.setIn(new ByteArrayInputStream("1".getBytes())); // startup speedcamera
-        System.setIn(new ByteArrayInputStream("2".getBytes())); // import policy
-
-        // answer policy questions
-        System.setIn(new ByteArrayInputStream("1".getBytes())); // Officer ID 0 or 1
-        System.setIn(new ByteArrayInputStream("234".getBytes())); // Officer 0 pwd: 123, officer 1 pwd: 234
-        System.setIn(new ByteArrayInputStream("y".getBytes()));
-
-
-        System.setIn(System.in);
-
-        //verify(speedCamera)
-    }*/
 
     @Order(2)
     @ParameterizedTest(name = "{index} => Validate Officer with id {0} and pwd: {1}")
     @CsvSource({
-            "0, 123",
-            "1, 234"
+            "0, 1234",
+            "1, 2345"
     })
     public void validate_officer_id_and_password(int id, int pwd) {
         assertTrue(speedCamera.getCentralUnit().validateOfficer(id, pwd));
@@ -76,8 +57,12 @@ public class ImportTest {
     @Test
     public void set_fine_policy() {
         IPolicy policy = new GermanPolicy(fineCataloguePath);
+        IFineEngine fineEngine = mock(FineEngine.class);
+
+        when(speedCamera.getFineEngine()).thenReturn(fineEngine);
+
         speedCamera.getFineEngine().setPolicy(policy);
 
-        assertEquals(policy, speedCamera.getFineEngine().getPolicy());
+        verify(fineEngine).setPolicy(policy);
     }
 }

@@ -1,7 +1,7 @@
 Feature: ControlCar
 
   Scenario: Capture Speed
-    Given {Car} drives by the speedcamera
+    Given {car} drives by the speedcamera
     When {car} drives with {speed} next to speedcamera
     Then the speedcamera captures the {speed} of the car
 #

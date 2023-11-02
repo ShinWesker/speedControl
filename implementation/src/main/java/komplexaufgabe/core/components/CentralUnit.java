@@ -17,7 +17,7 @@ public class CentralUnit implements ICentralUnit {
     private final TreeMap<Integer, Officer> registeredOfficer;
     private final ArrayList<Record> fineRecords;
     private final IFileWriter fileWriter;
-    private final String logPath = "/report.log";
+    private final String logPath = "/export/report.log";
     private final String exportPath = "/export.csv";
     private final IEncryption aes = new AES();
     private final String exportPathEncrypted = "/export.enc";
@@ -25,11 +25,11 @@ public class CentralUnit implements ICentralUnit {
     public CentralUnit() {
         registeredOfficer = new TreeMap<>();
         fineRecords = new ArrayList<>();
-        Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new IDCard()).build();
+        Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new OldIDCard()).build();
         off1.getIdCard().store(1234);
         registeredOfficer.put(0, off1);
 
-        Officer off2 = new Officer.OfficerBuilder("Peter", new Date(System.currentTimeMillis()), "FACEBFACEBFACEB", 1, new NextGenIDCard()).build();
+        Officer off2 = new Officer.OfficerBuilder("Peter", new Date(System.currentTimeMillis()), "FACEBFACEBFACEB", 1, new OldIDCard()).build();
         off2.getIdCard().store(2345);
         registeredOfficer.put(1, off2);
         fileWriter = new TextFileWriter();

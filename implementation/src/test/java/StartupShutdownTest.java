@@ -1,58 +1,51 @@
-import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
-import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
+import komplexaufgabe.simulate.ParkingSpace;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StartupShutdownTest {
-
-
-
-
-    @BeforeEach
-    public void setup() {
-
-    }
 
     @Order(1)
     @Test
     public void parking_space_initialisation() {
-        List<Car> carList = TestUtil.get100CarsFromParkingSpace();
-        Assertions.assertEquals(100, carList.size());
+        ParkingSpace parkingSpace = new ParkingSpace(TestUtil.getCarsFromFile());
 
-        carList.forEach(Assertions::assertNotNull);
+        for (int i = 0; i < 10; i++) {
+            Arrays.stream(parkingSpace.get100Cars()).toList().forEach(Assertions::assertNotNull);
+        }
     }
 
     @Order(2)
     @Test
     public void starting_speed_camera() {
-        SpeedCamera speedCamera=TestUtil.initSpeedCamera();
+        SpeedCamera speedCamera = TestUtil.initSpeedCamera();
 
-        if (!speedCamera.isShutDown())
+        if (!speedCamera.isShutDown()) {
             speedCamera.deactivate();
+        }
 
         speedCamera.activate();
 
-        Assertions.assertFalse(speedCamera.isShutDown());
+        assertFalse(speedCamera.isShutDown());
     }
 
     @Order(3)
     @Test
     public void shutdown_speed_camera() {
-        SpeedCamera speedCamera=TestUtil.initSpeedCamera();
+        SpeedCamera speedCamera = TestUtil.initSpeedCamera();
 
-        if (speedCamera.isShutDown())
+        if (speedCamera.isShutDown()) {
             speedCamera.activate();
+        }
 
         speedCamera.deactivate();
 
-        Assertions.assertTrue(speedCamera.isShutDown());
+        assertTrue(speedCamera.isShutDown());
     }
 }

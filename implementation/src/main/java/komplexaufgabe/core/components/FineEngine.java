@@ -27,10 +27,6 @@ public class FineEngine implements IFineEngine {
         System.out.println("Policy was set!");
     }
 
-    public IPolicy getPolicy() {
-        return policy;
-    }
-
     public boolean isSpeeding(int speed) {
         return speed > 53;
     }

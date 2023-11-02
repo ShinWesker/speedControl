@@ -10,8 +10,8 @@ import java.util.List;
 
 public class Police implements IPolice {
     private final List<Owner> wantedOwners;
-    private  final List<Owner> arrestedOwners;
-    private  final List<Car> confiscatedCars;
+    private final List<Owner> arrestedOwners;
+    private final List<Car> confiscatedCars;
     private ParkingSpace parkingSpace;
 
     private final IEncryption encryption;
@@ -23,9 +23,9 @@ public class Police implements IPolice {
         this.encryption = new AES();
     }
 
-    public void arrestOwner(String face) {
+    public void arrestOwner(String encryptedFace) {
         for (Owner wantedOwner : wantedOwners) {
-            if (wantedOwner.getFace().equals(encryption.decrypt(face))) {
+            if (wantedOwner.getFace().equals(encryption.decrypt(encryptedFace))) {
                 wantedOwners.remove(wantedOwner);
                 arrestedOwners.add(wantedOwner);
                 break;
@@ -43,10 +43,10 @@ public class Police implements IPolice {
         this.wantedOwners.add(owner);
     }
 
-    public boolean checkWanted(String data) {
+    public boolean checkWanted(String encryptedData) {
 
         for (Owner wantedOwner : wantedOwners) {
-            if (wantedOwner.getFace().equals(encryption.decrypt(data))) {
+            if (wantedOwner.getFace().equals(encryption.decrypt(encryptedData))) {
                 return true;
             }
         }

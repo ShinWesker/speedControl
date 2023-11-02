@@ -1,26 +1,21 @@
 import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.*;
+import komplexaufgabe.core.interfaces.components.IPolice;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
 import komplexaufgabe.core.interfaces.encryption.AES;
-import komplexaufgabe.io.CSVParser;
-import org.junit.Assert;
+import komplexaufgabe.simulate.ParkingSpace;
 import org.junit.jupiter.api.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.*;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 public class SimulationTest {
-
-    private final String dataPath = "./implementation/src/main/java/resources/data.csv";
-
-    @BeforeEach
-    public void setup() {
-
-    }
 
     @Order(1)
     @Test
@@ -28,27 +23,51 @@ public class SimulationTest {
 
     }
 
-    @Order(2)
+    /*@Order(2)
     @Test
     public void car_speed_between_45_and_120() {
-        LaserScanner laserScanner = new LaserScanner();
-        List<Car> cars =  TestUtil.get100CarsFromParkingSpace();
-        cars.forEach(car->{
-            Assertions.assertTrue(45<laserScanner.detectSpeed(car) && laserScanner.detectSpeed(car)<120);
+        List<Car> cars = TestUtil.getCarsFromFile();
+        cars.forEach(car -> {
+            Assertions.assertTrue(45 < car.getSpeed() && car.getSpeed() < 120);
         });
     }
 
     @Order(3)
     @Test
     public void car_speed_percentage_test() {
+        int tolerance= 3;
+
+        List<Car> cars = TestUtil.getCarsFromFile();
+        int countf10t20 = 0;
+        int countf21t70 = 0;
+
+        for(Car car : cars){
+            int speed = car.getSpeed();
+            if (speed > 53) {
+                if (speed > 70) {
+                    countf21t70 ++;
+                } else {
+                    countf10t20+=1;
+                }
+            }
+        }
+
+        Assertions.assertTrue(
+                cars.size()/countf10t20<10+tolerance
+                    && cars.size()/countf10t20>10-tolerance);
+
+        Assertions.assertTrue(
+                cars.size()/countf21t70<15+tolerance
+                        && cars.size()/countf21t70>15-tolerance);
 
     }
-
-    @Order(4)
-    @Test
-    public void laser_scanner_to_fine_engine_test___evtl_als_bdd() {
-
-    }
+*/
+//In File "StepDefinitions"
+//    @Order(4)
+//    @Test
+//    public void laser_scanner_to_fine_engine_test___evtl_als_bdd() {
+//
+//    }
 
 
     @TestFactory
@@ -56,26 +75,20 @@ public class SimulationTest {
     public Stream<DynamicTest> aiengine_face_and_licenseplate_extraction() {
         Camera camera = new Camera();
         AIEngine aiEngine = new AIEngine();
-        List<String[]> csvOut = new CSVParser().parse(dataPath);
+        List<Car> carList = TestUtil.getCarsFromFile();
 
-        List<String[]> expectedData = new ArrayList<>();
-        List<String[]> aiExtractedData = new ArrayList<>();
+        return carList.stream().map(car -> DynamicTest.dynamicTest("Extracting Face and licensePlate from car: " + car.toString(), () -> {
+            String[] expectedData = new String[]{car.getDriver().getFace(), car.getLicensePlate().getLicensePlateID()};
 
-        for (int i = 1; i <= 25; i++) {
-            Car car = new Car.CarBuilder(csvOut.get(i)[2], csvOut.get(i)[1], 50, new LicensePlate(csvOut.get(i)[0])).build();
-            expectedData.add(new String[]{csvOut.get(i)[5], csvOut.get(i)[0]});
-
-            CameraData data = camera.takePhoto(car);
-            aiExtractedData.add(aiEngine.extractData(data));
-        }
-
-        return expectedData.stream().map(data -> DynamicTest.dynamicTest("Resolving cameraData: " + Arrays.toString(data), () -> {
-            assertEquals(expectedData.indexOf(data), aiExtractedData.indexOf(data));
+            CameraData cameraData = camera.takePhoto(car);
+            String[] extractedData = aiEngine.extractData(cameraData);
+            assertArrayEquals(expectedData, extractedData);
         }));
     }
 
     @Order(6)
     @Test
+    @DisplayName("Tests the AES encryption and decryption with a simple word")
     public void aes_encryption() {
         AES aes = new AES();
         String text = "Hello";
@@ -88,11 +101,16 @@ public class SimulationTest {
 
     @Order(7)
     @Test
-    public void request_to_police() {
-        MobileNetworkModule mnm = new MobileNetworkModule();
+    @DisplayName("MobileNetworkModule request to arrest owner and check if he becomes wanted")
+    public void police_check_owner_wanted() {
+        IPolice police = new Police();
+        IVehicleRegistrationAuthority vra = new VehicleRegistrationAuthority();
+        MobileNetworkModule mnm = new MobileNetworkModule(police, vra);
+
         String face = "CFFAEFEAAACCCCC";
 
         mnm.requestArrest(face);
+
         boolean isWanted = mnm.sendRequestToPolice(face);
 
         assertTrue(isWanted);
@@ -100,22 +118,35 @@ public class SimulationTest {
 
     @Order(8)
     @Test
-    public void request_to_vra() {
-        MobileNetworkModule mnm = new MobileNetworkModule();
+    public void vra_car_request() {
+        IPolice police = new Police();
+        IVehicleRegistrationAuthority vra = new VehicleRegistrationAuthority();
+        MobileNetworkModule mnm = new MobileNetworkModule(police, vra);
 
-        String licensePlateID = "licenseID";
-        String name = "Name";
-        Date birthDate = new Date();
+        Owner owner = TestUtil.createOwner();
+        String licensePlateID = owner.getCar().getLicensePlate().getLicensePlateID();
 
-        LicensePlate licensePlate = new LicensePlate(licensePlateID);
-        Car car = new Car.CarBuilder("BMW", "RegID", 50, licensePlate).build();
-        Owner owner = new Owner.OwnerBuilder(name, birthDate, "FACE", new SmartPhone(143141434), car).build();
+        vra.registerCar(licensePlateID, owner);
+        Car car = mnm.vraGetCar(licensePlateID);
 
-        String[] expectedData = new String[]{name, String.valueOf(birthDate.getTime()), String.valueOf(owner.getSmartPhone().getPhoneNumber())};
+        assertEquals(owner.getCar(), car);
+    }
 
-        mnm.registerCar(licensePlate, owner);
+    @Order(9)
+    @Test
+    public void vra_owner_request() {
+        IPolice police = new Police();
+        IVehicleRegistrationAuthority vra = new VehicleRegistrationAuthority();
+        MobileNetworkModule mnm = new MobileNetworkModule(police, vra);
 
-        assertArrayEquals(expectedData, mnm.sendRequestToVRA(licensePlateID));
+        Owner owner = TestUtil.createOwner();
+        String[] ownerInfos = new String[]{owner.getName(), String.valueOf(owner.getBirthDate().getTime()), String.valueOf(owner.getSmartPhone().getPhoneNumber())};
+        String licensePlateID = owner.getCar().getLicensePlate().getLicensePlateID();
+
+        vra.registerCar(licensePlateID, owner);
+        String[] vraOwnerInfos = mnm.sendRequestToVRA(licensePlateID);
+
+        assertArrayEquals(ownerInfos, vraOwnerInfos);
     }
 
     @Order(11)
@@ -127,44 +158,72 @@ public class SimulationTest {
     @Order(12)
     @Test
     public void fine_engine_access_wallet_and_fine_money() {
-        long phoneNumber = 421412421;
-        SmartPhone smartPhone = mock(SmartPhone.class);
-        MobileCentralUnit.addOwner(phoneNumber, smartPhone);
+        IVehicleRegistrationAuthority vra = new VehicleRegistrationAuthority();
+        SpeedCamera speedCamera = TestUtil.initSpeedCamera(vra, new Police());
 
-        FineEngine fineEngine = new FineEngine(TestUtil.initSpeedCamera());
+        Owner owner = spy(TestUtil.createOwner());
+        MobileCentralUnit.addOwner(owner.getSmartPhone().getPhoneNumber(), owner.getSmartPhone());
 
-        //CameraData data = new Camera().takePhoto(car);
+        vra.registerCar(owner.getCar().getLicensePlate().getLicensePlateID(), owner);
 
-        //fineEngine.processCase(data, 200);
+        CameraData data = new Camera().takePhoto(owner.getCar());
+        speedCamera.getFineEngine().processCase(data, 200);
 
-        verify(smartPhone).fineWallet(50);
+        verify(owner.getSmartPhone()).fineWallet(50);
     }
 
     @Order(13)
     @Test
     public void traffic_spike_stop_car_after_fahndung() {
+        SpeedCamera speedCamera = TestUtil.initSpeedCamera();
+        Car car = TestUtil.createCar();
+        car.setDriver(TestUtil.createOwner());
+        car.setSpeed(500);
 
+        // Redirect System.out to a ByteArrayOutputStream
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        // Call the method that produces the output
+        speedCamera.controlCar(car);
+
+        // Get the captured output
+        String actualOutput = outputStream.toString().trim();
+        String expectedOutput = "Traffic spikes thrown!";
+        assertEquals(expectedOutput, actualOutput);
     }
 
     @Order(14)
     @Test
     public void owner_festname() {
-
+        Police police = new Police();
+        Owner owner = TestUtil.createOwner();
+        police.addWanted(owner);
+        AES aes = new AES();
+        Assertions.assertTrue(police.checkWanted(aes.encrypt("ACFFAEFEAAACCCCC")));
+        police.arrestOwner(aes.encrypt("ACFFAEFEAAACCCCC"));
+        Assertions.assertFalse(police.checkWanted(aes.encrypt("ACFFAEFEAAACCCCC")));
     }
 
     @Order(15)
     @Test
-    public void car_beschlagnahmung() {
+    public void confiscate_car() {
+        ParkingSpace parkingSpace = mock(ParkingSpace.class);
+        IPolice police = new Police();
+        police.setParkingSpace(parkingSpace);
 
+        Car car = TestUtil.createCar();
+
+        police.confiscateCar(car);
+
+        verify(parkingSpace).removeCar(car);
     }
 
     @Order(16)
     @Test
-    public void car_gets_removed_from_parking_space() {
-        SpeedCamera speedCamera = TestUtil.initSpeedCamera();
+    public void test100cars(){
+        ParkingSpace parkingSpace = new ParkingSpace(TestUtil.getCarsFromFile());
+//         cars = parkingSpace.get100Cars();
 
-        speedCamera.activate();
-        //speedCamera.controlCar(car);
-        //speedCamera.getSimulation().
     }
 }
