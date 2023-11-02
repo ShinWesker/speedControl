@@ -1,19 +1,20 @@
 package komplexaufgabe.core.entities;
 
 public class SmartPhone {
-    private final int phoneNumber;
+    private final long phoneNumber;
 
     private final Wallet wallet;
 
-    public SmartPhone(int pPhoneNumber) {
+    public SmartPhone(long pPhoneNumber) {
         phoneNumber = pPhoneNumber;
         wallet = new Wallet();
     }
-    public int getPhoneNumber() {
+
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public Wallet getWallet() {
-        return wallet;
+    public void fineWallet(double fine){
+        wallet.decreaseDeposit(fine);
     }
 }

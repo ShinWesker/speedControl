@@ -6,7 +6,7 @@ public class Officer extends Human {
     private final int officerID;
     private final IDCard idCard;
 
-    private Officer(OfficerBuilder officerBuilder){
+    private Officer(OfficerBuilder officerBuilder) {
         super(officerBuilder.name, officerBuilder.birthdate, officerBuilder.face);
         officerID = officerBuilder.officerID;
         idCard = officerBuilder.idCard;
@@ -19,7 +19,7 @@ public class Officer extends Human {
         private final int officerID;
         private final IDCard idCard;
 
-        public OfficerBuilder(String pName, Date pBirthDate, String pFace , int pOfficerID, IDCard pIDCard) {
+        public OfficerBuilder(String pName, Date pBirthDate, String pFace, int pOfficerID, IDCard pIDCard) {
             name = pName;
             birthdate = pBirthDate;
             face = pFace;
@@ -32,4 +32,7 @@ public class Officer extends Human {
         }
     }
 
+    public IDCard getIdCard() {
+        return idCard;
+    }
 }

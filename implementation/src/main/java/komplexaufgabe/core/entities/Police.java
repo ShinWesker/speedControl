@@ -1,29 +1,59 @@
 package komplexaufgabe.core.entities;
 
+import komplexaufgabe.core.interfaces.encryption.AES;
+import komplexaufgabe.core.interfaces.encryption.IEncryption;
+import komplexaufgabe.simulate.ParkingSpace;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Police {
     private List<Owner> wantedOwners;
-    private List<Owner> arrestedOwners;
-    private List<Car> confiscatedCars;
+    private final List<Owner> arrestedOwners;
+    private final List<Car> confiscatedCars;
+    private ParkingSpace parkingSpace;
+
+    private final IEncryption encryption;
 
     public Police() {
         this.wantedOwners = new ArrayList<>();
         this.arrestedOwners = new ArrayList<>();
         this.confiscatedCars = new ArrayList<>();
+        this.encryption = new AES();
     }
 
-    public void arrestOwner(Owner owner) {
-        if (wantedOwners.contains(owner)) {
-            wantedOwners.remove(owner);
-            arrestedOwners.add(owner);
-        } else {
-            System.out.println("This owner is not on the wanted list.");
+    public void arrestOwner(String face) {
+        for (Owner wantedOwner : wantedOwners) {
+            if (wantedOwner.getFace().equals(encryption.decrypt(face))) {
+                wantedOwners.remove(wantedOwner);
+                arrestedOwners.add(wantedOwner);
+            }
         }
+
     }
+
     public void confiscateCar(Car car) {
         confiscatedCars.add(car);
+        parkingSpace.removeCar(car);
     }
 
+    public void addWanted(Owner owner) {
+        this.wantedOwners.add(owner);
+    }
+
+    public boolean checkWanted(String data) {
+
+        for (Owner wantedOwner : wantedOwners) {
+            if (wantedOwner.getFace().equals(encryption.decrypt(data))) {
+                return true;
+            }
+        }
+
+
+        return false;
+    }
+
+    public void setParkingSpace(ParkingSpace parkingSpace) {
+        this.parkingSpace = parkingSpace;
+    }
 }

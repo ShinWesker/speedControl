@@ -1,63 +1,26 @@
+import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
-import komplexaufgabe.core.components.CentralUnit;
-import komplexaufgabe.core.components.LED;
-import komplexaufgabe.core.components.LaserScanner;
-import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.entities.LicensePlate;
-import komplexaufgabe.core.entities.Owner;
-import komplexaufgabe.core.entities.NextGenIDCard;
-import komplexaufgabe.core.entities.OldIDCard;
-import komplexaufgabe.core.entities.SmartPhone;
-import komplexaufgabe.core.interfaces.encryptionhash.MD5;
-import komplexaufgabe.core.interfaces.encryptionhash.SHA256;
-import komplexaufgabe.core.components.MobileCentralUnit;
-import komplexaufgabe.core.interfaces.policy.GermanPolicy;
+import komplexaufgabe.core.components.*;
+import komplexaufgabe.core.entities.*;
 import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
+import komplexaufgabe.io.CSVParser;
+import komplexaufgabe.io.IFileParser;
+import komplexaufgabe.randomUtil.MersenneTwister;
+import komplexaufgabe.simulate.ParkingSpace;
+import komplexaufgabe.simulate.Simulation;
 
-import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 import java.util.Stack;
 
 public class Application {
+    private static SpeedCamera speedCamera;
+    private static Police police;
+
     public static void main(String... args) {
-        Car carHenry = new Car.CarBuilder(
-                "BMW",
-                "KJEHDKJHE",
-                45.34,
-                new LicensePlate("EPOIJED")
-        ).build();
-
-        Owner henry = new Owner.OwnerBuilder(
-                "Hans Jürgen", new Date(), "DEFLKJHEIUHFEFUH",
-                new SmartPhone(324092834),
-                carHenry
-        ).build();
-
-
-        System.out.println("Car Parameter:");
-        System.out.println(carHenry.getManufacturer());
-
-        System.out.println("Owner Parameter:");
-        System.out.println(henry.getName());
-
-
-        System.out.println("Encryption Test:");
-        SHA256 tool = new SHA256();
-        System.out.println("SHA: " + tool.encrypt("Hallo"));
-        MD5 toolMd5 = new MD5();
-        System.out.println("MD5: " + toolMd5.encrypt("Hallo"));
-
-
-        System.out.println("IDCard Test:");
-        NextGenIDCard nextGen = new NextGenIDCard();
-        OldIDCard oldGen = new OldIDCard();
-        oldGen.savePIN(2388);
-        nextGen.savePIN(2388);
-        nextGen.saveFingerPrint("Finga");
-
-        // HashMap
-        MobileCentralUnit.addOwner(1, new SmartPhone(23498));
-
-        //Camera test der Hölle
 
         Stack<Object> componentsStack = new Stack<>();
 
@@ -70,13 +33,50 @@ public class Application {
         componentsStack.push(laserScanner);
         componentsStack.push(centralUnit);
 
-        SpeedCamera speedCamera = new SpeedCamera.CameraBuilder(
-                componentsStack,
-                new TrafficSpikes()).build();
 
-        speedCamera.activate();
-        speedCamera.getCamera().takePhoto(carHenry);
-        speedCamera.getLaserScanner().detectSpeed(carHenry);
-        speedCamera.getFineEngine().setPolicy(new GermanPolicy());
+        police = new Police();
+        speedCamera = new SpeedCamera.CameraBuilder(
+                componentsStack,
+                new TrafficSpikes(),
+                new MobileNetworkModule(police)).build();
+
+        ParkingSpace parkingSpace = new ParkingSpace(getCarsFromFile());
+        Simulation simulation = new Simulation(parkingSpace);
+        simulation.setSpeedCamera(speedCamera);
+
+        police.setParkingSpace(simulation.getParkingSpace());
+
+        CLI cli = new CLI(speedCamera, simulation);
+        cli.start();
     }
+
+    private static List<Car> getCarsFromFile() {
+        IFileParser csvParser = new CSVParser();
+        List<String[]> csvOut = csvParser.parse("./implementation/src/main/java/resources/data.csv");
+        List<Car> carList = new ArrayList<>();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
+        for (int i = 1; i < csvOut.size(); i++) {
+
+            Car car = new Car.CarBuilder(csvOut.get(i)[2], csvOut.get(i)[1], new LicensePlate(csvOut.get(i)[0])).build();
+            Owner owner;
+            SmartPhone smartPhone = new SmartPhone(Long.parseLong(csvOut.get(i)[6].replaceAll("\\s", "")));
+            try {
+                owner = new Owner.OwnerBuilder(csvOut.get(i)[3], formatter.parse(csvOut.get(i)[4]), csvOut.get(i)[5], smartPhone, car).build();
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
+            car.setDriver(owner);
+
+            if (csvOut.get(i)[7].equals("yes")) {
+                police.addWanted(owner);
+            }
+            carList.add(car);
+            speedCamera.getMobileNetworkModule().registerCar(car.getLicensePlate(), owner);
+            MobileCentralUnit.addOwner(smartPhone.getPhoneNumber(), smartPhone);
+        }
+        return carList;
+    }
+
+
 }

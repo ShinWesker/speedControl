@@ -1,0 +1,2261 @@
+Counted fined cars by manufacturer:
+--------------------------------
+{ASTON MARTIN=3, LEXUS=5, TOYOTA=4, AUDI=5, TESLA=5, MAZDA=5, BWM=1, MERCEDES-BENZ=2, JAGUAR=6, VOLKSWAGEN=5, PORSCHE=5, HONDA=5}
+
+Record overview (timestamp asc):
+--------------------------------
+[
+ Record{
+sequenceID=1,
+timestamp=378364186689000,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        ACFEC |
+|        AAAFE |
+|        EEEEF |
+|              |
++--------------+
++---[GEM2T1]---+
++--------------+,
+licensePlate=GEM2T1,
+name='Vivian Ellis',
+birthDate=Wed Nov 01 00:00:00 CET 1972,
+phoneNumber=1782186587337,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=2,
+timestamp=378364192232800,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CCFCF |
+|        EAEEA |
+|        FCEFE |
+|              |
++--------------+
++---[E3JZZ5]---+
++--------------+,
+licensePlate=E3JZZ5,
+name='Madeline Clayton',
+birthDate=Tue May 20 00:00:00 CET 1952,
+phoneNumber=1602795028481,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=3,
+timestamp=378364194415300,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CCFCF |
+|        EAEEA |
+|        FCEFE |
+|              |
++--------------+
++---[E3JZZ5]---+
++--------------+,
+licensePlate=E3JZZ5,
+name='Madeline Clayton',
+birthDate=Tue May 20 00:00:00 CET 1952,
+phoneNumber=1602795028481,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=4,
+timestamp=378364196580600,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        EACEC |
+|        ECAEE |
+|        CAAAC |
+|              |
++--------------+
++---[8BM0F7]---+
++--------------+,
+licensePlate=8BM0F7,
+name='Vanessa Jordan',
+birthDate=Thu May 27 00:00:00 CEST 1982,
+phoneNumber=1628882319655,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=5,
+timestamp=378364199122100,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CACCE |
+|        EAAAF |
+|        EFECC |
+|              |
++--------------+
++---[LF3IA4]---+
++--------------+,
+licensePlate=LF3IA4,
+name='Grant Saunders',
+birthDate=Mon Dec 16 00:00:00 CET 1985,
+phoneNumber=1623026204372,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=6,
+timestamp=378364203009200,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        ACACC |
+|        CAECF |
+|        CECCF |
+|              |
++--------------+
++---[FV9O35]---+
++--------------+,
+licensePlate=FV9O35,
+name='Erika French',
+birthDate=Fri Apr 06 00:00:00 CET 1962,
+phoneNumber=1797959698239,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=7,
+timestamp=378364204620500,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        AFFAF |
+|        AAAFA |
+|        CFFEC |
+|              |
++--------------+
++---[E7SZ2F]---+
++--------------+,
+licensePlate=E7SZ2F,
+name='Derek Lindsey',
+birthDate=Wed Sep 16 00:00:00 CET 1970,
+phoneNumber=1606671720286,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=8,
+timestamp=378364206167000,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        FFEAE |
+|        AACAC |
+|        CEEEF |
+|              |
++--------------+
++---[CFAT44]---+
++--------------+,
+licensePlate=CFAT44,
+name='Mandy Adkins',
+birthDate=Thu Feb 20 00:00:00 CET 1975,
+phoneNumber=1516202333045,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=9,
+timestamp=378364207651700,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        EFCAA |
+|        ECCCE |
+|        AEACE |
+|              |
++--------------+
++---[KGH8IR]---+
++--------------+,
+licensePlate=KGH8IR,
+name='Sherry Tate',
+birthDate=Mon Jan 04 00:00:00 CET 1988,
+phoneNumber=1602711969267,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=10,
+timestamp=378364209288900,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CACFF |
+|        FECAF |
+|        CCAAA |
+|              |
++--------------+
++---[GPC8XP]---+
++--------------+,
+licensePlate=GPC8XP,
+name='Ann Carter',
+birthDate=Mon May 01 00:00:00 CET 1972,
+phoneNumber=1733900402404,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=11,
+timestamp=378364211475000,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        EEEAE |
+|        CCCFC |
+|        CEAEA |
+|              |
++--------------+
++---[MR29ES]---+
++--------------+,
+licensePlate=MR29ES,
+name='Freda Hardy',
+birthDate=Sun Aug 05 00:00:00 CEST 1984,
+phoneNumber=1716899908130,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=12,
+timestamp=378364212902300,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CFAFA |
+|        FAEEC |
+|        FFFAE |
+|              |
++--------------+
++---[H8DM1Z]---+
++--------------+,
+licensePlate=H8DM1Z,
+name='Brandy Barton',
+birthDate=Sun Jan 31 00:00:00 CET 1988,
+phoneNumber=1777572512297,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=13,
+timestamp=378364214258100,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        FFEFC |
+|        AACCE |
+|        FAFFF |
+|              |
++--------------+
++---[OO30H1]---+
++--------------+,
+licensePlate=OO30H1,
+name='Tanya Burns',
+birthDate=Fri Oct 25 00:00:00 CET 1968,
+phoneNumber=1781614764607,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=14,
+timestamp=378364217459700,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        FFCCF |
+|        FACCC |
+|        FACCE |
+|              |
++--------------+
++---[T3I7A2]---+
++--------------+,
+licensePlate=T3I7A2,
+name='Arthur Hampton',
+birthDate=Thu Nov 03 00:00:00 CET 1966,
+phoneNumber=1753961258529,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=15,
+timestamp=378369131422900,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        EEAEA |
+|        FCFFE |
+|        CCCFA |
+|              |
++--------------+
++---[AW0O1I]---+
++--------------+,
+licensePlate=AW0O1I,
+name='Fernando Robinson',
+birthDate=Sat Nov 22 00:00:00 CET 1952,
+phoneNumber=1782985307709,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=16,
+timestamp=378369132824200,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CCEEC |
+|        CAAFA |
+|        CACCE |
+|              |
++--------------+
++---[TC5QHH]---+
++--------------+,
+licensePlate=TC5QHH,
+name='Ellis Sullivan',
+birthDate=Fri Mar 17 00:00:00 CET 1967,
+phoneNumber=1733262322318,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=17,
+timestamp=378369134070600,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        AEEEC |
+|        AAAAF |
+|        FCCFE |
+|              |
++--------------+
++---[AIHRVV]---+
++--------------+,
+licensePlate=AIHRVV,
+name='Mildred Anderson',
+birthDate=Tue May 11 00:00:00 CEST 1999,
+phoneNumber=1783429269582,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=18,
+timestamp=378369135303400,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CFAFA |
+|        FAEEC |
+|        FFFAE |
+|              |
++--------------+
++---[H8DM1Z]---+
++--------------+,
+licensePlate=H8DM1Z,
+name='Brandy Barton',
+birthDate=Sun Jan 31 00:00:00 CET 1988,
+phoneNumber=1777572512297,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=19,
+timestamp=378369136472100,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CFACE |
+|        FFEFC |
+|        CFFEE |
+|              |
++--------------+
++---[B3YAON]---+
++--------------+,
+licensePlate=B3YAON,
+name='Ervin Clarke',
+birthDate=Tue Feb 11 00:00:00 CET 1969,
+phoneNumber=1782480627108,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=20,
+timestamp=378369137735500,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        EFFEE |
+|        CACCC |
+|        EAEEA |
+|              |
++--------------+
++---[KC38JE]---+
++--------------+,
+licensePlate=KC38JE,
+name='Russell Floyd',
+birthDate=Sun Feb 11 00:00:00 CET 2001,
+phoneNumber=1711621098541,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=21,
+timestamp=378369138864400,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CEAAE |
+|        CFAEA |
+|        CEAFF |
+|              |
++--------------+
++---[ZTGW0U]---+
++--------------+,
+licensePlate=ZTGW0U,
+name='Caleb Taylor',
+birthDate=Sat Sep 02 00:00:00 CET 1967,
+phoneNumber=1708243499444,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=22,
+timestamp=378369140077500,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CEACF |
+|        FCCAE |
+|        AFCAF |
+|              |
++--------------+
++---[OI0O2E]---+
++--------------+,
+licensePlate=OI0O2E,
+name='Deborah Gonzales',
+birthDate=Mon Oct 27 00:00:00 CET 1952,
+phoneNumber=1607776561741,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=23,
+timestamp=378369141088700,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        FCAEE |
+|        CACCF |
+|        AECEA |
+|              |
++--------------+
++---[9D9UIN]---+
++--------------+,
+licensePlate=9D9UIN,
+name='Claire Silva',
+birthDate=Mon Sep 04 00:00:00 CEST 1995,
+phoneNumber=1758872003008,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=24,
+timestamp=378372147745100,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FAAEE |
+|        CCEFA |
+|        CCAEF |
+|              |
++--------------+
++---[891YZ8]---+
++--------------+,
+licensePlate=891YZ8,
+name='Gustavo Hansen',
+birthDate=Sun Apr 02 00:00:00 CET 1972,
+phoneNumber=1716883162794,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=25,
+timestamp=378372149946600,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FEAFE |
+|        EACFA |
+|        CFCFA |
+|              |
++--------------+
++---[YF4GWI]---+
++--------------+,
+licensePlate=YF4GWI,
+name='Perry Caldwell',
+birthDate=Wed Nov 27 00:00:00 CET 1957,
+phoneNumber=1793030316319,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=26,
+timestamp=378372152108800,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        EEEEC |
+|        EEACE |
+|        AFECA |
+|              |
++--------------+
++---[JALHLN]---+
++--------------+,
+licensePlate=JALHLN,
+name='Hope Drake',
+birthDate=Sun Nov 12 00:00:00 CET 1989,
+phoneNumber=1708345771679,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=27,
+timestamp=378372153777700,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FFECF |
+|        ECAFA |
+|        EAFCE |
+|              |
++--------------+
++---[64KXVN]---+
++--------------+,
+licensePlate=64KXVN,
+name='Emanuel Kelly',
+birthDate=Tue Aug 05 00:00:00 CET 1958,
+phoneNumber=1603730876590,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=28,
+timestamp=378372155691600,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        CAFCF |
+|        CFAFC |
+|        CACCF |
+|              |
++--------------+
++---[Y4MTN8]---+
++--------------+,
+licensePlate=Y4MTN8,
+name='Rogelio Reyes',
+birthDate=Mon Nov 03 00:00:00 CET 1958,
+phoneNumber=1793426042918,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=29,
+timestamp=378372158903900,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FFFCA |
+|        CCFFE |
+|        EFCEF |
+|              |
++--------------+
++---[LL2CYQ]---+
++--------------+,
+licensePlate=LL2CYQ,
+name='Marsha Hughes',
+birthDate=Thu Aug 13 00:00:00 CET 1959,
+phoneNumber=1709620468166,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=30,
+timestamp=378372161214400,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        CFACE |
+|        FFEFC |
+|        CFFEE |
+|              |
++--------------+
++---[B3YAON]---+
++--------------+,
+licensePlate=B3YAON,
+name='Ervin Clarke',
+birthDate=Tue Feb 11 00:00:00 CET 1969,
+phoneNumber=1782480627108,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=31,
+timestamp=378372169162500,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        FCAEF |
+|        EAAFF |
+|        FFEAC |
+|              |
++--------------+
++---[KVYIWF]---+
++--------------+,
+licensePlate=KVYIWF,
+name='Chris Mccarthy',
+birthDate=Thu Feb 07 00:00:00 CET 1974,
+phoneNumber=1756739703084,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=32,
+timestamp=378372170329100,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        CFCCC |
+|        EAEAA |
+|        AEFEF |
+|              |
++--------------+
++---[MRI3NQ]---+
++--------------+,
+licensePlate=MRI3NQ,
+name='Sherman Vasquez',
+birthDate=Tue Sep 12 00:00:00 CET 1967,
+phoneNumber=1798216439983,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=33,
+timestamp=378372171951600,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        FAACC |
+|        FFCEC |
+|        CFAFE |
+|              |
++--------------+
++---[HF17J4]---+
++--------------+,
+licensePlate=HF17J4,
+name='Latoya Berry',
+birthDate=Tue Oct 19 00:00:00 CET 1976,
+phoneNumber=1793391425310,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=34,
+timestamp=378372174090700,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        ACEEC |
+|        AAFCE |
+|        CCEFC |
+|              |
++--------------+
++---[044QK4]---+
++--------------+,
+licensePlate=044QK4,
+name='Guadalupe Chapman',
+birthDate=Sun Feb 14 00:00:00 CET 1982,
+phoneNumber=1514608839664,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=35,
+timestamp=378372175937200,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        AFCFC |
+|        FCFCE |
+|        CAFFE |
+|              |
++--------------+
++---[99AR0Z]---+
++--------------+,
+licensePlate=99AR0Z,
+name='Seth Guzman',
+birthDate=Fri Nov 27 00:00:00 CET 1987,
+phoneNumber=1706583057830,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=36,
+timestamp=378372178275200,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        ECECA |
+|        FFFEE |
+|        EFFAF |
+|              |
++--------------+
++---[1ZNPI0]---+
++--------------+,
+licensePlate=1ZNPI0,
+name='Abraham Harmon',
+birthDate=Sat Jul 29 00:00:00 CET 1972,
+phoneNumber=1519529277355,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=37,
+timestamp=378375160342500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FCFFE |
+|        ECEEA |
+|        AAECC |
+|              |
++--------------+
++---[232AVA]---+
++--------------+,
+licensePlate=232AVA,
+name='Charlene Moreno',
+birthDate=Mon May 09 00:00:00 CET 1977,
+phoneNumber=1798734830979,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=38,
+timestamp=378375162054500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        CAEEC |
+|        ECFCF |
+|        AEECA |
+|              |
++--------------+
++---[FW8ZUC]---+
++--------------+,
+licensePlate=FW8ZUC,
+name='Isabel Barker',
+birthDate=Wed May 03 00:00:00 CET 1972,
+phoneNumber=1774981040554,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=39,
+timestamp=378375163637200,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EEAEA |
+|        FCFFE |
+|        CCCFA |
+|              |
++--------------+
++---[AW0O1I]---+
++--------------+,
+licensePlate=AW0O1I,
+name='Fernando Robinson',
+birthDate=Sat Nov 22 00:00:00 CET 1952,
+phoneNumber=1782985307709,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=40,
+timestamp=378375165088800,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAFFF |
+|        EAFCC |
+|        CFCFA |
+|              |
++--------------+
++---[XJAPFD]---+
++--------------+,
+licensePlate=XJAPFD,
+name='Saul Collins',
+birthDate=Thu Apr 01 00:00:00 CEST 1982,
+phoneNumber=1793802796810,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=41,
+timestamp=378375166570000,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAEEF |
+|        ECCFF |
+|        CFCEF |
+|              |
++--------------+
++---[AJ7D56]---+
++--------------+,
+licensePlate=AJ7D56,
+name='Dominic Herrera',
+birthDate=Sun Sep 23 00:00:00 CEST 1990,
+phoneNumber=1716828398264,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=42,
+timestamp=378375167961600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EEAAA |
+|        EFFAE |
+|        AFAAC |
+|              |
++--------------+
++---[PRT1B0]---+
++--------------+,
+licensePlate=PRT1B0,
+name='Angie Newton',
+birthDate=Mon Nov 15 00:00:00 CET 1954,
+phoneNumber=1701257671198,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=43,
+timestamp=378375171110700,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EFAAE |
+|        ECFCC |
+|        EAFFA |
+|              |
++--------------+
++---[VGJ153]---+
++--------------+,
+licensePlate=VGJ153,
+name='Pat Fuller',
+birthDate=Thu Jul 19 00:00:00 CET 1973,
+phoneNumber=1715500414926,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=44,
+timestamp=378375172983400,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        AFCCA |
+|        AAFEC |
+|        FAAEC |
+|              |
++--------------+
++---[LCRFT8]---+
++--------------+,
+licensePlate=LCRFT8,
+name='Shannon Singleton',
+birthDate=Mon Oct 09 00:00:00 CET 1950,
+phoneNumber=1624574314905,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=45,
+timestamp=378375174923500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAAAC |
+|        CECEC |
+|        AEFFE |
+|              |
++--------------+
++---[4QSINW]---+
++--------------+,
+licensePlate=4QSINW,
+name='Brittany Fields',
+birthDate=Wed Nov 29 00:00:00 CET 2000,
+phoneNumber=1752721824301,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=46,
+timestamp=378375176714900,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EACFC |
+|        EEFEC |
+|        CEFCE |
+|              |
++--------------+
++---[G5TI6B]---+
++--------------+,
+licensePlate=G5TI6B,
+name='Jonathon Mcdaniel',
+birthDate=Wed Jan 02 00:00:00 CET 1952,
+phoneNumber=1781105062431,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=47,
+timestamp=378375178422600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAFAE |
+|        CCECA |
+|        EACEA |
+|              |
++--------------+
++---[ABFMEI]---+
++--------------+,
+licensePlate=ABFMEI,
+name='Carlos Sharp',
+birthDate=Sat May 05 00:00:00 CET 1962,
+phoneNumber=1711304688420,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=48,
+timestamp=378375179865400,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        AECCE |
+|        CAEFC |
+|        EEFCA |
+|              |
++--------------+
++---[93ACVC]---+
++--------------+,
+licensePlate=93ACVC,
+name='Yvette Murphy',
+birthDate=Wed Feb 09 00:00:00 CET 1977,
+phoneNumber=1739245661158,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=49,
+timestamp=378375181280600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        CEAAF |
+|        FEAAC |
+|        FEACE |
+|              |
++--------------+
++---[P42ATO]---+
++--------------+,
+licensePlate=P42ATO,
+name='Nadine Clarke',
+birthDate=Fri Apr 02 00:00:00 CET 1976,
+phoneNumber=1512215472483,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=50,
+timestamp=378375182929600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FFEAE |
+|        AACAC |
+|        CEEEF |
+|              |
++--------------+
++---[CFAT44]---+
++--------------+,
+licensePlate=CFAT44,
+name='Mandy Adkins',
+birthDate=Thu Feb 20 00:00:00 CET 1975,
+phoneNumber=1516202333045,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=51,
+timestamp=378375184399500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FEFAF |
+|        FACEE |
+|        FCAFF |
+|              |
++--------------+
++---[GMT0W2]---+
++--------------+,
+licensePlate=GMT0W2,
+name='Kelly Joseph',
+birthDate=Wed Feb 26 00:00:00 CET 1958,
+phoneNumber=1773014305004,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}]
+
+Record overview (measured speed desc):
+--------------------------------
+[
+ Record{
+sequenceID=4,
+timestamp=378364196580600,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        EACEC |
+|        ECAEE |
+|        CAAAC |
+|              |
++--------------+
++---[8BM0F7]---+
++--------------+,
+licensePlate=8BM0F7,
+name='Vanessa Jordan',
+birthDate=Thu May 27 00:00:00 CEST 1982,
+phoneNumber=1628882319655,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=9,
+timestamp=378364207651700,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        EFCAA |
+|        ECCCE |
+|        AEACE |
+|              |
++--------------+
++---[KGH8IR]---+
++--------------+,
+licensePlate=KGH8IR,
+name='Sherry Tate',
+birthDate=Mon Jan 04 00:00:00 CET 1988,
+phoneNumber=1602711969267,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=10,
+timestamp=378364209288900,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CACFF |
+|        FECAF |
+|        CCAAA |
+|              |
++--------------+
++---[GPC8XP]---+
++--------------+,
+licensePlate=GPC8XP,
+name='Ann Carter',
+birthDate=Mon May 01 00:00:00 CET 1972,
+phoneNumber=1733900402404,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=15,
+timestamp=378369131422900,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        EEAEA |
+|        FCFFE |
+|        CCCFA |
+|              |
++--------------+
++---[AW0O1I]---+
++--------------+,
+licensePlate=AW0O1I,
+name='Fernando Robinson',
+birthDate=Sat Nov 22 00:00:00 CET 1952,
+phoneNumber=1782985307709,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=24,
+timestamp=378372147745100,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FAAEE |
+|        CCEFA |
+|        CCAEF |
+|              |
++--------------+
++---[891YZ8]---+
++--------------+,
+licensePlate=891YZ8,
+name='Gustavo Hansen',
+birthDate=Sun Apr 02 00:00:00 CET 1972,
+phoneNumber=1716883162794,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=28,
+timestamp=378372155691600,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        CAFCF |
+|        CFAFC |
+|        CACCF |
+|              |
++--------------+
++---[Y4MTN8]---+
++--------------+,
+licensePlate=Y4MTN8,
+name='Rogelio Reyes',
+birthDate=Mon Nov 03 00:00:00 CET 1958,
+phoneNumber=1793426042918,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=32,
+timestamp=378372170329100,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        CFCCC |
+|        EAEAA |
+|        AEFEF |
+|              |
++--------------+
++---[MRI3NQ]---+
++--------------+,
+licensePlate=MRI3NQ,
+name='Sherman Vasquez',
+birthDate=Tue Sep 12 00:00:00 CET 1967,
+phoneNumber=1798216439983,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=39,
+timestamp=378375163637200,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EEAEA |
+|        FCFFE |
+|        CCCFA |
+|              |
++--------------+
++---[AW0O1I]---+
++--------------+,
+licensePlate=AW0O1I,
+name='Fernando Robinson',
+birthDate=Sat Nov 22 00:00:00 CET 1952,
+phoneNumber=1782985307709,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=43,
+timestamp=378375171110700,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EFAAE |
+|        ECFCC |
+|        EAFFA |
+|              |
++--------------+
++---[VGJ153]---+
++--------------+,
+licensePlate=VGJ153,
+name='Pat Fuller',
+birthDate=Thu Jul 19 00:00:00 CET 1973,
+phoneNumber=1715500414926,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=46,
+timestamp=378375176714900,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EACFC |
+|        EEFEC |
+|        CEFCE |
+|              |
++--------------+
++---[G5TI6B]---+
++--------------+,
+licensePlate=G5TI6B,
+name='Jonathon Mcdaniel',
+birthDate=Wed Jan 02 00:00:00 CET 1952,
+phoneNumber=1781105062431,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=8,
+timestamp=378364206167000,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        FFEAE |
+|        AACAC |
+|        CEEEF |
+|              |
++--------------+
++---[CFAT44]---+
++--------------+,
+licensePlate=CFAT44,
+name='Mandy Adkins',
+birthDate=Thu Feb 20 00:00:00 CET 1975,
+phoneNumber=1516202333045,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=33,
+timestamp=378372171951600,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        FAACC |
+|        FFCEC |
+|        CFAFE |
+|              |
++--------------+
++---[HF17J4]---+
++--------------+,
+licensePlate=HF17J4,
+name='Latoya Berry',
+birthDate=Tue Oct 19 00:00:00 CET 1976,
+phoneNumber=1793391425310,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=40,
+timestamp=378375165088800,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAFFF |
+|        EAFCC |
+|        CFCFA |
+|              |
++--------------+
++---[XJAPFD]---+
++--------------+,
+licensePlate=XJAPFD,
+name='Saul Collins',
+birthDate=Thu Apr 01 00:00:00 CEST 1982,
+phoneNumber=1793802796810,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=42,
+timestamp=378375167961600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        EEAAA |
+|        EFFAE |
+|        AFAAC |
+|              |
++--------------+
++---[PRT1B0]---+
++--------------+,
+licensePlate=PRT1B0,
+name='Angie Newton',
+birthDate=Mon Nov 15 00:00:00 CET 1954,
+phoneNumber=1701257671198,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=47,
+timestamp=378375178422600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAFAE |
+|        CCECA |
+|        EACEA |
+|              |
++--------------+
++---[ABFMEI]---+
++--------------+,
+licensePlate=ABFMEI,
+name='Carlos Sharp',
+birthDate=Sat May 05 00:00:00 CET 1962,
+phoneNumber=1711304688420,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=50,
+timestamp=378375182929600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FFEAE |
+|        AACAC |
+|        CEEEF |
+|              |
++--------------+
++---[CFAT44]---+
++--------------+,
+licensePlate=CFAT44,
+name='Mandy Adkins',
+birthDate=Thu Feb 20 00:00:00 CET 1975,
+phoneNumber=1516202333045,
+allowedSpeed=50,
+measuredSpeed=65,
+measuredSpeedAfterDeductingTolerance=62,
+penalty=78.5
+}, 
+ Record{
+sequenceID=5,
+timestamp=378364199122100,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CACCE |
+|        EAAAF |
+|        EFECC |
+|              |
++--------------+
++---[LF3IA4]---+
++--------------+,
+licensePlate=LF3IA4,
+name='Grant Saunders',
+birthDate=Mon Dec 16 00:00:00 CET 1985,
+phoneNumber=1623026204372,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=14,
+timestamp=378364217459700,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        FFCCF |
+|        FACCC |
+|        FACCE |
+|              |
++--------------+
++---[T3I7A2]---+
++--------------+,
+licensePlate=T3I7A2,
+name='Arthur Hampton',
+birthDate=Thu Nov 03 00:00:00 CET 1966,
+phoneNumber=1753961258529,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=16,
+timestamp=378369132824200,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CCEEC |
+|        CAAFA |
+|        CACCE |
+|              |
++--------------+
++---[TC5QHH]---+
++--------------+,
+licensePlate=TC5QHH,
+name='Ellis Sullivan',
+birthDate=Fri Mar 17 00:00:00 CET 1967,
+phoneNumber=1733262322318,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=20,
+timestamp=378369137735500,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        EFFEE |
+|        CACCC |
+|        EAEEA |
+|              |
++--------------+
++---[KC38JE]---+
++--------------+,
+licensePlate=KC38JE,
+name='Russell Floyd',
+birthDate=Sun Feb 11 00:00:00 CET 2001,
+phoneNumber=1711621098541,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=23,
+timestamp=378369141088700,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        FCAEE |
+|        CACCF |
+|        AECEA |
+|              |
++--------------+
++---[9D9UIN]---+
++--------------+,
+licensePlate=9D9UIN,
+name='Claire Silva',
+birthDate=Mon Sep 04 00:00:00 CEST 1995,
+phoneNumber=1758872003008,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=31,
+timestamp=378372169162500,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        FCAEF |
+|        EAAFF |
+|        FFEAC |
+|              |
++--------------+
++---[KVYIWF]---+
++--------------+,
+licensePlate=KVYIWF,
+name='Chris Mccarthy',
+birthDate=Thu Feb 07 00:00:00 CET 1974,
+phoneNumber=1756739703084,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=38,
+timestamp=378375162054500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        CAEEC |
+|        ECFCF |
+|        AEECA |
+|              |
++--------------+
++---[FW8ZUC]---+
++--------------+,
+licensePlate=FW8ZUC,
+name='Isabel Barker',
+birthDate=Wed May 03 00:00:00 CET 1972,
+phoneNumber=1774981040554,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=44,
+timestamp=378375172983400,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        AFCCA |
+|        AAFEC |
+|        FAAEC |
+|              |
++--------------+
++---[LCRFT8]---+
++--------------+,
+licensePlate=LCRFT8,
+name='Shannon Singleton',
+birthDate=Mon Oct 09 00:00:00 CET 1950,
+phoneNumber=1624574314905,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=49,
+timestamp=378375181280600,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        CEAAF |
+|        FEAAC |
+|        FEACE |
+|              |
++--------------+
++---[P42ATO]---+
++--------------+,
+licensePlate=P42ATO,
+name='Nadine Clarke',
+birthDate=Fri Apr 02 00:00:00 CET 1976,
+phoneNumber=1512215472483,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=51,
+timestamp=378375184399500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FEFAF |
+|        FACEE |
+|        FCAFF |
+|              |
++--------------+
++---[GMT0W2]---+
++--------------+,
+licensePlate=GMT0W2,
+name='Kelly Joseph',
+birthDate=Wed Feb 26 00:00:00 CET 1958,
+phoneNumber=1773014305004,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=1,
+timestamp=378364186689000,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        ACFEC |
+|        AAAFE |
+|        EEEEF |
+|              |
++--------------+
++---[GEM2T1]---+
++--------------+,
+licensePlate=GEM2T1,
+name='Vivian Ellis',
+birthDate=Wed Nov 01 00:00:00 CET 1972,
+phoneNumber=1782186587337,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=2,
+timestamp=378364192232800,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CCFCF |
+|        EAEEA |
+|        FCEFE |
+|              |
++--------------+
++---[E3JZZ5]---+
++--------------+,
+licensePlate=E3JZZ5,
+name='Madeline Clayton',
+birthDate=Tue May 20 00:00:00 CET 1952,
+phoneNumber=1602795028481,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=3,
+timestamp=378364194415300,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CCFCF |
+|        EAEEA |
+|        FCEFE |
+|              |
++--------------+
++---[E3JZZ5]---+
++--------------+,
+licensePlate=E3JZZ5,
+name='Madeline Clayton',
+birthDate=Tue May 20 00:00:00 CET 1952,
+phoneNumber=1602795028481,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=6,
+timestamp=378364203009200,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        ACACC |
+|        CAECF |
+|        CECCF |
+|              |
++--------------+
++---[FV9O35]---+
++--------------+,
+licensePlate=FV9O35,
+name='Erika French',
+birthDate=Fri Apr 06 00:00:00 CET 1962,
+phoneNumber=1797959698239,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=7,
+timestamp=378364204620500,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        AFFAF |
+|        AAAFA |
+|        CFFEC |
+|              |
++--------------+
++---[E7SZ2F]---+
++--------------+,
+licensePlate=E7SZ2F,
+name='Derek Lindsey',
+birthDate=Wed Sep 16 00:00:00 CET 1970,
+phoneNumber=1606671720286,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=11,
+timestamp=378364211475000,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        EEEAE |
+|        CCCFC |
+|        CEAEA |
+|              |
++--------------+
++---[MR29ES]---+
++--------------+,
+licensePlate=MR29ES,
+name='Freda Hardy',
+birthDate=Sun Aug 05 00:00:00 CEST 1984,
+phoneNumber=1716899908130,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=12,
+timestamp=378364212902300,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        CFAFA |
+|        FAEEC |
+|        FFFAE |
+|              |
++--------------+
++---[H8DM1Z]---+
++--------------+,
+licensePlate=H8DM1Z,
+name='Brandy Barton',
+birthDate=Sun Jan 31 00:00:00 CET 1988,
+phoneNumber=1777572512297,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=13,
+timestamp=378364214258100,
+time=01.11.2023 05:26:41,
+picture=
++--------------+
+|        FFEFC |
+|        AACCE |
+|        FAFFF |
+|              |
++--------------+
++---[OO30H1]---+
++--------------+,
+licensePlate=OO30H1,
+name='Tanya Burns',
+birthDate=Fri Oct 25 00:00:00 CET 1968,
+phoneNumber=1781614764607,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=17,
+timestamp=378369134070600,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        AEEEC |
+|        AAAAF |
+|        FCCFE |
+|              |
++--------------+
++---[AIHRVV]---+
++--------------+,
+licensePlate=AIHRVV,
+name='Mildred Anderson',
+birthDate=Tue May 11 00:00:00 CEST 1999,
+phoneNumber=1783429269582,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=18,
+timestamp=378369135303400,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CFAFA |
+|        FAEEC |
+|        FFFAE |
+|              |
++--------------+
++---[H8DM1Z]---+
++--------------+,
+licensePlate=H8DM1Z,
+name='Brandy Barton',
+birthDate=Sun Jan 31 00:00:00 CET 1988,
+phoneNumber=1777572512297,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=19,
+timestamp=378369136472100,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CFACE |
+|        FFEFC |
+|        CFFEE |
+|              |
++--------------+
++---[B3YAON]---+
++--------------+,
+licensePlate=B3YAON,
+name='Ervin Clarke',
+birthDate=Tue Feb 11 00:00:00 CET 1969,
+phoneNumber=1782480627108,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=21,
+timestamp=378369138864400,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CEAAE |
+|        CFAEA |
+|        CEAFF |
+|              |
++--------------+
++---[ZTGW0U]---+
++--------------+,
+licensePlate=ZTGW0U,
+name='Caleb Taylor',
+birthDate=Sat Sep 02 00:00:00 CET 1967,
+phoneNumber=1708243499444,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=22,
+timestamp=378369140077500,
+time=01.11.2023 05:26:45,
+picture=
++--------------+
+|        CEACF |
+|        FCCAE |
+|        AFCAF |
+|              |
++--------------+
++---[OI0O2E]---+
++--------------+,
+licensePlate=OI0O2E,
+name='Deborah Gonzales',
+birthDate=Mon Oct 27 00:00:00 CET 1952,
+phoneNumber=1607776561741,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=25,
+timestamp=378372149946600,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FEAFE |
+|        EACFA |
+|        CFCFA |
+|              |
++--------------+
++---[YF4GWI]---+
++--------------+,
+licensePlate=YF4GWI,
+name='Perry Caldwell',
+birthDate=Wed Nov 27 00:00:00 CET 1957,
+phoneNumber=1793030316319,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=26,
+timestamp=378372152108800,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        EEEEC |
+|        EEACE |
+|        AFECA |
+|              |
++--------------+
++---[JALHLN]---+
++--------------+,
+licensePlate=JALHLN,
+name='Hope Drake',
+birthDate=Sun Nov 12 00:00:00 CET 1989,
+phoneNumber=1708345771679,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=27,
+timestamp=378372153777700,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FFECF |
+|        ECAFA |
+|        EAFCE |
+|              |
++--------------+
++---[64KXVN]---+
++--------------+,
+licensePlate=64KXVN,
+name='Emanuel Kelly',
+birthDate=Tue Aug 05 00:00:00 CET 1958,
+phoneNumber=1603730876590,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=29,
+timestamp=378372158903900,
+time=01.11.2023 05:26:48,
+picture=
++--------------+
+|        FFFCA |
+|        CCFFE |
+|        EFCEF |
+|              |
++--------------+
++---[LL2CYQ]---+
++--------------+,
+licensePlate=LL2CYQ,
+name='Marsha Hughes',
+birthDate=Thu Aug 13 00:00:00 CET 1959,
+phoneNumber=1709620468166,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=30,
+timestamp=378372161214400,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        CFACE |
+|        FFEFC |
+|        CFFEE |
+|              |
++--------------+
++---[B3YAON]---+
++--------------+,
+licensePlate=B3YAON,
+name='Ervin Clarke',
+birthDate=Tue Feb 11 00:00:00 CET 1969,
+phoneNumber=1782480627108,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=34,
+timestamp=378372174090700,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        ACEEC |
+|        AAFCE |
+|        CCEFC |
+|              |
++--------------+
++---[044QK4]---+
++--------------+,
+licensePlate=044QK4,
+name='Guadalupe Chapman',
+birthDate=Sun Feb 14 00:00:00 CET 1982,
+phoneNumber=1514608839664,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=35,
+timestamp=378372175937200,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        AFCFC |
+|        FCFCE |
+|        CAFFE |
+|              |
++--------------+
++---[99AR0Z]---+
++--------------+,
+licensePlate=99AR0Z,
+name='Seth Guzman',
+birthDate=Fri Nov 27 00:00:00 CET 1987,
+phoneNumber=1706583057830,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=36,
+timestamp=378372178275200,
+time=01.11.2023 05:26:49,
+picture=
++--------------+
+|        ECECA |
+|        FFFEE |
+|        EFFAF |
+|              |
++--------------+
++---[1ZNPI0]---+
++--------------+,
+licensePlate=1ZNPI0,
+name='Abraham Harmon',
+birthDate=Sat Jul 29 00:00:00 CET 1972,
+phoneNumber=1519529277355,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=37,
+timestamp=378375160342500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FCFFE |
+|        ECEEA |
+|        AAECC |
+|              |
++--------------+
++---[232AVA]---+
++--------------+,
+licensePlate=232AVA,
+name='Charlene Moreno',
+birthDate=Mon May 09 00:00:00 CET 1977,
+phoneNumber=1798734830979,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=41,
+timestamp=378375166570000,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAEEF |
+|        ECCFF |
+|        CFCEF |
+|              |
++--------------+
++---[AJ7D56]---+
++--------------+,
+licensePlate=AJ7D56,
+name='Dominic Herrera',
+birthDate=Sun Sep 23 00:00:00 CEST 1990,
+phoneNumber=1716828398264,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=45,
+timestamp=378375174923500,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        FAAAC |
+|        CECEC |
+|        AEFFE |
+|              |
++--------------+
++---[4QSINW]---+
++--------------+,
+licensePlate=4QSINW,
+name='Brittany Fields',
+birthDate=Wed Nov 29 00:00:00 CET 2000,
+phoneNumber=1752721824301,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}, 
+ Record{
+sequenceID=48,
+timestamp=378375179865400,
+time=01.11.2023 05:26:52,
+picture=
++--------------+
+|        AECCE |
+|        CAEFC |
+|        EEFCA |
+|              |
++--------------+
++---[93ACVC]---+
++--------------+,
+licensePlate=93ACVC,
+name='Yvette Murphy',
+birthDate=Wed Feb 09 00:00:00 CET 1977,
+phoneNumber=1739245661158,
+allowedSpeed=50,
+measuredSpeed=56,
+measuredSpeedAfterDeductingTolerance=53,
+penalty=58.5
+}]
+
+Record overview (to fast speed average, min, max):
+--------------------------------
+average: 8.18
+min: 3
+max: 20
