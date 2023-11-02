@@ -29,7 +29,7 @@ public class CentralUnit implements ICentralUnit {
         off1.getIdCard().store(1234);
         registeredOfficer.put(0, off1);
 
-        Officer off2 = new Officer.OfficerBuilder("Peter", new Date(System.currentTimeMillis()), "FACEBFACEBFACEB", 1, new NextGenIDCard()).build();
+        Officer off2 = new Officer.OfficerBuilder("Peter", new Date(System.currentTimeMillis()), "FACEBFACEBFACEB", 1, new OldIDCard()).build();
         off2.getIdCard().store(2345);
         registeredOfficer.put(1, off2);
         fileWriter = new TextFileWriter();
