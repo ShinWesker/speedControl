@@ -2,29 +2,23 @@ package komplexaufgabe.simulate;
 
 
 import komplexaufgabe.core.SpeedCamera;
-import komplexaufgabe.core.components.MobileCentralUnit;
 import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.entities.LicensePlate;
-import komplexaufgabe.core.entities.Owner;
-import komplexaufgabe.core.entities.SmartPhone;
-import komplexaufgabe.io.CSVParser;
-import komplexaufgabe.io.IFileParser;
 import komplexaufgabe.randomUtil.MersenneTwister;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Simulation {
 
     private final ParkingSpace parkingSpace;
-    private SpeedCamera speedCamera;
+    private final SpeedCamera speedCamera;
     private final Queue<Car> simulationCars = new LinkedList<>();
 
-    public Simulation(ParkingSpace parkingSpace) {
+    public Simulation(ParkingSpace parkingSpace, SpeedCamera speedCamera) {
         this.parkingSpace = parkingSpace;
+        this.speedCamera = speedCamera;
     }
-
 
     public void start() {
         Car[] cars = parkingSpace.get100Cars();
@@ -61,29 +55,10 @@ public class Simulation {
             }
             // 15%
             else {
-                return mersenneTwister.nextInt(75, 120);
+                return mersenneTwister.nextInt(75, 130);
             }
 
         }
 
-    }
-
-
-  /*  public void removeCar(Car car) {
-        // remove car from parkingSpace
-        parkingSpace.removeCar(car);
-        // it is possible that car is multiple times in the simulation Queue
-        simulationCars.removeIf(element -> element == car);
-
-    }
-
-   */
-
-    public void setSpeedCamera(SpeedCamera speedCamera) {
-        this.speedCamera = speedCamera;
-    }
-
-    public ParkingSpace getParkingSpace() {
-        return parkingSpace;
     }
 }

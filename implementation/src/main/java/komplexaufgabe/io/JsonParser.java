@@ -13,7 +13,7 @@ public class JsonParser implements IFileParser {
         String content = "N/A";
 
         try {
-            content = new String(Files.readAllBytes(Paths.get(filePath)));
+            content = new String(Files.readAllBytes(Paths.get(this.getClass().getResource(filePath).toURI())));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

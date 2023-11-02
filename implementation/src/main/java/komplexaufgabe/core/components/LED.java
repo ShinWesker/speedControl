@@ -1,6 +1,8 @@
 package komplexaufgabe.core.components;
 
-public class LED {
+import komplexaufgabe.core.interfaces.components.ILED;
+
+public class LED implements ILED {
     private final String color = "red";
 
     public void flash() {

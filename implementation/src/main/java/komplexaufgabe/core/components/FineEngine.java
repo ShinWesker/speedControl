@@ -3,15 +3,17 @@ package komplexaufgabe.core.components;
 import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.LicensePlate;
 import komplexaufgabe.core.entities.Record;
+import komplexaufgabe.core.interfaces.components.IAIEngine;
+import komplexaufgabe.core.interfaces.components.IFineEngine;
 import komplexaufgabe.core.interfaces.policy.IPolicy;
 import komplexaufgabe.core.SpeedCamera;
 
 import java.util.Date;
 
-public class FineEngine {
+public class FineEngine implements IFineEngine {
     private IPolicy policy;
     private final SpeedCamera speedCamera;
-    private final AIEngine aiEngine;
+    private final IAIEngine aiEngine;
 
     private int recordId = 1;
 
@@ -51,7 +53,8 @@ public class FineEngine {
         String[] ownerData = identifyDriver(carData[1]);
 
         double penalty = policy.getFine(carSpeed);
-        Record record = new Record(recordId++, System.nanoTime(), new Date(System.currentTimeMillis()), cameraData.getCameraPhoto(), new LicensePlate(carData[1]), ownerData[0], new Date(Long.parseLong(ownerData[1])), Long.parseLong(ownerData[2]), 50, carSpeed, carSpeed - 3, penalty);
+        String manufacturer = speedCamera.getMobileNetworkModule().vraGetCar(carData[1]).getManufacturer();
+        Record record = new Record(recordId++, System.nanoTime(), new Date(System.currentTimeMillis()), cameraData.getCameraPhoto(), new LicensePlate(carData[1]), manufacturer, ownerData[0], new Date(Long.parseLong(ownerData[1])), Long.parseLong(ownerData[2]), 50, carSpeed, carSpeed - 3, penalty);
         speedCamera.getCentralUnit().addRecord(record);
 
         fineWallet(Long.parseLong(ownerData[2]), penalty);
