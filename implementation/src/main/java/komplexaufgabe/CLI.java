@@ -164,7 +164,7 @@ public class CLI {
 
 
     private void createReportLog() {
-        speedCamera.getCentralUnit().createReportLog(speedCamera.getMobileNetworkModule());
+        speedCamera.getCentralUnit().createReportLog();
         System.out.println("Created report log!");
     }
 

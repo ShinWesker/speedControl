@@ -12,14 +12,13 @@ import java.util.Queue;
 public class Simulation {
 
     private final ParkingSpace parkingSpace;
-    private SpeedCamera speedCamera;
+    private final SpeedCamera speedCamera;
     private final Queue<Car> simulationCars = new LinkedList<>();
 
     public Simulation(ParkingSpace parkingSpace, SpeedCamera speedCamera) {
         this.parkingSpace = parkingSpace;
         this.speedCamera = speedCamera;
     }
-
 
     public void start() {
         Car[] cars = parkingSpace.get100Cars();
@@ -56,7 +55,7 @@ public class Simulation {
             }
             // 15%
             else {
-                return mersenneTwister.nextInt(75, 120);
+                return mersenneTwister.nextInt(75, 130);
             }
 
         }

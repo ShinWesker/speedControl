@@ -1,18 +1,21 @@
 package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.*;
+import komplexaufgabe.core.interfaces.components.IMobileNetworkModule;
+import komplexaufgabe.core.interfaces.components.IPolice;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
 
-public class MobileNetworkModule {
+public class MobileNetworkModule implements IMobileNetworkModule {
 
     private final IEncryption encryption;
-    private final Police police;
+    private final IPolice police;
 
-    private final VehicleRegistrationAuthority vra;
+    private final IVehicleRegistrationAuthority vra;
 
 
-    public MobileNetworkModule(Police police, VehicleRegistrationAuthority vra) {
+    public MobileNetworkModule(IPolice police, IVehicleRegistrationAuthority vra) {
         this.police = police;
         encryption = new AES();
         this.vra = vra;

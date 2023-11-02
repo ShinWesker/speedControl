@@ -2,10 +2,11 @@ import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.*;
+import komplexaufgabe.core.interfaces.components.IPolice;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
 import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
 import komplexaufgabe.io.CSVParser;
 import komplexaufgabe.io.IFileParser;
-import komplexaufgabe.randomUtil.MersenneTwister;
 import komplexaufgabe.simulate.ParkingSpace;
 import komplexaufgabe.simulate.Simulation;
 
@@ -17,9 +18,8 @@ import java.util.Locale;
 import java.util.Stack;
 
 public class Application {
-    private static SpeedCamera speedCamera;
-    private static Police police;
-    private static VehicleRegistrationAuthority vra;
+    private static IPolice police;
+    private static IVehicleRegistrationAuthority vra;
 
     public static void main(String... args) {
 
@@ -36,7 +36,7 @@ public class Application {
         vra = new VehicleRegistrationAuthority();
 
         police = new Police();
-        speedCamera = new SpeedCamera.CameraBuilder(
+        SpeedCamera speedCamera = new SpeedCamera.CameraBuilder(
                 componentsStack,
                 new TrafficSpikes(),
                 new MobileNetworkModule(police, vra)).build();
