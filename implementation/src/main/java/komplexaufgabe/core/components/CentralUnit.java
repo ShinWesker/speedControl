@@ -25,7 +25,7 @@ public class CentralUnit implements ICentralUnit {
     public CentralUnit() {
         registeredOfficer = new TreeMap<>();
         fineRecords = new ArrayList<>();
-        Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new IDCard()).build();
+        Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new OldIDCard()).build();
         off1.getIdCard().store(1234);
         registeredOfficer.put(0, off1);
 
