@@ -23,6 +23,7 @@ public class CLI {
     private Scanner scanner;
     private final SpeedCamera speedCamera;
     private boolean loadedPolicy = false;
+    private boolean executedSimulation = false;
     private final Simulation simulation;
 
     public CLI(SpeedCamera speedCamera, Simulation simulation) {
@@ -69,10 +70,39 @@ public class CLI {
                     }
                 }
             }
-            case 4 -> createReportLog();
+            case 4 -> {
+                if (speedCamera.isShutDown()) {
+                    System.out.println("Turn on speed camera first!");
+                } else {
+                    if (loadedPolicy) {
+                        if(executedSimulation){
+                            createReportLog();
+
+                        }else {
+                            System.out.println("Please execute the Simulation first!");
+                        }
+                    } else {
+                        System.out.println("Please load policy first!");
+                    }
+                }
+            }
 
 
-            case 5 -> export();
+            case 5 -> {
+                if (speedCamera.isShutDown()) {
+                    System.out.println("Turn on speed camera first!");
+                } else {
+                    if (loadedPolicy) {
+                        if(executedSimulation){
+                            export();
+                        }else {
+                            System.out.println("Please execute the Simulation first!");
+                        }
+                    } else {
+                        System.out.println("Please load policy first!");
+                    }
+                }
+            }
 
             case 6 -> {
                 if (speedCamera.isShutDown()) {
@@ -159,6 +189,7 @@ public class CLI {
     }
 
     private void executeSimulation() {
+        executedSimulation =true;
         simulation.start();
     }
 
