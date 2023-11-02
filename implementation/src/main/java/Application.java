@@ -2,10 +2,11 @@ import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.*;
+import komplexaufgabe.core.interfaces.components.IPolice;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
 import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
 import komplexaufgabe.io.CSVParser;
 import komplexaufgabe.io.IFileParser;
-import komplexaufgabe.randomUtil.MersenneTwister;
 import komplexaufgabe.simulate.ParkingSpace;
 import komplexaufgabe.simulate.Simulation;
 
@@ -17,8 +18,8 @@ import java.util.Locale;
 import java.util.Stack;
 
 public class Application {
-    private static SpeedCamera speedCamera;
-    private static Police police;
+    private static IPolice police;
+    private static IVehicleRegistrationAuthority vra;
 
     public static void main(String... args) {
 
@@ -32,19 +33,18 @@ public class Application {
         componentsStack.push(led);
         componentsStack.push(laserScanner);
         componentsStack.push(centralUnit);
-
+        vra = new VehicleRegistrationAuthority();
 
         police = new Police();
-        speedCamera = new SpeedCamera.CameraBuilder(
+        SpeedCamera speedCamera = new SpeedCamera.CameraBuilder(
                 componentsStack,
                 new TrafficSpikes(),
-                new MobileNetworkModule(police)).build();
+                new MobileNetworkModule(police, vra)).build();
 
         ParkingSpace parkingSpace = new ParkingSpace(getCarsFromFile());
-        Simulation simulation = new Simulation(parkingSpace);
-        simulation.setSpeedCamera(speedCamera);
+        Simulation simulation = new Simulation(parkingSpace, speedCamera);
 
-        police.setParkingSpace(simulation.getParkingSpace());
+        police.setParkingSpace(parkingSpace);
 
         CLI cli = new CLI(speedCamera, simulation);
         cli.start();
@@ -52,7 +52,7 @@ public class Application {
 
     private static List<Car> getCarsFromFile() {
         IFileParser csvParser = new CSVParser();
-        List<String[]> csvOut = csvParser.parse("./implementation/src/main/java/resources/data.csv");
+        List<String[]> csvOut = csvParser.parse("/data.csv");
         List<Car> carList = new ArrayList<>();
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
@@ -72,7 +72,7 @@ public class Application {
                 police.addWanted(owner);
             }
             carList.add(car);
-            speedCamera.getMobileNetworkModule().registerCar(car.getLicensePlate(), owner);
+            vra.registerCar(car.getLicensePlate().getLicensePlateID(), owner);
             MobileCentralUnit.addOwner(smartPhone.getPhoneNumber(), smartPhone);
         }
         return carList;

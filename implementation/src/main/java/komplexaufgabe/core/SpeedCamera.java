@@ -3,9 +3,8 @@ package komplexaufgabe.core;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.entities.Owner;
+import komplexaufgabe.core.interfaces.components.*;
 import komplexaufgabe.core.interfaces.stoppingtools.IStoppingTools;
-import komplexaufgabe.simulate.Simulation;
 
 import java.util.Date;
 import java.util.Objects;
@@ -15,15 +14,14 @@ import java.util.UUID;
 public class SpeedCamera {
     private final UUID serialNumber;
     private final Date manufacturingDate;
-    private final Camera camera;
+    private final ICamera camera;
     private final IStoppingTools stoppingTool;
-    private final CentralUnit centralUnit;
-    private final LED led;
-    private final LaserScanner laserScanner;
-    private final FineEngine fineEngine;
+    private final ICentralUnit centralUnit;
+    private final ILED led;
+    private final ILaserScanner laserScanner;
+    private final IFineEngine fineEngine;
     private boolean isShutDown = true;
-
-    private final MobileNetworkModule mobileNetworkModule;
+    private final IMobileNetworkModule mobileNetworkModule;
 
     private SpeedCamera(CameraBuilder cameraBuilder) {
         centralUnit = (CentralUnit) cameraBuilder.bSections.peek();
@@ -79,12 +77,12 @@ public class SpeedCamera {
         return isShutDown;
     }
 
-    public CentralUnit getCentralUnit() {
+    public ICentralUnit getCentralUnit() {
         return centralUnit;
     }
 
 
-    public FineEngine getFineEngine() {
+    public IFineEngine getFineEngine() {
         return fineEngine;
     }
 
@@ -104,7 +102,7 @@ public class SpeedCamera {
         }
     }
 
-    public MobileNetworkModule getMobileNetworkModule() {
+    public IMobileNetworkModule getMobileNetworkModule() {
         return mobileNetworkModule;
     }
 }

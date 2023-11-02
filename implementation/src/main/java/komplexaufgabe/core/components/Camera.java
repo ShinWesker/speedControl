@@ -2,8 +2,9 @@ package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.Car;
+import komplexaufgabe.core.interfaces.components.ICamera;
 
-public class Camera {
+public class Camera implements ICamera {
 
     public CameraData takePhoto(Car car){
 
