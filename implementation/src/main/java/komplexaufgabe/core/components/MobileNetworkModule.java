@@ -12,10 +12,10 @@ public class MobileNetworkModule {
     private final VehicleRegistrationAuthority vra;
 
 
-    public MobileNetworkModule(Police police) {
+    public MobileNetworkModule(Police police, VehicleRegistrationAuthority vra) {
         this.police = police;
         encryption = new AES();
-        vra = new VehicleRegistrationAuthority();
+        this.vra = vra;
 
     }
 
@@ -30,10 +30,6 @@ public class MobileNetworkModule {
         }
 
         return arr;
-    }
-
-    public void registerCar(LicensePlate licensePlate, Owner owner) {
-        vra.registerCar(licensePlate.getLicensePlateID(), owner);
     }
 
     public void requestArrest(String face) {

@@ -19,6 +19,7 @@ import java.util.Stack;
 public class Application {
     private static SpeedCamera speedCamera;
     private static Police police;
+    private static VehicleRegistrationAuthority vra;
 
     public static void main(String... args) {
 
@@ -32,19 +33,18 @@ public class Application {
         componentsStack.push(led);
         componentsStack.push(laserScanner);
         componentsStack.push(centralUnit);
-
+        vra = new VehicleRegistrationAuthority();
 
         police = new Police();
         speedCamera = new SpeedCamera.CameraBuilder(
                 componentsStack,
                 new TrafficSpikes(),
-                new MobileNetworkModule(police)).build();
+                new MobileNetworkModule(police, vra)).build();
 
         ParkingSpace parkingSpace = new ParkingSpace(getCarsFromFile());
-        Simulation simulation = new Simulation(parkingSpace);
-        simulation.setSpeedCamera(speedCamera);
+        Simulation simulation = new Simulation(parkingSpace, speedCamera);
 
-        police.setParkingSpace(simulation.getParkingSpace());
+        police.setParkingSpace(parkingSpace);
 
         CLI cli = new CLI(speedCamera, simulation);
         cli.start();
@@ -72,7 +72,7 @@ public class Application {
                 police.addWanted(owner);
             }
             carList.add(car);
-            speedCamera.getMobileNetworkModule().registerCar(car.getLicensePlate(), owner);
+            vra.registerCar(car.getLicensePlate().getLicensePlateID(), owner);
             MobileCentralUnit.addOwner(smartPhone.getPhoneNumber(), smartPhone);
         }
         return carList;
