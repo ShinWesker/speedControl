@@ -1,15 +1,11 @@
 package komplexaufgabe;
 
 import komplexaufgabe.core.SpeedCamera;
-import komplexaufgabe.core.components.CentralUnit;
-import komplexaufgabe.core.components.LED;
-import komplexaufgabe.core.components.LaserScanner;
 import komplexaufgabe.core.interfaces.policy.GermanPolicy;
-import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
+import komplexaufgabe.simulate.Simulation;
 
 
 import java.util.Scanner;
-import java.util.Stack;
 
 public class CLI {
 
@@ -25,25 +21,16 @@ public class CLI {
     */
     private int state = 0;
     private Scanner scanner;
-    private SpeedCamera speedCamera;
+    private final SpeedCamera speedCamera;
     private boolean loadedPolicy = false;
+    private final Simulation simulation;
+
+    public CLI(SpeedCamera speedCamera, Simulation simulation) {
+        this.speedCamera = speedCamera;
+        this.simulation = simulation;
+    }
 
     public void start() {
-        Stack<Object> componentsStack = new Stack<>();
-
-        LED led = new LED();
-        CentralUnit centralUnit = new CentralUnit();
-        LaserScanner laserScanner = new LaserScanner();
-
-        // Push the objects into the stack
-        componentsStack.push(led);
-        componentsStack.push(laserScanner);
-        componentsStack.push(centralUnit);
-
-
-        speedCamera = new SpeedCamera.CameraBuilder(
-                componentsStack,
-                new TrafficSpikes()).build();
         scanner = new Scanner(System.in);
         showMenu();
     }
@@ -83,6 +70,7 @@ public class CLI {
                 }
             }
             case 4 -> createReportLog();
+
 
             case 5 -> export();
 
@@ -155,7 +143,7 @@ public class CLI {
             System.out.println("Do you want to import \"resources/fine_catalogue.json\" ? (y/n)");
             String in = scanner.nextLine();
             if (in.equals("y")) {
-                speedCamera.getFineEngine().setPolicy(new GermanPolicy("./implementation/src/main/java/resources/fine_catalogue.json"));
+                speedCamera.getFineEngine().setPolicy(new GermanPolicy("/fine_catalogue.json"));
                 loadedPolicy = true;
             } else {
                 switchState("");
@@ -171,17 +159,17 @@ public class CLI {
     }
 
     private void executeSimulation() {
-        speedCamera.getSimulation().start();
+        simulation.start();
     }
 
 
     private void createReportLog() {
-        speedCamera.createReportLog();
+        speedCamera.getCentralUnit().createReportLog();
         System.out.println("Created report log!");
     }
 
     private void export() {
-        speedCamera.export();
+        speedCamera.getCentralUnit().export();
         System.out.println("Exported data to csv!");
     }
 

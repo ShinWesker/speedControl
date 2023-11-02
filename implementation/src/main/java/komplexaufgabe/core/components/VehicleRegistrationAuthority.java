@@ -2,12 +2,13 @@ package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.Car;
 import komplexaufgabe.core.entities.Owner;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
 
 import java.util.HashMap;
 
-public class VehicleRegistrationAuthority {
+public class VehicleRegistrationAuthority implements IVehicleRegistrationAuthority {
 
     private final HashMap<String, Owner> carOwners;
     private final IEncryption encryption;

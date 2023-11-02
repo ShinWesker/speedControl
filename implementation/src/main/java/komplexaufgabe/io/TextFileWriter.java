@@ -9,7 +9,7 @@ public class TextFileWriter implements IFileWriter {
     @Override
     public void writeFile(String path, String content) {
         try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(WriterConfig.INSTANCE.exportPath + path));
             bufferedWriter.write(content);
             bufferedWriter.close();
         } catch (IOException ioe) {

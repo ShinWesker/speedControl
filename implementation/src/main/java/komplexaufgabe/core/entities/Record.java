@@ -9,6 +9,7 @@ public class Record {
     private final Date time;
     private final String picture;
     private final LicensePlate licensePlate;
+    private final String manufacturer;
     private final String name;
     private final Date birthDate;
     private final long phoneNumber;
@@ -20,12 +21,13 @@ public class Record {
 
     private final double penalty;
 
-    public Record(int sequenceID, long timestamp, Date time, String picture, LicensePlate licensePlate, String name, Date birthDate, long phoneNumber, int allowedSpeed, int measuredSpeed, int measuredSpeedAfterDeductingTolerance, double penalty) {
+    public Record(int sequenceID, long timestamp, Date time, String picture, LicensePlate licensePlate, String manufacturer, String name, Date birthDate, long phoneNumber, int allowedSpeed, int measuredSpeed, int measuredSpeedAfterDeductingTolerance, double penalty) {
         this.sequenceID = sequenceID;
         this.timestamp = timestamp;
         this.time = time;
         this.picture = picture;
         this.licensePlate = licensePlate;
+        this.manufacturer = manufacturer;
         this.name = name;
         this.birthDate = birthDate;
         this.phoneNumber = phoneNumber;
@@ -39,17 +41,16 @@ public class Record {
         return timestamp;
     }
 
-
-    public LicensePlate getLicensePlate() {
-        return licensePlate;
-    }
-
     public int getMeasuredSpeed() {
         return measuredSpeed;
     }
 
     public int getMeasuredSpeedAfterDeductingTolerance() {
         return measuredSpeedAfterDeductingTolerance;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
     }
 
     @Override
@@ -61,6 +62,7 @@ public class Record {
                 "time=" + sdf.format(time) + ",\n" +
                 "picture=\n" + picture + ",\n" +
                 "licensePlate=" + licensePlate.getLicensePlateID() + ",\n" +
+                "manufacturer=" + manufacturer + ",\n" +
                 "name='" + name + '\'' + ",\n" +
                 "birthDate=" + birthDate + ",\n" +
                 "phoneNumber=" + phoneNumber + ",\n" +
@@ -77,6 +79,7 @@ public class Record {
                 "time=" + sdf.format(time) + ";" +
                 "picture=" + picture.replaceAll("\n", "") + ";" +
                 "licensePlate=" + licensePlate.getLicensePlateID() + ";" +
+                "manufacturer=" + manufacturer + ";" +
                 "name=" + name + ";" +
                 "birthDate=" + birthDate + ";" +
                 "phoneNumber=" + phoneNumber + ";" +

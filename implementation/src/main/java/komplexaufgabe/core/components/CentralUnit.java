@@ -1,40 +1,36 @@
 package komplexaufgabe.core.components;
 
-import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.entities.Officer;
-import komplexaufgabe.core.entities.OldIDCard;
+import komplexaufgabe.core.entities.*;
 import komplexaufgabe.core.entities.Record;
+import komplexaufgabe.core.interfaces.components.ICentralUnit;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
-import komplexaufgabe.core.interfaces.encryptionhash.IEncryptionHash;
-import komplexaufgabe.core.interfaces.encryptionhash.SHA256;
 import komplexaufgabe.io.CSVParser;
 import komplexaufgabe.io.IFileParser;
 import komplexaufgabe.io.IFileWriter;
 import komplexaufgabe.io.TextFileWriter;
 
-import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CentralUnit {
+public class CentralUnit implements ICentralUnit {
     private final TreeMap<Integer, Officer> registeredOfficer;
     private final ArrayList<Record> fineRecords;
     private final IFileWriter fileWriter;
-    private final String logPath = "./implementation/src/main/java/export/report.log";
-    private final String exportPath = "./implementation/src/main/java/export/export.csv";
+    private final String logPath = "/report.log";
+    private final String exportPath = "/export.csv";
     private final IEncryption aes = new AES();
-    private final String exportPathEncrypted = "./implementation/src/main/java/export/export.enc";
+    private final String exportPathEncrypted = "/export.enc";
 
     public CentralUnit() {
         registeredOfficer = new TreeMap<>();
         fineRecords = new ArrayList<>();
-        Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new OldIDCard()).build();
-        off1.getIdCard().store(123);
+        Officer off1 = new Officer.OfficerBuilder("Joe", new Date(System.currentTimeMillis()), "FACEAFACEAFACEA", 0, new IDCard()).build();
+        off1.getIdCard().store(1234);
         registeredOfficer.put(0, off1);
 
-        Officer off2 = new Officer.OfficerBuilder("Peter", new Date(System.currentTimeMillis()), "FACEBFACEBFACEB", 1, new OldIDCard()).build();
-        off2.getIdCard().store(234);
+        Officer off2 = new Officer.OfficerBuilder("Peter", new Date(System.currentTimeMillis()), "FACEBFACEBFACEB", 1, new NextGenIDCard()).build();
+        off2.getIdCard().store(2345);
         registeredOfficer.put(1, off2);
         fileWriter = new TextFileWriter();
     }
@@ -52,16 +48,12 @@ public class CentralUnit {
         fineRecords.add(record);
     }
 
-    public void createReportLog(MobileNetworkModule mobileNetworkModule) {
+    public void createReportLog() {
         String content = "";
 
-        List<Car> finedCars = new ArrayList<>();
-        for (Record rec : fineRecords) {
-            finedCars.add(mobileNetworkModule.vraGetCar(rec.getLicensePlate().getLicensePlateID()));
-        }
         content = content + "Counted fined cars by manufacturer:\n--------------------------------\n";
 
-        content = content + finedCars.stream().collect(Collectors.groupingBy(Car::getManufacturer, Collectors.counting())) + "\n";
+        content = content + fineRecords.stream().collect(Collectors.groupingBy(Record::getManufacturer, Collectors.counting())) + "\n";
         content = content + "\nRecord overview (timestamp asc):\n--------------------------------\n";
         content = content + fineRecords.stream().sorted(Comparator.comparingLong(Record::getTimestamp)).toList() + "\n";
         content = content + "\nRecord overview (measured speed desc):\n--------------------------------\n";

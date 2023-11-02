@@ -3,9 +3,8 @@ package komplexaufgabe.core;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.CameraData;
 import komplexaufgabe.core.entities.Car;
-import komplexaufgabe.core.entities.Owner;
+import komplexaufgabe.core.interfaces.components.*;
 import komplexaufgabe.core.interfaces.stoppingtools.IStoppingTools;
-import komplexaufgabe.simulate.Simulation;
 
 import java.util.Date;
 import java.util.Objects;
@@ -15,17 +14,14 @@ import java.util.UUID;
 public class SpeedCamera {
     private final UUID serialNumber;
     private final Date manufacturingDate;
-    private final Camera camera;
+    private final ICamera camera;
     private final IStoppingTools stoppingTool;
-    private final CentralUnit centralUnit;
-    private final LED led;
-    private final LaserScanner laserScanner;
-    private final FineEngine fineEngine;
+    private final ICentralUnit centralUnit;
+    private final ILED led;
+    private final ILaserScanner laserScanner;
+    private final IFineEngine fineEngine;
     private boolean isShutDown = true;
-
-    private final Simulation simulation;
-
-    private final MobileNetworkModule mobileNetworkModule;
+    private final IMobileNetworkModule mobileNetworkModule;
 
     private SpeedCamera(CameraBuilder cameraBuilder) {
         centralUnit = (CentralUnit) cameraBuilder.bSections.peek();
@@ -44,18 +40,9 @@ public class SpeedCamera {
         stoppingTool = cameraBuilder.bStoppingTool;
 
 
-        mobileNetworkModule = new MobileNetworkModule();
-        simulation = new Simulation(this);
+        mobileNetworkModule = cameraBuilder.bMobileNetworkmodule;
 
 
-    }
-
-    public void addWanted(Owner owner) {
-        mobileNetworkModule.addWanted(owner);
-    }
-
-    public Simulation getSimulation() {
-        return simulation;
     }
 
     public void activate() {
@@ -79,7 +66,6 @@ public class SpeedCamera {
                 stoppingTool.action();
                 mobileNetworkModule.requestArrest(wantedDriverFace);
                 mobileNetworkModule.requestCarConfiscation(car);
-                simulation.removeCar(car);
             }
 
         }
@@ -91,23 +77,24 @@ public class SpeedCamera {
         return isShutDown;
     }
 
-    public CentralUnit getCentralUnit() {
+    public ICentralUnit getCentralUnit() {
         return centralUnit;
     }
 
 
-    public FineEngine getFineEngine() {
+    public IFineEngine getFineEngine() {
         return fineEngine;
     }
 
     public static class CameraBuilder {
         private final Stack<Object> bSections;
         private final IStoppingTools bStoppingTool;
+        private final MobileNetworkModule bMobileNetworkmodule;
 
-        public CameraBuilder(Stack<Object> pSections, IStoppingTools pStoppingTools) {
+        public CameraBuilder(Stack<Object> pSections, IStoppingTools pStoppingTools, MobileNetworkModule pMobileNetworkModule) {
             bSections = pSections;
             bStoppingTool = pStoppingTools;
-
+            bMobileNetworkmodule = pMobileNetworkModule;
         }
 
         public SpeedCamera build() {
@@ -115,16 +102,8 @@ public class SpeedCamera {
         }
     }
 
-    public MobileNetworkModule getMobileNetworkModule() {
+    public IMobileNetworkModule getMobileNetworkModule() {
         return mobileNetworkModule;
-    }
-
-    public void createReportLog() {
-        centralUnit.createReportLog(mobileNetworkModule);
-    }
-
-    public void export() {
-        centralUnit.export();
     }
 }
 

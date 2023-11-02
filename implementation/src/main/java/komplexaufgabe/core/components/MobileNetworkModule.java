@@ -1,26 +1,25 @@
 package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.*;
+import komplexaufgabe.core.interfaces.components.IMobileNetworkModule;
+import komplexaufgabe.core.interfaces.components.IPolice;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
 import komplexaufgabe.core.interfaces.encryption.AES;
 import komplexaufgabe.core.interfaces.encryption.IEncryption;
 
-public class MobileNetworkModule {
+public class MobileNetworkModule implements IMobileNetworkModule {
 
     private final IEncryption encryption;
-    private final Police police;
+    private final IPolice police;
 
-    private final VehicleRegistrationAuthority vra;
+    private final IVehicleRegistrationAuthority vra;
 
 
-    public MobileNetworkModule() {
-        police = new Police();
+    public MobileNetworkModule(IPolice police, IVehicleRegistrationAuthority vra) {
+        this.police = police;
         encryption = new AES();
-        vra = new VehicleRegistrationAuthority();
+        this.vra = vra;
 
-    }
-
-    public void addWanted(Owner owner) {
-        police.addWanted(owner);
     }
 
     public boolean sendRequestToPolice(String data) {
@@ -34,10 +33,6 @@ public class MobileNetworkModule {
         }
 
         return arr;
-    }
-
-    public void registerCar(LicensePlate licensePlate, Owner owner) {
-        vra.registerCar(licensePlate.getLicensePlateID(), owner);
     }
 
     public void requestArrest(String face) {

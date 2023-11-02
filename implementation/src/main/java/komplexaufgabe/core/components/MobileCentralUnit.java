@@ -1,7 +1,6 @@
 package komplexaufgabe.core.components;
 
 import komplexaufgabe.core.entities.SmartPhone;
-import komplexaufgabe.core.entities.Wallet;
 
 import java.util.HashMap;
 
