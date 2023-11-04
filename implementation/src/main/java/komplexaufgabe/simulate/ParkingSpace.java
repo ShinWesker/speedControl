@@ -53,4 +53,8 @@ public class ParkingSpace {
             }
         }
     }
+
+    public Car[][] getParkingSlots() {
+        return parkingSlots;
+    }
 }

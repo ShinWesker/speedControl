@@ -1,0 +1,707 @@
+Counted fined cars by manufacturer:
+--------------------------------
+{LEXUS=3, AUDI=2, TESLA=2, TOYOTA=1, MAZDA=2, VOLKSWAGEN=2, PORSCHE=1, HONDA=2}
+
+Record overview (timestamp asc):
+--------------------------------
+[
+ Record{
+sequenceID=1,
+timestamp=1634379057964600,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CCACA |
+|        AEFAF |
+|        CFEFE |
+|              |
++--------------+
++---[ID7JFQ]---+
++--------------+,
+licensePlate=ID7JFQ,
+manufacturer=TOYOTA,
+name='Dexter Bush',
+birthDate=Mon Jan 17 00:00:00 CET 2000,
+phoneNumber=1753058279401,
+allowedSpeed=50,
+measuredSpeed=70,
+measuredSpeedAfterDeductingTolerance=67,
+penalty=98.5
+}, 
+ Record{
+sequenceID=2,
+timestamp=1634379074617100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FEFEF |
+|        EACFE |
+|        ECAFC |
+|              |
++--------------+
++---[H8ZL00]---+
++--------------+,
+licensePlate=H8ZL00,
+manufacturer=TESLA,
+name='Angel Schwartz',
+birthDate=Tue Jan 09 00:00:00 CET 1990,
+phoneNumber=1719257521764,
+allowedSpeed=50,
+measuredSpeed=64,
+measuredSpeedAfterDeductingTolerance=61,
+penalty=78.5
+}, 
+ Record{
+sequenceID=3,
+timestamp=1634379091695100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACACE |
+|        AECAC |
+|        FEEEF |
+|              |
++--------------+
++---[RFE5C9]---+
++--------------+,
+licensePlate=RFE5C9,
+manufacturer=TESLA,
+name='Trevor King',
+birthDate=Sun Jan 19 00:00:00 CET 1969,
+phoneNumber=1626753460088,
+allowedSpeed=50,
+measuredSpeed=59,
+measuredSpeedAfterDeductingTolerance=56,
+penalty=58.5
+}, 
+ Record{
+sequenceID=4,
+timestamp=1634379109440100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CAAEC |
+|        CECFE |
+|        ECCAF |
+|              |
++--------------+
++---[U2C2HH]---+
++--------------+,
+licensePlate=U2C2HH,
+manufacturer=LEXUS,
+name='Elmer Gill',
+birthDate=Mon Jan 08 00:00:00 CET 2001,
+phoneNumber=1735857888037,
+allowedSpeed=50,
+measuredSpeed=72,
+measuredSpeedAfterDeductingTolerance=69,
+penalty=98.5
+}, 
+ Record{
+sequenceID=5,
+timestamp=1634379127466800,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ECFEC |
+|        FACCA |
+|        AEFFA |
+|              |
++--------------+
++---[DLS5BT]---+
++--------------+,
+licensePlate=DLS5BT,
+manufacturer=VOLKSWAGEN,
+name='Terrence Hicks',
+birthDate=Wed Mar 28 00:00:00 CET 1951,
+phoneNumber=1707296746937,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenceID=6,
+timestamp=1634379135501000,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CEAAC |
+|        AAFFC |
+|        CACAC |
+|              |
++--------------+
++---[3M7OPW]---+
++--------------+,
+licensePlate=3M7OPW,
+manufacturer=AUDI,
+name='Richard Garrett',
+birthDate=Mon Jan 23 00:00:00 CET 1995,
+phoneNumber=1737629370417,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=7,
+timestamp=1634379149852700,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        AFACF |
+|        ACFEA |
+|        EFEEF |
+|              |
++--------------+
++---[PPFNKP]---+
++--------------+,
+licensePlate=PPFNKP,
+manufacturer=HONDA,
+name='Barry Gibbs',
+birthDate=Fri Feb 11 00:00:00 CET 1966,
+phoneNumber=1791141459477,
+allowedSpeed=50,
+measuredSpeed=66,
+measuredSpeedAfterDeductingTolerance=63,
+penalty=78.5
+}, 
+ Record{
+sequenceID=8,
+timestamp=1634379157607900,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        EEEAE |
+|        CCCFC |
+|        CEAEA |
+|              |
++--------------+
++---[MR29ES]---+
++--------------+,
+licensePlate=MR29ES,
+manufacturer=MAZDA,
+name='Freda Hardy',
+birthDate=Sun Aug 05 00:00:00 CEST 1984,
+phoneNumber=1716899908130,
+allowedSpeed=50,
+measuredSpeed=58,
+measuredSpeedAfterDeductingTolerance=55,
+penalty=58.5
+}, 
+ Record{
+sequenceID=9,
+timestamp=1634379167701200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FCAFC |
+|        CFFFE |
+|        AACFA |
+|              |
++--------------+
++---[US2M4R]---+
++--------------+,
+licensePlate=US2M4R,
+manufacturer=LEXUS,
+name='Alejandro Terry',
+birthDate=Mon Aug 11 00:00:00 CET 1952,
+phoneNumber=1788658170155,
+allowedSpeed=50,
+measuredSpeed=66,
+measuredSpeedAfterDeductingTolerance=63,
+penalty=78.5
+}, 
+ Record{
+sequenceID=10,
+timestamp=1634379173151100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FFACE |
+|        CFCEC |
+|        EFFEF |
+|              |
++--------------+
++---[OJES9G]---+
++--------------+,
+licensePlate=OJES9G,
+manufacturer=HONDA,
+name='Jan King',
+birthDate=Sun May 01 00:00:00 CEST 1983,
+phoneNumber=1797260083322,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=11,
+timestamp=1634379176063300,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ECCEC |
+|        EAEEA |
+|        CEFCE |
+|              |
++--------------+
++---[2SDSG6]---+
++--------------+,
+licensePlate=2SDSG6,
+manufacturer=PORSCHE,
+name='Cesar Riley',
+birthDate=Mon Dec 02 00:00:00 CET 1985,
+phoneNumber=1798191226018,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=12,
+timestamp=1634379178711600,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        EFCAC |
+|        CFAFE |
+|        ACECF |
+|              |
++--------------+
++---[A6Y80J]---+
++--------------+,
+licensePlate=A6Y80J,
+manufacturer=AUDI,
+name='Bryan Phillips',
+birthDate=Fri May 17 00:00:00 CEST 2002,
+phoneNumber=1603036910314,
+allowedSpeed=50,
+measuredSpeed=74,
+measuredSpeedAfterDeductingTolerance=71,
+penalty=143.5
+}, 
+ Record{
+sequenceID=13,
+timestamp=1634379183296200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACEAE |
+|        FAEEC |
+|        ECFEE |
+|              |
++--------------+
++---[08PP9Q]---+
++--------------+,
+licensePlate=08PP9Q,
+manufacturer=VOLKSWAGEN,
+name='Jose Ramsey',
+birthDate=Wed May 15 00:00:00 CEST 1996,
+phoneNumber=1776961342500,
+allowedSpeed=50,
+measuredSpeed=55,
+measuredSpeedAfterDeductingTolerance=52,
+penalty=58.5
+}, 
+ Record{
+sequenceID=14,
+timestamp=1634379186082900,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FAAAF |
+|        CACAC |
+|        CEEFA |
+|              |
++--------------+
++---[JWE6SD]---+
++--------------+,
+licensePlate=JWE6SD,
+manufacturer=LEXUS,
+name='Ben Griffith',
+birthDate=Fri Jul 27 00:00:00 CEST 1984,
+phoneNumber=1519535826170,
+allowedSpeed=50,
+measuredSpeed=63,
+measuredSpeedAfterDeductingTolerance=60,
+penalty=58.5
+}, 
+ Record{
+sequenceID=15,
+timestamp=1634379188556100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        AFAEE |
+|        CFEEC |
+|        CFAAE |
+|              |
++--------------+
++---[CURNO5]---+
++--------------+,
+licensePlate=CURNO5,
+manufacturer=MAZDA,
+name='Margie Rivera',
+birthDate=Sun Apr 30 00:00:00 CET 1961,
+phoneNumber=1773962389725,
+allowedSpeed=50,
+measuredSpeed=54,
+measuredSpeedAfterDeductingTolerance=51,
+penalty=58.5
+}]
+
+Record overview (measured speed desc):
+--------------------------------
+[
+ Record{
+sequenceID=12,
+timestamp=1634379178711600,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        EFCAC |
+|        CFAFE |
+|        ACECF |
+|              |
++--------------+
++---[A6Y80J]---+
++--------------+,
+licensePlate=A6Y80J,
+manufacturer=AUDI,
+name='Bryan Phillips',
+birthDate=Fri May 17 00:00:00 CEST 2002,
+phoneNumber=1603036910314,
+allowedSpeed=50,
+measuredSpeed=74,
+measuredSpeedAfterDeductingTolerance=71,
+penalty=143.5
+}, 
+ Record{
+sequenceID=11,
+timestamp=1634379176063300,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ECCEC |
+|        EAEEA |
+|        CEFCE |
+|              |
++--------------+
++---[2SDSG6]---+
++--------------+,
+licensePlate=2SDSG6,
+manufacturer=PORSCHE,
+name='Cesar Riley',
+birthDate=Mon Dec 02 00:00:00 CET 1985,
+phoneNumber=1798191226018,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=4,
+timestamp=1634379109440100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CAAEC |
+|        CECFE |
+|        ECCAF |
+|              |
++--------------+
++---[U2C2HH]---+
++--------------+,
+licensePlate=U2C2HH,
+manufacturer=LEXUS,
+name='Elmer Gill',
+birthDate=Mon Jan 08 00:00:00 CET 2001,
+phoneNumber=1735857888037,
+allowedSpeed=50,
+measuredSpeed=72,
+measuredSpeedAfterDeductingTolerance=69,
+penalty=98.5
+}, 
+ Record{
+sequenceID=1,
+timestamp=1634379057964600,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CCACA |
+|        AEFAF |
+|        CFEFE |
+|              |
++--------------+
++---[ID7JFQ]---+
++--------------+,
+licensePlate=ID7JFQ,
+manufacturer=TOYOTA,
+name='Dexter Bush',
+birthDate=Mon Jan 17 00:00:00 CET 2000,
+phoneNumber=1753058279401,
+allowedSpeed=50,
+measuredSpeed=70,
+measuredSpeedAfterDeductingTolerance=67,
+penalty=98.5
+}, 
+ Record{
+sequenceID=5,
+timestamp=1634379127466800,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ECFEC |
+|        FACCA |
+|        AEFFA |
+|              |
++--------------+
++---[DLS5BT]---+
++--------------+,
+licensePlate=DLS5BT,
+manufacturer=VOLKSWAGEN,
+name='Terrence Hicks',
+birthDate=Wed Mar 28 00:00:00 CET 1951,
+phoneNumber=1707296746937,
+allowedSpeed=50,
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
+}, 
+ Record{
+sequenceID=7,
+timestamp=1634379149852700,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        AFACF |
+|        ACFEA |
+|        EFEEF |
+|              |
++--------------+
++---[PPFNKP]---+
++--------------+,
+licensePlate=PPFNKP,
+manufacturer=HONDA,
+name='Barry Gibbs',
+birthDate=Fri Feb 11 00:00:00 CET 1966,
+phoneNumber=1791141459477,
+allowedSpeed=50,
+measuredSpeed=66,
+measuredSpeedAfterDeductingTolerance=63,
+penalty=78.5
+}, 
+ Record{
+sequenceID=9,
+timestamp=1634379167701200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FCAFC |
+|        CFFFE |
+|        AACFA |
+|              |
++--------------+
++---[US2M4R]---+
++--------------+,
+licensePlate=US2M4R,
+manufacturer=LEXUS,
+name='Alejandro Terry',
+birthDate=Mon Aug 11 00:00:00 CET 1952,
+phoneNumber=1788658170155,
+allowedSpeed=50,
+measuredSpeed=66,
+measuredSpeedAfterDeductingTolerance=63,
+penalty=78.5
+}, 
+ Record{
+sequenceID=2,
+timestamp=1634379074617100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FEFEF |
+|        EACFE |
+|        ECAFC |
+|              |
++--------------+
++---[H8ZL00]---+
++--------------+,
+licensePlate=H8ZL00,
+manufacturer=TESLA,
+name='Angel Schwartz',
+birthDate=Tue Jan 09 00:00:00 CET 1990,
+phoneNumber=1719257521764,
+allowedSpeed=50,
+measuredSpeed=64,
+measuredSpeedAfterDeductingTolerance=61,
+penalty=78.5
+}, 
+ Record{
+sequenceID=14,
+timestamp=1634379186082900,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FAAAF |
+|        CACAC |
+|        CEEFA |
+|              |
++--------------+
++---[JWE6SD]---+
++--------------+,
+licensePlate=JWE6SD,
+manufacturer=LEXUS,
+name='Ben Griffith',
+birthDate=Fri Jul 27 00:00:00 CEST 1984,
+phoneNumber=1519535826170,
+allowedSpeed=50,
+measuredSpeed=63,
+measuredSpeedAfterDeductingTolerance=60,
+penalty=58.5
+}, 
+ Record{
+sequenceID=6,
+timestamp=1634379135501000,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CEAAC |
+|        AAFFC |
+|        CACAC |
+|              |
++--------------+
++---[3M7OPW]---+
++--------------+,
+licensePlate=3M7OPW,
+manufacturer=AUDI,
+name='Richard Garrett',
+birthDate=Mon Jan 23 00:00:00 CET 1995,
+phoneNumber=1737629370417,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=10,
+timestamp=1634379173151100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FFACE |
+|        CFCEC |
+|        EFFEF |
+|              |
++--------------+
++---[OJES9G]---+
++--------------+,
+licensePlate=OJES9G,
+manufacturer=HONDA,
+name='Jan King',
+birthDate=Sun May 01 00:00:00 CEST 1983,
+phoneNumber=1797260083322,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=3,
+timestamp=1634379091695100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACACE |
+|        AECAC |
+|        FEEEF |
+|              |
++--------------+
++---[RFE5C9]---+
++--------------+,
+licensePlate=RFE5C9,
+manufacturer=TESLA,
+name='Trevor King',
+birthDate=Sun Jan 19 00:00:00 CET 1969,
+phoneNumber=1626753460088,
+allowedSpeed=50,
+measuredSpeed=59,
+measuredSpeedAfterDeductingTolerance=56,
+penalty=58.5
+}, 
+ Record{
+sequenceID=8,
+timestamp=1634379157607900,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        EEEAE |
+|        CCCFC |
+|        CEAEA |
+|              |
++--------------+
++---[MR29ES]---+
++--------------+,
+licensePlate=MR29ES,
+manufacturer=MAZDA,
+name='Freda Hardy',
+birthDate=Sun Aug 05 00:00:00 CEST 1984,
+phoneNumber=1716899908130,
+allowedSpeed=50,
+measuredSpeed=58,
+measuredSpeedAfterDeductingTolerance=55,
+penalty=58.5
+}, 
+ Record{
+sequenceID=13,
+timestamp=1634379183296200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACEAE |
+|        FAEEC |
+|        ECFEE |
+|              |
++--------------+
++---[08PP9Q]---+
++--------------+,
+licensePlate=08PP9Q,
+manufacturer=VOLKSWAGEN,
+name='Jose Ramsey',
+birthDate=Wed May 15 00:00:00 CEST 1996,
+phoneNumber=1776961342500,
+allowedSpeed=50,
+measuredSpeed=55,
+measuredSpeedAfterDeductingTolerance=52,
+penalty=58.5
+}, 
+ Record{
+sequenceID=15,
+timestamp=1634379188556100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        AFAEE |
+|        CFEEC |
+|        CFAAE |
+|              |
++--------------+
++---[CURNO5]---+
++--------------+,
+licensePlate=CURNO5,
+manufacturer=MAZDA,
+name='Margie Rivera',
+birthDate=Sun Apr 30 00:00:00 CET 1961,
+phoneNumber=1773962389725,
+allowedSpeed=50,
+measuredSpeed=54,
+measuredSpeedAfterDeductingTolerance=51,
+penalty=58.5
+}]
+
+Record overview (to fast speed average, min, max):
+--------------------------------
+average: 11,20
+min: 1
+max: 21
