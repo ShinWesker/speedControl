@@ -12,7 +12,7 @@ public class CSVParser implements IFileParser {
     @Override
     public List<String[]> parse(String filePath) {
         try {
-            Stream<String> stream = Files.lines(Paths.get(this.getClass().getResource(filePath).toURI()));
+            Stream<String> stream = Files.lines(Paths.get(this.getClass().getClassLoader().getResource(filePath).toURI()));
 
             return stream.map(line -> {
                 String[] token = line.split("\n");

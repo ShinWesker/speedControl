@@ -1,4 +1,3 @@
-import komplexaufgabe.CLI;
 import komplexaufgabe.core.SpeedCamera;
 import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.*;
@@ -12,17 +11,13 @@ import komplexaufgabe.simulate.Simulation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Stack;
+import java.util.*;
 
-public class Application {
-    private static IPolice police;
-    private static IVehicleRegistrationAuthority vra;
+import static org.mockito.Mockito.spy;
 
-    public static void main(String... args) {
+public class TestUtil {
 
+    public static SpeedCamera initSpeedCamera(IVehicleRegistrationAuthority vra, IPolice police) {
         Stack<Object> componentsStack = new Stack<>();
 
         LED led = new LED();
@@ -33,24 +28,29 @@ public class Application {
         componentsStack.push(led);
         componentsStack.push(laserScanner);
         componentsStack.push(centralUnit);
-        vra = new VehicleRegistrationAuthority();
 
-        police = new Police();
-        SpeedCamera speedCamera = new SpeedCamera.CameraBuilder(
-                componentsStack,
-                new TrafficSpikes(),
-                new MobileNetworkModule(police, vra)).build();
-
-        ParkingSpace parkingSpace = new ParkingSpace(getCarsFromFile());
-        Simulation simulation = new Simulation(parkingSpace, speedCamera);
-
-        police.setParkingSpace(parkingSpace);
-
-        CLI cli = new CLI(speedCamera, simulation);
-        cli.start();
+        return new SpeedCamera.CameraBuilder(componentsStack, new TrafficSpikes(), new MobileNetworkModule(police, vra)).build();
     }
 
-    private static List<Car> getCarsFromFile() {
+    public static SpeedCamera initSpeedCamera() {
+        return initSpeedCamera(new VehicleRegistrationAuthority(), new Police());
+    }
+
+    public static ParkingSpace initParkingSpace() {
+        List<Car> carList = getCarsFromFile(new VehicleRegistrationAuthority(), new Police());
+        return new ParkingSpace(carList);
+    }
+
+    public static Simulation initSimulation() {
+        return new Simulation(initParkingSpace(), initSpeedCamera());
+    }
+
+    public static List<Car> get100CarsFromParkingSpace() {
+        ParkingSpace parkingSpace = initParkingSpace();
+        return List.of(parkingSpace.get100Cars());
+    }
+
+    public static List<Car> getCarsFromFile(IVehicleRegistrationAuthority vra, IPolice police) {
         IFileParser csvParser = new CSVParser();
         List<String[]> csvOut = csvParser.parse("data.csv");
         List<Car> carList = new ArrayList<>();
@@ -78,5 +78,23 @@ public class Application {
         return carList;
     }
 
+    public static Owner createOwner() {
+        String name = "Name";
+        Date brithDate = new Date();
+        String face = "CFFAEFEAAACCCCC";
+        SmartPhone smartphone = spy(new SmartPhone(123456789));
+        Car car = createCar();
+        Owner owner = new Owner.OwnerBuilder(name, brithDate, face, smartphone, car).build();
+        car.setDriver(owner);
 
+        return owner;
+    }
+
+    public static Car createCar() {
+        String manufacturer = "BMW";
+        String registrationID = "6afwib6x3t";
+        LicensePlate licensePlate = new LicensePlate("RNH731");
+
+        return new Car.CarBuilder(manufacturer, registrationID, licensePlate).build();
+    }
 }

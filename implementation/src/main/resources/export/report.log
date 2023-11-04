@@ -1,515 +1,377 @@
 Counted fined cars by manufacturer:
 --------------------------------
-{ASTON MARTIN=2, LEXUS=1, AUDI=1, MAZDA=2, BWM=3, MERCEDES-BENZ=3, JAGUAR=3, PORSCHE=1}
+{LEXUS=3, AUDI=2, TESLA=2, TOYOTA=1, MAZDA=2, VOLKSWAGEN=2, PORSCHE=1, HONDA=2}
 
 Record overview (timestamp asc):
 --------------------------------
 [
  Record{
 sequenceID=1,
-timestamp=460020585382900,
-time=02.11.2023 04:07:34,
+timestamp=1634379057964600,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        AAFCC |
-|        AECCA |
-|        AFECC |
+|        CCACA |
+|        AEFAF |
+|        CFEFE |
 |              |
 +--------------+
-+---[3W555J]---+
++---[ID7JFQ]---+
 +--------------+,
-licensePlate=3W555J,
-manufacturer=MERCEDES-BENZ,
-name='Bernadette Hanson',
-birthDate=Sun May 24 00:00:00 CET 1970,
-phoneNumber=1771438834113,
+licensePlate=ID7JFQ,
+manufacturer=TOYOTA,
+name='Dexter Bush',
+birthDate=Mon Jan 17 00:00:00 CET 2000,
+phoneNumber=1753058279401,
 allowedSpeed=50,
-measuredSpeed=82,
-measuredSpeedAfterDeductingTolerance=79,
-penalty=208.5
+measuredSpeed=70,
+measuredSpeedAfterDeductingTolerance=67,
+penalty=98.5
 }, 
  Record{
 sequenceID=2,
-timestamp=460020591333900,
-time=02.11.2023 04:07:34,
+timestamp=1634379074617100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        EECEE |
-|        AEACE |
-|        EFCCF |
+|        FEFEF |
+|        EACFE |
+|        ECAFC |
 |              |
 +--------------+
-+---[5EVT38]---+
++---[H8ZL00]---+
 +--------------+,
-licensePlate=5EVT38,
-manufacturer=BWM,
-name='Anthony Jones',
-birthDate=Thu Feb 15 00:00:00 CET 1962,
-phoneNumber=1773957780906,
+licensePlate=H8ZL00,
+manufacturer=TESLA,
+name='Angel Schwartz',
+birthDate=Tue Jan 09 00:00:00 CET 1990,
+phoneNumber=1719257521764,
 allowedSpeed=50,
-measuredSpeed=63,
-measuredSpeedAfterDeductingTolerance=60,
-penalty=58.5
+measuredSpeed=64,
+measuredSpeedAfterDeductingTolerance=61,
+penalty=78.5
 }, 
  Record{
 sequenceID=3,
-timestamp=460020594118200,
-time=02.11.2023 04:07:34,
+timestamp=1634379091695100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        CAAEF |
-|        CCFCE |
-|        CFCCF |
+|        ACACE |
+|        AECAC |
+|        FEEEF |
 |              |
 +--------------+
-+---[PNXKU3]---+
++---[RFE5C9]---+
 +--------------+,
-licensePlate=PNXKU3,
-manufacturer=BWM,
-name='Meghan Ortega',
-birthDate=Sun Dec 25 00:00:00 CET 1988,
-phoneNumber=1788241728503,
+licensePlate=RFE5C9,
+manufacturer=TESLA,
+name='Trevor King',
+birthDate=Sun Jan 19 00:00:00 CET 1969,
+phoneNumber=1626753460088,
 allowedSpeed=50,
-measuredSpeed=54,
-measuredSpeedAfterDeductingTolerance=51,
+measuredSpeed=59,
+measuredSpeedAfterDeductingTolerance=56,
 penalty=58.5
 }, 
  Record{
 sequenceID=4,
-timestamp=460020596844700,
-time=02.11.2023 04:07:34,
+timestamp=1634379109440100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        EEAFE |
-|        FECFA |
-|        FFCCC |
+|        CAAEC |
+|        CECFE |
+|        ECCAF |
 |              |
 +--------------+
-+---[ENXC9T]---+
++---[U2C2HH]---+
 +--------------+,
-licensePlate=ENXC9T,
+licensePlate=U2C2HH,
 manufacturer=LEXUS,
-name='Nick Dean',
-birthDate=Fri Nov 07 00:00:00 CET 1986,
-phoneNumber=1789312287597,
+name='Elmer Gill',
+birthDate=Mon Jan 08 00:00:00 CET 2001,
+phoneNumber=1735857888037,
 allowedSpeed=50,
-measuredSpeed=104,
-measuredSpeedAfterDeductingTolerance=101,
-penalty=591.5
+measuredSpeed=72,
+measuredSpeedAfterDeductingTolerance=69,
+penalty=98.5
 }, 
  Record{
 sequenceID=5,
-timestamp=460020600582900,
-time=02.11.2023 04:07:34,
+timestamp=1634379127466800,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        CCAFC |
-|        CCECF |
-|        EEFAE |
+|        ECFEC |
+|        FACCA |
+|        AEFFA |
 |              |
 +--------------+
-+---[F4HAS6]---+
++---[DLS5BT]---+
 +--------------+,
-licensePlate=F4HAS6,
-manufacturer=MERCEDES-BENZ,
-name='Kelly Lamb',
-birthDate=Sat Aug 18 00:00:00 CEST 1984,
-phoneNumber=1792325834491,
+licensePlate=DLS5BT,
+manufacturer=VOLKSWAGEN,
+name='Terrence Hicks',
+birthDate=Wed Mar 28 00:00:00 CET 1951,
+phoneNumber=1707296746937,
 allowedSpeed=50,
-measuredSpeed=68,
-measuredSpeedAfterDeductingTolerance=65,
-penalty=78.5
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
 }, 
  Record{
 sequenceID=6,
-timestamp=460020602608300,
-time=02.11.2023 04:07:34,
+timestamp=1634379135501000,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        FFECF |
-|        FCCEF |
-|        AAACF |
+|        CEAAC |
+|        AAFFC |
+|        CACAC |
 |              |
 +--------------+
-+---[0MXSNG]---+
++---[3M7OPW]---+
 +--------------+,
-licensePlate=0MXSNG,
+licensePlate=3M7OPW,
 manufacturer=AUDI,
-name='Joe Garza',
-birthDate=Sun Nov 25 00:00:00 CET 1973,
-phoneNumber=1756502942740,
+name='Richard Garrett',
+birthDate=Mon Jan 23 00:00:00 CET 1995,
+phoneNumber=1737629370417,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=7,
+timestamp=1634379149852700,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        AFACF |
+|        ACFEA |
+|        EFEEF |
+|              |
++--------------+
++---[PPFNKP]---+
++--------------+,
+licensePlate=PPFNKP,
+manufacturer=HONDA,
+name='Barry Gibbs',
+birthDate=Fri Feb 11 00:00:00 CET 1966,
+phoneNumber=1791141459477,
 allowedSpeed=50,
 measuredSpeed=66,
 measuredSpeedAfterDeductingTolerance=63,
 penalty=78.5
 }, 
  Record{
-sequenceID=7,
-timestamp=460020604460500,
-time=02.11.2023 04:07:34,
+sequenceID=8,
+timestamp=1634379157607900,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        AAFEC |
-|        AAAFF |
-|        EFFAF |
+|        EEEAE |
+|        CCCFC |
+|        CEAEA |
 |              |
 +--------------+
-+---[ZPL350]---+
++---[MR29ES]---+
 +--------------+,
-licensePlate=ZPL350,
-manufacturer=JAGUAR,
-name='Luis Wong',
-birthDate=Wed Nov 29 00:00:00 CET 2000,
-phoneNumber=1513511121031,
+licensePlate=MR29ES,
+manufacturer=MAZDA,
+name='Freda Hardy',
+birthDate=Sun Aug 05 00:00:00 CEST 1984,
+phoneNumber=1716899908130,
+allowedSpeed=50,
+measuredSpeed=58,
+measuredSpeedAfterDeductingTolerance=55,
+penalty=58.5
+}, 
+ Record{
+sequenceID=9,
+timestamp=1634379167701200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FCAFC |
+|        CFFFE |
+|        AACFA |
+|              |
++--------------+
++---[US2M4R]---+
++--------------+,
+licensePlate=US2M4R,
+manufacturer=LEXUS,
+name='Alejandro Terry',
+birthDate=Mon Aug 11 00:00:00 CET 1952,
+phoneNumber=1788658170155,
+allowedSpeed=50,
+measuredSpeed=66,
+measuredSpeedAfterDeductingTolerance=63,
+penalty=78.5
+}, 
+ Record{
+sequenceID=10,
+timestamp=1634379173151100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FFACE |
+|        CFCEC |
+|        EFFEF |
+|              |
++--------------+
++---[OJES9G]---+
++--------------+,
+licensePlate=OJES9G,
+manufacturer=HONDA,
+name='Jan King',
+birthDate=Sun May 01 00:00:00 CEST 1983,
+phoneNumber=1797260083322,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=11,
+timestamp=1634379176063300,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ECCEC |
+|        EAEEA |
+|        CEFCE |
+|              |
++--------------+
++---[2SDSG6]---+
++--------------+,
+licensePlate=2SDSG6,
+manufacturer=PORSCHE,
+name='Cesar Riley',
+birthDate=Mon Dec 02 00:00:00 CET 1985,
+phoneNumber=1798191226018,
+allowedSpeed=50,
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=12,
+timestamp=1634379178711600,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        EFCAC |
+|        CFAFE |
+|        ACECF |
+|              |
++--------------+
++---[A6Y80J]---+
++--------------+,
+licensePlate=A6Y80J,
+manufacturer=AUDI,
+name='Bryan Phillips',
+birthDate=Fri May 17 00:00:00 CEST 2002,
+phoneNumber=1603036910314,
+allowedSpeed=50,
+measuredSpeed=74,
+measuredSpeedAfterDeductingTolerance=71,
+penalty=143.5
+}, 
+ Record{
+sequenceID=13,
+timestamp=1634379183296200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACEAE |
+|        FAEEC |
+|        ECFEE |
+|              |
++--------------+
++---[08PP9Q]---+
++--------------+,
+licensePlate=08PP9Q,
+manufacturer=VOLKSWAGEN,
+name='Jose Ramsey',
+birthDate=Wed May 15 00:00:00 CEST 1996,
+phoneNumber=1776961342500,
 allowedSpeed=50,
 measuredSpeed=55,
 measuredSpeedAfterDeductingTolerance=52,
 penalty=58.5
 }, 
  Record{
-sequenceID=8,
-timestamp=460020606226100,
-time=02.11.2023 04:07:34,
+sequenceID=14,
+timestamp=1634379186082900,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        CFFCE |
-|        EFCEF |
-|        CFCCF |
+|        FAAAF |
+|        CACAC |
+|        CEEFA |
 |              |
 +--------------+
-+---[73QDMZ]---+
++---[JWE6SD]---+
 +--------------+,
-licensePlate=73QDMZ,
-manufacturer=BWM,
-name='Cristina Pratt',
-birthDate=Wed Apr 18 00:00:00 CET 1951,
-phoneNumber=1708069216787,
+licensePlate=JWE6SD,
+manufacturer=LEXUS,
+name='Ben Griffith',
+birthDate=Fri Jul 27 00:00:00 CEST 1984,
+phoneNumber=1519535826170,
 allowedSpeed=50,
-measuredSpeed=97,
-measuredSpeedAfterDeductingTolerance=94,
-penalty=428.5
-}, 
- Record{
-sequenceID=9,
-timestamp=460020608594600,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        ACFFF |
-|        ACCAE |
-|        EEAEF |
-|              |
-+--------------+
-+---[2753PQ]---+
-+--------------+,
-licensePlate=2753PQ,
-manufacturer=PORSCHE,
-name='Nina Richardson',
-birthDate=Tue Oct 15 00:00:00 CET 1985,
-phoneNumber=1703062580727,
-allowedSpeed=50,
-measuredSpeed=74,
-measuredSpeedAfterDeductingTolerance=71,
-penalty=143.5
-}, 
- Record{
-sequenceID=10,
-timestamp=460020610514700,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        ECACF |
-|        CEECA |
-|        FAECC |
-|              |
-+--------------+
-+---[IISKZU]---+
-+--------------+,
-licensePlate=IISKZU,
-manufacturer=JAGUAR,
-name='Chris Foster',
-birthDate=Thu Apr 24 00:00:00 CET 1952,
-phoneNumber=1713508988655,
-allowedSpeed=50,
-measuredSpeed=90,
-measuredSpeedAfterDeductingTolerance=87,
-penalty=288.5
-}, 
- Record{
-sequenceID=11,
-timestamp=460020613222100,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        CECAC |
-|        ACEAE |
-|        FEEAF |
-|              |
-+--------------+
-+---[F780RD]---+
-+--------------+,
-licensePlate=F780RD,
-manufacturer=MAZDA,
-name='Adrian Mccormick',
-birthDate=Tue Mar 02 00:00:00 CET 1976,
-phoneNumber=1622498789358,
-allowedSpeed=50,
-measuredSpeed=74,
-measuredSpeedAfterDeductingTolerance=71,
-penalty=143.5
-}, 
- Record{
-sequenceID=12,
-timestamp=460020614626500,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        AEAFF |
-|        AEEEC |
-|        EAEEF |
-|              |
-+--------------+
-+---[GWX2ZX]---+
-+--------------+,
-licensePlate=GWX2ZX,
-manufacturer=MAZDA,
-name='Gordon Garcia',
-birthDate=Wed Apr 18 00:00:00 CET 1962,
-phoneNumber=1603257897526,
-allowedSpeed=50,
-measuredSpeed=61,
-measuredSpeedAfterDeductingTolerance=58,
+measuredSpeed=63,
+measuredSpeedAfterDeductingTolerance=60,
 penalty=58.5
 }, 
  Record{
-sequenceID=13,
-timestamp=460020616291000,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        FEAAF |
-|        FECAC |
-|        FFAAC |
-|              |
-+--------------+
-+---[782XS9]---+
-+--------------+,
-licensePlate=782XS9,
-manufacturer=JAGUAR,
-name='Orville Collins',
-birthDate=Thu Feb 16 00:00:00 CET 1956,
-phoneNumber=1718362910177,
-allowedSpeed=50,
-measuredSpeed=65,
-measuredSpeedAfterDeductingTolerance=62,
-penalty=78.5
-}, 
- Record{
-sequenceID=14,
-timestamp=460020618020700,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        FCAEE |
-|        CFFCA |
-|        EFCEA |
-|              |
-+--------------+
-+---[IBRJMO]---+
-+--------------+,
-licensePlate=IBRJMO,
-manufacturer=MERCEDES-BENZ,
-name='Percy Hill',
-birthDate=Wed Jun 07 00:00:00 CET 1972,
-phoneNumber=1703782519480,
-allowedSpeed=50,
-measuredSpeed=68,
-measuredSpeedAfterDeductingTolerance=65,
-penalty=78.5
-}, 
- Record{
 sequenceID=15,
-timestamp=460020619313900,
-time=02.11.2023 04:07:34,
+timestamp=1634379188556100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        FCAEE |
-|        CACCF |
-|        AECEA |
+|        AFAEE |
+|        CFEEC |
+|        CFAAE |
 |              |
 +--------------+
-+---[9D9UIN]---+
++---[CURNO5]---+
 +--------------+,
-licensePlate=9D9UIN,
-manufacturer=ASTON MARTIN,
-name='Claire Silva',
-birthDate=Mon Sep 04 00:00:00 CEST 1995,
-phoneNumber=1758872003008,
+licensePlate=CURNO5,
+manufacturer=MAZDA,
+name='Margie Rivera',
+birthDate=Sun Apr 30 00:00:00 CET 1961,
+phoneNumber=1773962389725,
 allowedSpeed=50,
-measuredSpeed=67,
-measuredSpeedAfterDeductingTolerance=64,
-penalty=78.5
-}, 
- Record{
-sequenceID=16,
-timestamp=460020620623300,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        AEAAC |
-|        EEEFC |
-|        EEACF |
-|              |
-+--------------+
-+---[G1QQP1]---+
-+--------------+,
-licensePlate=G1QQP1,
-manufacturer=ASTON MARTIN,
-name='Tanya Doyle',
-birthDate=Sat Jun 23 00:00:00 CET 1962,
-phoneNumber=1758378442909,
-allowedSpeed=50,
-measuredSpeed=82,
-measuredSpeedAfterDeductingTolerance=79,
-penalty=208.5
+measuredSpeed=54,
+measuredSpeedAfterDeductingTolerance=51,
+penalty=58.5
 }]
 
 Record overview (measured speed desc):
 --------------------------------
 [
  Record{
-sequenceID=4,
-timestamp=460020596844700,
-time=02.11.2023 04:07:34,
+sequenceID=12,
+timestamp=1634379178711600,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        EEAFE |
-|        FECFA |
-|        FFCCC |
+|        EFCAC |
+|        CFAFE |
+|        ACECF |
 |              |
 +--------------+
-+---[ENXC9T]---+
++---[A6Y80J]---+
 +--------------+,
-licensePlate=ENXC9T,
-manufacturer=LEXUS,
-name='Nick Dean',
-birthDate=Fri Nov 07 00:00:00 CET 1986,
-phoneNumber=1789312287597,
-allowedSpeed=50,
-measuredSpeed=104,
-measuredSpeedAfterDeductingTolerance=101,
-penalty=591.5
-}, 
- Record{
-sequenceID=8,
-timestamp=460020606226100,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        CFFCE |
-|        EFCEF |
-|        CFCCF |
-|              |
-+--------------+
-+---[73QDMZ]---+
-+--------------+,
-licensePlate=73QDMZ,
-manufacturer=BWM,
-name='Cristina Pratt',
-birthDate=Wed Apr 18 00:00:00 CET 1951,
-phoneNumber=1708069216787,
-allowedSpeed=50,
-measuredSpeed=97,
-measuredSpeedAfterDeductingTolerance=94,
-penalty=428.5
-}, 
- Record{
-sequenceID=10,
-timestamp=460020610514700,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        ECACF |
-|        CEECA |
-|        FAECC |
-|              |
-+--------------+
-+---[IISKZU]---+
-+--------------+,
-licensePlate=IISKZU,
-manufacturer=JAGUAR,
-name='Chris Foster',
-birthDate=Thu Apr 24 00:00:00 CET 1952,
-phoneNumber=1713508988655,
-allowedSpeed=50,
-measuredSpeed=90,
-measuredSpeedAfterDeductingTolerance=87,
-penalty=288.5
-}, 
- Record{
-sequenceID=1,
-timestamp=460020585382900,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        AAFCC |
-|        AECCA |
-|        AFECC |
-|              |
-+--------------+
-+---[3W555J]---+
-+--------------+,
-licensePlate=3W555J,
-manufacturer=MERCEDES-BENZ,
-name='Bernadette Hanson',
-birthDate=Sun May 24 00:00:00 CET 1970,
-phoneNumber=1771438834113,
-allowedSpeed=50,
-measuredSpeed=82,
-measuredSpeedAfterDeductingTolerance=79,
-penalty=208.5
-}, 
- Record{
-sequenceID=16,
-timestamp=460020620623300,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        AEAAC |
-|        EEEFC |
-|        EEACF |
-|              |
-+--------------+
-+---[G1QQP1]---+
-+--------------+,
-licensePlate=G1QQP1,
-manufacturer=ASTON MARTIN,
-name='Tanya Doyle',
-birthDate=Sat Jun 23 00:00:00 CET 1962,
-phoneNumber=1758378442909,
-allowedSpeed=50,
-measuredSpeed=82,
-measuredSpeedAfterDeductingTolerance=79,
-penalty=208.5
-}, 
- Record{
-sequenceID=9,
-timestamp=460020608594600,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        ACFFF |
-|        ACCAE |
-|        EEAEF |
-|              |
-+--------------+
-+---[2753PQ]---+
-+--------------+,
-licensePlate=2753PQ,
-manufacturer=PORSCHE,
-name='Nina Richardson',
-birthDate=Tue Oct 15 00:00:00 CET 1985,
-phoneNumber=1703062580727,
+licensePlate=A6Y80J,
+manufacturer=AUDI,
+name='Bryan Phillips',
+birthDate=Fri May 17 00:00:00 CEST 2002,
+phoneNumber=1603036910314,
 allowedSpeed=50,
 measuredSpeed=74,
 measuredSpeedAfterDeductingTolerance=71,
@@ -517,229 +379,321 @@ penalty=143.5
 }, 
  Record{
 sequenceID=11,
-timestamp=460020613222100,
-time=02.11.2023 04:07:34,
+timestamp=1634379176063300,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        CECAC |
-|        ACEAE |
-|        FEEAF |
+|        ECCEC |
+|        EAEEA |
+|        CEFCE |
 |              |
 +--------------+
-+---[F780RD]---+
++---[2SDSG6]---+
 +--------------+,
-licensePlate=F780RD,
-manufacturer=MAZDA,
-name='Adrian Mccormick',
-birthDate=Tue Mar 02 00:00:00 CET 1976,
-phoneNumber=1622498789358,
+licensePlate=2SDSG6,
+manufacturer=PORSCHE,
+name='Cesar Riley',
+birthDate=Mon Dec 02 00:00:00 CET 1985,
+phoneNumber=1798191226018,
 allowedSpeed=50,
-measuredSpeed=74,
-measuredSpeedAfterDeductingTolerance=71,
-penalty=143.5
+measuredSpeed=73,
+measuredSpeedAfterDeductingTolerance=70,
+penalty=98.5
+}, 
+ Record{
+sequenceID=4,
+timestamp=1634379109440100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CAAEC |
+|        CECFE |
+|        ECCAF |
+|              |
++--------------+
++---[U2C2HH]---+
++--------------+,
+licensePlate=U2C2HH,
+manufacturer=LEXUS,
+name='Elmer Gill',
+birthDate=Mon Jan 08 00:00:00 CET 2001,
+phoneNumber=1735857888037,
+allowedSpeed=50,
+measuredSpeed=72,
+measuredSpeedAfterDeductingTolerance=69,
+penalty=98.5
+}, 
+ Record{
+sequenceID=1,
+timestamp=1634379057964600,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        CCACA |
+|        AEFAF |
+|        CFEFE |
+|              |
++--------------+
++---[ID7JFQ]---+
++--------------+,
+licensePlate=ID7JFQ,
+manufacturer=TOYOTA,
+name='Dexter Bush',
+birthDate=Mon Jan 17 00:00:00 CET 2000,
+phoneNumber=1753058279401,
+allowedSpeed=50,
+measuredSpeed=70,
+measuredSpeedAfterDeductingTolerance=67,
+penalty=98.5
 }, 
  Record{
 sequenceID=5,
-timestamp=460020600582900,
-time=02.11.2023 04:07:34,
+timestamp=1634379127466800,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        CCAFC |
-|        CCECF |
-|        EEFAE |
+|        ECFEC |
+|        FACCA |
+|        AEFFA |
 |              |
 +--------------+
-+---[F4HAS6]---+
++---[DLS5BT]---+
 +--------------+,
-licensePlate=F4HAS6,
-manufacturer=MERCEDES-BENZ,
-name='Kelly Lamb',
-birthDate=Sat Aug 18 00:00:00 CEST 1984,
-phoneNumber=1792325834491,
+licensePlate=DLS5BT,
+manufacturer=VOLKSWAGEN,
+name='Terrence Hicks',
+birthDate=Wed Mar 28 00:00:00 CET 1951,
+phoneNumber=1707296746937,
 allowedSpeed=50,
-measuredSpeed=68,
-measuredSpeedAfterDeductingTolerance=65,
-penalty=78.5
+measuredSpeed=69,
+measuredSpeedAfterDeductingTolerance=66,
+penalty=98.5
 }, 
  Record{
-sequenceID=14,
-timestamp=460020618020700,
-time=02.11.2023 04:07:34,
+sequenceID=7,
+timestamp=1634379149852700,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        FCAEE |
-|        CFFCA |
-|        EFCEA |
+|        AFACF |
+|        ACFEA |
+|        EFEEF |
 |              |
 +--------------+
-+---[IBRJMO]---+
++---[PPFNKP]---+
 +--------------+,
-licensePlate=IBRJMO,
-manufacturer=MERCEDES-BENZ,
-name='Percy Hill',
-birthDate=Wed Jun 07 00:00:00 CET 1972,
-phoneNumber=1703782519480,
-allowedSpeed=50,
-measuredSpeed=68,
-measuredSpeedAfterDeductingTolerance=65,
-penalty=78.5
-}, 
- Record{
-sequenceID=15,
-timestamp=460020619313900,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        FCAEE |
-|        CACCF |
-|        AECEA |
-|              |
-+--------------+
-+---[9D9UIN]---+
-+--------------+,
-licensePlate=9D9UIN,
-manufacturer=ASTON MARTIN,
-name='Claire Silva',
-birthDate=Mon Sep 04 00:00:00 CEST 1995,
-phoneNumber=1758872003008,
-allowedSpeed=50,
-measuredSpeed=67,
-measuredSpeedAfterDeductingTolerance=64,
-penalty=78.5
-}, 
- Record{
-sequenceID=6,
-timestamp=460020602608300,
-time=02.11.2023 04:07:34,
-picture=
-+--------------+
-|        FFECF |
-|        FCCEF |
-|        AAACF |
-|              |
-+--------------+
-+---[0MXSNG]---+
-+--------------+,
-licensePlate=0MXSNG,
-manufacturer=AUDI,
-name='Joe Garza',
-birthDate=Sun Nov 25 00:00:00 CET 1973,
-phoneNumber=1756502942740,
+licensePlate=PPFNKP,
+manufacturer=HONDA,
+name='Barry Gibbs',
+birthDate=Fri Feb 11 00:00:00 CET 1966,
+phoneNumber=1791141459477,
 allowedSpeed=50,
 measuredSpeed=66,
 measuredSpeedAfterDeductingTolerance=63,
 penalty=78.5
 }, 
  Record{
-sequenceID=13,
-timestamp=460020616291000,
-time=02.11.2023 04:07:34,
+sequenceID=9,
+timestamp=1634379167701200,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        FEAAF |
-|        FECAC |
-|        FFAAC |
+|        FCAFC |
+|        CFFFE |
+|        AACFA |
 |              |
 +--------------+
-+---[782XS9]---+
++---[US2M4R]---+
 +--------------+,
-licensePlate=782XS9,
-manufacturer=JAGUAR,
-name='Orville Collins',
-birthDate=Thu Feb 16 00:00:00 CET 1956,
-phoneNumber=1718362910177,
+licensePlate=US2M4R,
+manufacturer=LEXUS,
+name='Alejandro Terry',
+birthDate=Mon Aug 11 00:00:00 CET 1952,
+phoneNumber=1788658170155,
 allowedSpeed=50,
-measuredSpeed=65,
-measuredSpeedAfterDeductingTolerance=62,
+measuredSpeed=66,
+measuredSpeedAfterDeductingTolerance=63,
 penalty=78.5
 }, 
  Record{
 sequenceID=2,
-timestamp=460020591333900,
-time=02.11.2023 04:07:34,
+timestamp=1634379074617100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        EECEE |
-|        AEACE |
-|        EFCCF |
+|        FEFEF |
+|        EACFE |
+|        ECAFC |
 |              |
 +--------------+
-+---[5EVT38]---+
++---[H8ZL00]---+
 +--------------+,
-licensePlate=5EVT38,
-manufacturer=BWM,
-name='Anthony Jones',
-birthDate=Thu Feb 15 00:00:00 CET 1962,
-phoneNumber=1773957780906,
+licensePlate=H8ZL00,
+manufacturer=TESLA,
+name='Angel Schwartz',
+birthDate=Tue Jan 09 00:00:00 CET 1990,
+phoneNumber=1719257521764,
+allowedSpeed=50,
+measuredSpeed=64,
+measuredSpeedAfterDeductingTolerance=61,
+penalty=78.5
+}, 
+ Record{
+sequenceID=14,
+timestamp=1634379186082900,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        FAAAF |
+|        CACAC |
+|        CEEFA |
+|              |
++--------------+
++---[JWE6SD]---+
++--------------+,
+licensePlate=JWE6SD,
+manufacturer=LEXUS,
+name='Ben Griffith',
+birthDate=Fri Jul 27 00:00:00 CEST 1984,
+phoneNumber=1519535826170,
 allowedSpeed=50,
 measuredSpeed=63,
 measuredSpeedAfterDeductingTolerance=60,
 penalty=58.5
 }, 
  Record{
-sequenceID=12,
-timestamp=460020614626500,
-time=02.11.2023 04:07:34,
+sequenceID=6,
+timestamp=1634379135501000,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        AEAFF |
-|        AEEEC |
-|        EAEEF |
+|        CEAAC |
+|        AAFFC |
+|        CACAC |
 |              |
 +--------------+
-+---[GWX2ZX]---+
++---[3M7OPW]---+
 +--------------+,
-licensePlate=GWX2ZX,
-manufacturer=MAZDA,
-name='Gordon Garcia',
-birthDate=Wed Apr 18 00:00:00 CET 1962,
-phoneNumber=1603257897526,
+licensePlate=3M7OPW,
+manufacturer=AUDI,
+name='Richard Garrett',
+birthDate=Mon Jan 23 00:00:00 CET 1995,
+phoneNumber=1737629370417,
 allowedSpeed=50,
-measuredSpeed=61,
-measuredSpeedAfterDeductingTolerance=58,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
 penalty=58.5
 }, 
  Record{
-sequenceID=7,
-timestamp=460020604460500,
-time=02.11.2023 04:07:34,
+sequenceID=10,
+timestamp=1634379173151100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        AAFEC |
-|        AAAFF |
-|        EFFAF |
+|        FFACE |
+|        CFCEC |
+|        EFFEF |
 |              |
 +--------------+
-+---[ZPL350]---+
++---[OJES9G]---+
 +--------------+,
-licensePlate=ZPL350,
-manufacturer=JAGUAR,
-name='Luis Wong',
-birthDate=Wed Nov 29 00:00:00 CET 2000,
-phoneNumber=1513511121031,
+licensePlate=OJES9G,
+manufacturer=HONDA,
+name='Jan King',
+birthDate=Sun May 01 00:00:00 CEST 1983,
+phoneNumber=1797260083322,
+allowedSpeed=50,
+measuredSpeed=60,
+measuredSpeedAfterDeductingTolerance=57,
+penalty=58.5
+}, 
+ Record{
+sequenceID=3,
+timestamp=1634379091695100,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACACE |
+|        AECAC |
+|        FEEEF |
+|              |
++--------------+
++---[RFE5C9]---+
++--------------+,
+licensePlate=RFE5C9,
+manufacturer=TESLA,
+name='Trevor King',
+birthDate=Sun Jan 19 00:00:00 CET 1969,
+phoneNumber=1626753460088,
+allowedSpeed=50,
+measuredSpeed=59,
+measuredSpeedAfterDeductingTolerance=56,
+penalty=58.5
+}, 
+ Record{
+sequenceID=8,
+timestamp=1634379157607900,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        EEEAE |
+|        CCCFC |
+|        CEAEA |
+|              |
++--------------+
++---[MR29ES]---+
++--------------+,
+licensePlate=MR29ES,
+manufacturer=MAZDA,
+name='Freda Hardy',
+birthDate=Sun Aug 05 00:00:00 CEST 1984,
+phoneNumber=1716899908130,
+allowedSpeed=50,
+measuredSpeed=58,
+measuredSpeedAfterDeductingTolerance=55,
+penalty=58.5
+}, 
+ Record{
+sequenceID=13,
+timestamp=1634379183296200,
+time=04.11.2023 02:06:38,
+picture=
++--------------+
+|        ACEAE |
+|        FAEEC |
+|        ECFEE |
+|              |
++--------------+
++---[08PP9Q]---+
++--------------+,
+licensePlate=08PP9Q,
+manufacturer=VOLKSWAGEN,
+name='Jose Ramsey',
+birthDate=Wed May 15 00:00:00 CEST 1996,
+phoneNumber=1776961342500,
 allowedSpeed=50,
 measuredSpeed=55,
 measuredSpeedAfterDeductingTolerance=52,
 penalty=58.5
 }, 
  Record{
-sequenceID=3,
-timestamp=460020594118200,
-time=02.11.2023 04:07:34,
+sequenceID=15,
+timestamp=1634379188556100,
+time=04.11.2023 02:06:38,
 picture=
 +--------------+
-|        CAAEF |
-|        CCFCE |
-|        CFCCF |
+|        AFAEE |
+|        CFEEC |
+|        CFAAE |
 |              |
 +--------------+
-+---[PNXKU3]---+
++---[CURNO5]---+
 +--------------+,
-licensePlate=PNXKU3,
-manufacturer=BWM,
-name='Meghan Ortega',
-birthDate=Sun Dec 25 00:00:00 CET 1988,
-phoneNumber=1788241728503,
+licensePlate=CURNO5,
+manufacturer=MAZDA,
+name='Margie Rivera',
+birthDate=Sun Apr 30 00:00:00 CET 1961,
+phoneNumber=1773962389725,
 allowedSpeed=50,
 measuredSpeed=54,
 measuredSpeedAfterDeductingTolerance=51,
@@ -748,6 +702,6 @@ penalty=58.5
 
 Record overview (to fast speed average, min, max):
 --------------------------------
-average: 20.13
+average: 11,20
 min: 1
-max: 51
+max: 21
