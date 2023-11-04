@@ -1,6 +1,6 @@
 # Ignore specific directories
-/implementation/.idea/
-/implementation/build/
+/02_implementation/.idea/
+/02_implementation/build/
 .gradle/
 build/
 .idea/

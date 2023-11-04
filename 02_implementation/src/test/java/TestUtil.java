@@ -45,11 +45,6 @@ public class TestUtil {
         return new Simulation(initParkingSpace(), initSpeedCamera());
     }
 
-    public static List<Car> get100CarsFromParkingSpace() {
-        ParkingSpace parkingSpace = initParkingSpace();
-        return List.of(parkingSpace.get100Cars());
-    }
-
     public static List<Car> getCarsFromFile(IVehicleRegistrationAuthority vra, IPolice police) {
         IFileParser csvParser = new CSVParser();
         List<String[]> csvOut = csvParser.parse("data.csv");

@@ -37,6 +37,8 @@ public class Simulation {
         while (!simulationCars.isEmpty()) {
             speedCamera.controlCar(simulationCars.poll());
         }
+
+        System.out.println("Simulation finished!");
     }
 
    public int generateSpeed() {
