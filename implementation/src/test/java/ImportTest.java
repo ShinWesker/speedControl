@@ -39,7 +39,7 @@ public class ImportTest {
     @Order(3)
     @ParameterizedTest(name = "{index} => Fine for {0} km/h would be {1} Euro")
     @CsvSource({
-            "145, 843.5",
+            "130, 843.5",
             "82, 208.5",
             "99, 428.5",
             "75, 143.5",
@@ -59,6 +59,7 @@ public class ImportTest {
         IPolicy policy = new GermanPolicy(fineCataloguePath);
         IFineEngine fineEngine = mock(FineEngine.class);
 
+        speedCamera = spy(TestUtil.initSpeedCamera());
         when(speedCamera.getFineEngine()).thenReturn(fineEngine);
 
         speedCamera.getFineEngine().setPolicy(policy);

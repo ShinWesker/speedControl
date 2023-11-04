@@ -37,11 +37,9 @@ public class Simulation {
         while (!simulationCars.isEmpty()) {
             speedCamera.controlCar(simulationCars.poll());
         }
-
-
     }
 
-    private static int generateSpeed() {
+   public int generateSpeed() {
         MersenneTwister mersenneTwister = new MersenneTwister();
         // 90%
         if (mersenneTwister.nextInt(0, 100) > 10) {
@@ -57,8 +55,6 @@ public class Simulation {
             else {
                 return mersenneTwister.nextInt(75, 130);
             }
-
         }
-
     }
 }

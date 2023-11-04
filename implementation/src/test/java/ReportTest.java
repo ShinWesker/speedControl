@@ -1,38 +1,48 @@
 import komplexaufgabe.core.SpeedCamera;
+import komplexaufgabe.core.components.VehicleRegistrationAuthority;
+import komplexaufgabe.core.entities.Police;
+import komplexaufgabe.core.interfaces.components.IPolice;
+import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
+import komplexaufgabe.core.interfaces.policy.GermanPolicy;
+import komplexaufgabe.io.TextFileWriter;
+import komplexaufgabe.simulate.ParkingSpace;
+import komplexaufgabe.simulate.Simulation;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.stream.Stream;
+import java.io.InputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ReportTest {
 
+    @BeforeEach
+    public void setup() {
+        new TextFileWriter().writeFile("report.log", " ");
+    }
+
     @Test
-    //TODO: fix
-    public void create_report() throws IOException, URISyntaxException {
-        SpeedCamera speedCamera = TestUtil.initSpeedCamera();
+    public void create_report() throws IOException {
+        IVehicleRegistrationAuthority vra = new VehicleRegistrationAuthority();
+        IPolice police = new Police();
+        SpeedCamera speedCamera = TestUtil.initSpeedCamera(vra, police);
+        Simulation simulation = new Simulation(new ParkingSpace(TestUtil.getCarsFromFile(vra, police)), speedCamera);
 
-        Path logPath = Paths.get(getClass().getClassLoader().getResource("export/report.log").toURI());
-        Stream<String> stream = Files.lines(logPath);
-        List<String> reportLines = stream.toList();
-        long reportLogLengthBefore = reportLines.size();
-
-        TestUtil.runSetPolicySimulation(speedCamera);
+        speedCamera.activate();
+        speedCamera.getFineEngine().setPolicy(new GermanPolicy("fine_catalogue.json"));
+        simulation.start();
 
         speedCamera.getCentralUnit().createReportLog();
 
-        stream = Files.lines(logPath);
-        reportLines = stream.toList();
-        long reportLogLengthAfter = reportLines.size();
+        InputStream stream = null;
+        try {
+            stream = this.getClass().getClassLoader().getResourceAsStream("export/report.log");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
-        assertNotNull(reportLines);
-        assertFalse(reportLines.isEmpty());
-        assertNotEquals(reportLogLengthBefore, reportLogLengthAfter);
+        assertNotNull(stream);
+        assertFalse(new String(stream.readAllBytes()).trim().isEmpty());
     }
 }

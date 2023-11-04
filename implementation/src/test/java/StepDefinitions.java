@@ -5,6 +5,8 @@ import komplexaufgabe.core.components.LaserScanner;
 import komplexaufgabe.core.entities.Car;
 import org.junit.jupiter.api.Assertions;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class StepDefinitions {
 
     Car speedCar;
@@ -31,7 +33,7 @@ public class StepDefinitions {
 
     @Then("the speedcamera captures the \\{speed} of the car")
     public void the_speedcamera_captures_the_of_the_car() {
-        Assertions.assertTrue(speedSpeedCar > 53);
-        Assertions.assertTrue(speedSlowCar < 53);
+        assertTrue(speedSpeedCar > 53);
+        assertTrue(speedSlowCar < 53);
     }
 }

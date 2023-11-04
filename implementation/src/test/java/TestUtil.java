@@ -3,7 +3,6 @@ import komplexaufgabe.core.components.*;
 import komplexaufgabe.core.entities.*;
 import komplexaufgabe.core.interfaces.components.IPolice;
 import komplexaufgabe.core.interfaces.components.IVehicleRegistrationAuthority;
-import komplexaufgabe.core.interfaces.policy.GermanPolicy;
 import komplexaufgabe.core.interfaces.stoppingtools.TrafficSpikes;
 import komplexaufgabe.io.CSVParser;
 import komplexaufgabe.io.IFileParser;
@@ -13,6 +12,8 @@ import komplexaufgabe.simulate.Simulation;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import static org.mockito.Mockito.spy;
 
 public class TestUtil {
 
@@ -28,34 +29,30 @@ public class TestUtil {
         componentsStack.push(laserScanner);
         componentsStack.push(centralUnit);
 
-        return new SpeedCamera.CameraBuilder(
-                componentsStack,
-                new TrafficSpikes(),
-                new MobileNetworkModule(police, vra)).build();
+        return new SpeedCamera.CameraBuilder(componentsStack, new TrafficSpikes(), new MobileNetworkModule(police, vra)).build();
     }
 
     public static SpeedCamera initSpeedCamera() {
         return initSpeedCamera(new VehicleRegistrationAuthority(), new Police());
     }
 
-    public static void runSetPolicySimulation(SpeedCamera speedCamera) {
-        Simulation simulation = new Simulation(new ParkingSpace(getCarsFromFile()), speedCamera);
-        speedCamera.activate();
-        speedCamera.getFineEngine().setPolicy(new GermanPolicy("fine_catalogue.json"));
-        simulation.start();
-        speedCamera.deactivate();
+    public static ParkingSpace initParkingSpace() {
+        List<Car> carList = getCarsFromFile(new VehicleRegistrationAuthority(), new Police());
+        return new ParkingSpace(carList);
     }
 
-    public static List<Car> get100CarsFromParkingSpace(){
-        List<Car> carList = getCarsFromFile();
+    public static Simulation initSimulation() {
+        return new Simulation(initParkingSpace(), initSpeedCamera());
+    }
 
-        ParkingSpace parkingSpace = new ParkingSpace(carList);
+    public static List<Car> get100CarsFromParkingSpace() {
+        ParkingSpace parkingSpace = initParkingSpace();
         return List.of(parkingSpace.get100Cars());
     }
 
-    public static List<Car> getCarsFromFile() {
+    public static List<Car> getCarsFromFile(IVehicleRegistrationAuthority vra, IPolice police) {
         IFileParser csvParser = new CSVParser();
-        List<String[]> csvOut = csvParser.parse("/data.csv");
+        List<String[]> csvOut = csvParser.parse("data.csv");
         List<Car> carList = new ArrayList<>();
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.GERMANY);
@@ -71,7 +68,12 @@ public class TestUtil {
             }
             car.setDriver(owner);
 
+            if (csvOut.get(i)[7].equals("yes")) {
+                police.addWanted(owner);
+            }
             carList.add(car);
+            vra.registerCar(car.getLicensePlate().getLicensePlateID(), owner);
+            MobileCentralUnit.addOwner(smartPhone.getPhoneNumber(), smartPhone);
         }
         return carList;
     }
@@ -79,25 +81,20 @@ public class TestUtil {
     public static Owner createOwner() {
         String name = "Name";
         Date brithDate = new Date();
-        String face = "ACFFAEFEAAACCCCC";
-        SmartPhone smartphone = new SmartPhone(123456789);
+        String face = "CFFAEFEAAACCCCC";
+        SmartPhone smartphone = spy(new SmartPhone(123456789));
         Car car = createCar();
+        Owner owner = new Owner.OwnerBuilder(name, brithDate, face, smartphone, car).build();
+        car.setDriver(owner);
 
-        return new Owner.OwnerBuilder(name, brithDate, face, smartphone, car).build();
+        return owner;
     }
 
     public static Car createCar() {
         String manufacturer = "BMW";
-        String registrationID = "test";
-        LicensePlate licensePlate = new LicensePlate("licensePlateID");
+        String registrationID = "6afwib6x3t";
+        LicensePlate licensePlate = new LicensePlate("RNH731");
 
         return new Car.CarBuilder(manufacturer, registrationID, licensePlate).build();
     }
-
-
-
-
-
-
-
 }
